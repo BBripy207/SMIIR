@@ -3,8 +3,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sistemas21atp.github.io',
-    base: '/DINERBOT-T10',
+    site: 'https://smiir.com.mx',
+    // base: '/DINERBOT-T10', // Comentamos esto para el dominio principal
 
     // Optimizaciones de imagen SUPER POTENCIADAS
     image: {

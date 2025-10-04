@@ -15,12 +15,12 @@
 }
 
 .main-title .highlight {
-    color: #8A2BE2;
-    background: linear-gradient(135deg, #8A2BE2 0%, #9932CC 100%);
+    color: #1E3A8A;
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+    text-shadow: 0 0 30px rgba(30, 58, 138, 0.5);
 }
 
 /* Subtítulos */
@@ -86,7 +86,7 @@
 
 /* Texto destacado */
 .highlight-text {
-    color: #4A9EFF;
+    color: #1E3A8A;
     font-weight: 600;
     text-decoration: underline;
 }

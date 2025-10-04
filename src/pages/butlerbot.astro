@@ -1,25 +1,48 @@
 ---
-title: "DINERBOT T9"
-description: "Presentación del robot DINERBOT T9"
 import { Image } from 'astro:assets';
 import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header_new.astro';
 import Footer from '../components/Footer.astro';
+
+// Metadatos SEO
+const title = "DINERBOT T9";
+const description = "Presentación del robot DINERBOT T9 - Versión anterior del sistema de servicio autónomo";
 ---
 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DINERBOT T9 - Presentación</title>
+    <title>{title} - Presentación</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smiir.com.mx/butlerbot">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/DINERBOT-T10/styles/base.css">
-    <link rel="stylesheet" href="/DINERBOT-T10/styles/layout.css">
-    <link rel="stylesheet" href="/DINERBOT-T10/styles/typography.css">
-    <link rel="stylesheet" href="/DINERBOT-T10/styles/components.css">
-    <link rel="stylesheet" href="/DINERBOT-T10/styles/responsive.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/typography.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS moderno para iframes */
+        .video-container iframe {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-container iframe:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        }
+    </style>
     
     <!-- View Transitions para navegación fluida -->
     <ViewTransitions />
@@ -36,7 +59,7 @@ import Footer from '../components/Footer.astro';
                 </h1>
 
                 <div class="image-container">
-                    <Image src="/DINERBOT-T10/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" class="presentation-image" width={800} height={600} loading="lazy" />
+                    <Image src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" class="presentation-image" width={800} height={600} loading="lazy" />
                 </div>
                 <h2 class="interaction-title-purple">
                     Bandejas Ajustables
@@ -47,7 +70,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/vwnUBjHUBak?autoplay=1&mute=1&loop=1&playlist=vwnUBjHUBak&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -61,7 +84,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/lata0fMeANM?autoplay=1&mute=1&loop=1&playlist=lata0fMeANM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -75,7 +98,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/Asa_U5sVsNE?autoplay=1&mute=1&loop=1&playlist=Asa_U5sVsNE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -89,7 +112,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/bQ-HiL7wgNo?autoplay=1&mute=1&loop=1&playlist=bQ-HiL7wgNo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -104,7 +127,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/_iX0L_B2m24?autoplay=1&mute=1&loop=1&playlist=_iX0L_B2m24&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -118,7 +141,7 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/x-XpJ0r-zlg?autoplay=1&mute=1&loop=1&playlist=x-XpJ0r-zlg&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
@@ -133,15 +156,15 @@ import Footer from '../components/Footer.astro';
                 <div class="video-container">
                     <iframe
                         src="https://www.youtube.com/embed/-6H7yR8JRBU?autoplay=1&mute=1&loop=1&playlist=-6H7yR8JRBU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video" frameborder="0"
+                        title="DINERBOT T9 Video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
                     </iframe>
                 </div>
                 <div class="image-gallery">
                     <div class="image-container-dual">
-                        <Image src="/DINERBOT-T10/assets/images/DINERBOT-09/DINERBOT-9-02.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
-                        <Image src="/DINERBOT-T10/assets/images/DINERBOT-09/DINERBOT-9-03.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
+                        <Image src="/assets/images/DINERBOT-09/DINERBOT-9-02.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
+                        <Image src="/assets/images/DINERBOT-09/DINERBOT-9-03.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -151,10 +174,10 @@ import Footer from '../components/Footer.astro';
     <Footer />
 
     <!-- Scripts modulares -->
-    <script src="/DINERBOT-T10/components/SlideshowManager.js" is:inline></script>
-    <script src="/DINERBOT-T10/components/NavigationManager.js" is:inline></script>
-    <script src="/DINERBOT-T10/components/AnimationManager.js" is:inline></script>
-    <script src="/DINERBOT-T10/components/app.js" is:inline></script>
+    <script src="/components/SlideshowManager.js" is:inline></script>
+    <script src="/components/NavigationManager.js" is:inline></script>
+    <script src="/components/AnimationManager.js" is:inline></script>
+    <script src="/components/app.js" is:inline></script>
 
 </body>
 </html>

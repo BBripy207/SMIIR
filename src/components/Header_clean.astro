@@ -7,13 +7,13 @@
 .apple-header {
     background: rgba(0, 0, 0, 0.92);
     backdrop-filter: blur(20px);
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 12px 0;
-    min-height: 80px;
+    padding: 8px 0;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,8 +107,8 @@
     }
     
     .apple-header {
-        min-height: 120px;
-        padding: 16px 0;
+        min-height: 90px;
+        padding: 8px 0;
     }
 }
 </style>
@@ -126,15 +126,9 @@
     </div>
 </header>
 
-<!-- Espaciado para el contenido debajo del header fijo -->
+<!-- El header ahora es estático y el contenido va justo debajo -->
 <style>
-main, .presentation-container {
-    margin-top: 100px;
-}
-
-@media (max-width: 768px) {
-    main, .presentation-container {
-        margin-top: 140px;
-    }
+main, .presentation-container, .products-page {
+    /* Sin padding extra - contenido justo debajo del header */
 }
 </style>

@@ -50,10 +50,20 @@
     letter-spacing: -0.01em;
     transition: color 0.3s ease;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .nav-item:hover {
     color: #ffffff;
+}
+
+.nav-product-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 /* Dropdown para Productos */
@@ -170,24 +180,11 @@
         <img src="/assets/images/simir.png" alt="SIMIR" class="logo">
         
         <nav class="nav-menu">
-            <div class="products-dropdown">
-                <a href="#" class="nav-item">Productos</a>
-                <div class="products-content">
-                    <div class="products-grid">
-                        <a href="/butlerbot" class="product-card">
-                            <div class="product-icon">
-                                <img src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9">
-                            </div>
-                            <h3 class="product-name">DINERBOT T9</h3>
-                        </a>
-                        <a href="/dinerbot-t10" class="product-card">
-                            <div class="product-icon">
-                                <img src="/assets/images/1.png" alt="DINERBOT T10">
-                            </div>
-                            <h3 class="product-name">DINERBOT T10</h3>
-                        </a>
-                    </div>
-                </div>
+            <div class="products-item">
+                <a href="/productos" class="nav-item">
+                    <img src="/assets/images/1.png" alt="Productos" class="nav-product-icon">
+                    Productos
+                </a>
             </div>
         </nav>
         

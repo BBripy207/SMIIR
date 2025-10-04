@@ -12,69 +12,86 @@ const description = "Soluciones avanzadas de robótica para servicio autónomo -
 <BaseLayout title={title} description={description}>
     
     <style>
-        .main-content {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Sección de Novedades */
+        .novedades-section {
+            padding: 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            padding: 80px 20px 20px;
         }
         
-        .welcome-section {
-            max-width: 800px;
-        }
-        
-        .welcome-title {
-            font-size: 3.5rem;
+        .novedades-title {
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .welcome-subtitle {
-            font-size: 1.2rem;
-            color: #a1a1aa;
-            margin-bottom: 2rem;
+        .dinerbots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 1rem;
         }
         
-        .cta-button {
-            display: inline-block;
-            padding: 12px 32px;
-            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
-            color: white;
+        .dinerbot-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        .dinerbot-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(74, 158, 255, 0.3);
+        }
+        
+        .dinerbot-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: all 0.4s ease;
         }
         
         @media (max-width: 768px) {
-            .welcome-title {
-                font-size: 2.5rem;
+            .novedades-section {
+                padding: 1.5rem 1rem;
+            }
+            
+            .novedades-title {
+                font-size: 2rem;
+            }
+            
+            .dinerbots-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .dinerbot-image {
+                height: 300px;
             }
         }
     </style>
 
     <HeaderApple />
 
-    <main class="main-content">
-        <div class="welcome-section">
-            <h1 class="welcome-title">Bienvenido a SIMIR</h1>
-            <p class="welcome-subtitle">
-                Soluciones avanzadas de robótica para el futuro del servicio autónomo
-            </p>
-            <a href="#" class="cta-button">Explorar Productos</a>
+    <section class="novedades-section">
+        <h2 class="novedades-title">Novedades</h2>
+        <div class="dinerbots-grid">
+            <a href="/dinerbot-t10" class="dinerbot-card">
+                <img src="/assets/images/1.png" alt="DINERBOT T10" class="dinerbot-image">
+            </a>
+            <a href="/butlerbot" class="dinerbot-card">
+                <img src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" class="dinerbot-image">
+            </a>
         </div>
-    </main>
+    </section>
 
     <Footer />
     <FloatingButtons />

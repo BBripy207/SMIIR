@@ -1,0 +1,208 @@
+---
+// Header estilo Apple para SIMIR
+---
+
+<style>
+/* Header estilo Apple */
+.apple-header {
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 24px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.nav-item {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+}
+
+/* Dropdown para Productos */
+.products-dropdown {
+    position: relative;
+}
+
+.products-content {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 40px;
+    min-width: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.products-dropdown:hover .products-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    color: #f5f5f7;
+}
+
+.product-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.product-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-link {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .products-content {
+        min-width: 90vw;
+        left: 5vw;
+        transform: none;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<header class="apple-header">
+    <div class="header-content">
+        <img src="/assets/images/simir.png" alt="SIMIR" class="logo">
+        
+        <nav class="nav-menu">
+            <div class="products-dropdown">
+                <a href="#" class="nav-item">Productos</a>
+                <div class="products-content">
+                    <div class="products-grid">
+                        <a href="/butlerbot" class="product-card">
+                            <div class="product-icon">
+                                <img src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9">
+                            </div>
+                            <h3 class="product-name">DINERBOT T9</h3>
+                        </a>
+                        <a href="/dinerbot-t10" class="product-card">
+                            <div class="product-icon">
+                                <img src="/assets/images/1.png" alt="DINERBOT T10">
+                            </div>
+                            <h3 class="product-name">DINERBOT T10</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="contact-section">
+            <a href="tel:+526145518651" class="contact-link">📞</a>
+            <a href="https://wa.me/message/PGBVC2B2SREDG1" class="contact-link" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Espaciado para el contenido debajo del header fijo -->
+<style>
+main, .presentation-container {
+    margin-top: 48px;
+}
+</style>

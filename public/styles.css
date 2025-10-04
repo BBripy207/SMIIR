@@ -1,0 +1,133 @@
+/* Estilos para DINERBOT T10 - EXACTAMENTE IGUAL AL ORIGINAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.presentation-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #4A9EFF 0%, #007BFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.highlight {
+    color: #4A9EFF;
+    font-weight: 900;
+}
+
+.image-container {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.presentation-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(74, 158, 255, 0.3);
+}
+
+.interaction-title,
+.service-title,
+.safeguard-title,
+.simplicity-title,
+.styles-title,
+.navigation-title,
+.algorithms-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 3rem 0 1.5rem 0;
+    color: #4A9EFF;
+    text-align: center;
+}
+
+.tech-description,
+.detection-description,
+.customization-description,
+.mapping-description,
+.algorithms-description {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #b3b3b3;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.highlight-text {
+    color: #4A9EFF;
+    font-weight: 700;
+}
+
+.video-container {
+    margin: 3rem auto;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .interaction-title,
+    .service-title,
+    .safeguard-title,
+    .simplicity-title,
+    .styles-title,
+    .navigation-title,
+    .algorithms-title {
+        font-size: 1.8rem;
+    }
+
+    .tech-description,
+    .detection-description,
+    .customization-description,
+    .mapping-description,
+    .algorithms-description {
+        font-size: 1.1rem;
+    }
+
+    .presentation-container {
+        padding: 1rem;
+    }
+}

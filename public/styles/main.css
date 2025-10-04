@@ -1,0 +1,30 @@
+/* 
+DINERBOT T10 - Main Stylesheet
+Arquitectura CSS modular y escalable
+*/
+
+/* Base styles - Variables, reset, utilidades */
+@import url('base.css');
+
+/* Layout components - Grid, flexbox, containers */
+@import url('layout.css');
+
+/* Typography - Tipografía y estilos de texto */
+@import url('typography.css');
+
+/* Components - Componentes reutilizables */
+@import url('components.css');
+
+/* Responsive design - Media queries */
+@import url('responsive.css');
+
+/* 
+Orden de importación siguiendo la metodología ITCSS:
+1. Settings (variables)
+2. Tools (mixins, funciones - no aplicable en CSS puro)
+3. Generic (reset, normalize)
+4. Elements (elementos HTML base)
+5. Objects (patrones de diseño, layout)
+6. Components (componentes UI)
+7. Utilities (clases de utilidad)
+*/

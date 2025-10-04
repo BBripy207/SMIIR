@@ -1,0 +1,36 @@
+.header {
+    background: #000;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.icon {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.icon:hover {
+    color: #4A9EFF;
+    transform: scale(1.1);
+}

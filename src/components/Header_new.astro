@@ -1,0 +1,248 @@
+---
+---
+
+<header class="header">
+    <!-- Menú hamburguesa para móviles -->
+    <button class="mobile-menu-btn" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <img src="/DINERBOT-T10/assets/images/simir.png" alt="SIMIR" class="logo">
+    
+    <div class="contact-icons-mobile">
+        <a href="tel:+526145518651" class="icon">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/message/PGBVC2B2SREDG1" class="icon" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <nav class="nav" id="nav">
+        <button class="close-menu-btn">&times;</button>
+        <a href="#" class="nav-link">Productos</a>
+        <a href="#" class="nav-link">Soluciones</a>
+        <a href="#" class="nav-link">Historias de Clientes</a>
+        <a href="#" class="nav-link">Noticias</a>
+        <a href="#" class="nav-link">Acerca de SIMIR</a>
+        <div class="nav-contact-icons">
+            <a href="tel:+526145518651" class="icon">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/message/PGBVC2B2SREDG1" class="icon" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<style>
+.header {
+    background: #0a0a0a;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    height: 35px;
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.icon {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+.icon:hover {
+    color: #4a9eff;
+}
+
+/* Menú hamburguesa - OCULTO en desktop */
+.mobile-menu-btn {
+    display: none;
+}
+
+.contact-icons-mobile {
+    display: none;
+}
+
+.close-menu-btn {
+    display: none;
+}
+
+.nav-contact-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* MÓVIL: Todo en una fila horizontal */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1000;
+        position: relative;
+        order: 1;
+    }
+    
+    .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+    
+    .logo {
+        height: 40px;
+        order: 2;
+        margin-left: 1rem;
+    }
+    
+    .contact-icons-mobile {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-left: auto;
+        order: 3;
+    }
+    
+    /* Ocultar nav principal en móvil */
+    .nav {
+        display: none;
+    }
+    
+    /* Menú desplegable cuando está activo */
+    .nav.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 1001;
+        gap: 2rem;
+    }
+    
+    .nav.active .close-menu-btn {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1003;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav.active .nav-link {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .nav.active .nav-contact-icons {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+}
+</style>
+
+<script is:inline>
+// Función global para manejar el menú
+window.initMobileMenu = function() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const closeBtn = document.querySelector('.close-menu-btn');
+    const nav = document.querySelector('.nav');
+    
+    console.log('Inicializando menú...', { menuBtn, closeBtn, nav });
+    
+    if (menuBtn) {
+        // Limpiar listeners anteriores
+        menuBtn.onclick = null;
+        menuBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburguesa clickeada');
+            if (nav) {
+                nav.classList.add('active');
+                menuBtn.style.display = 'none';
+                console.log('Menú abierto');
+            }
+        };
+    }
+    
+    if (closeBtn) {
+        closeBtn.onclick = null;
+        closeBtn.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Cerrar clickeado');
+            if (nav) {
+                nav.classList.remove('active');
+                menuBtn.style.display = 'flex';
+                console.log('Menú cerrado');
+            }
+        };
+    }
+};
+
+// Ejecutar al cargar
+document.addEventListener('DOMContentLoaded', window.initMobileMenu);
+
+// Ejecutar en navegación Astro
+document.addEventListener('astro:page-load', window.initMobileMenu);
+
+// Ejecutar inmediatamente también
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(window.initMobileMenu, 50);
+}
+</script>

@@ -30,34 +30,35 @@
     border: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #2E4BC6 0%, #1E3A8A 100%);
 }
 
 /* Botón de WhatsApp */
 .floating-btn.whatsapp {
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    background: linear-gradient(135deg, #2E4BC6 0%, #1E3A8A 100%);
 }
 
 .floating-btn.whatsapp:hover {
-    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Botón de teléfono */
 .floating-btn.phone {
-    background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+    background: linear-gradient(135deg, #2E4BC6 0%, #1E3A8A 100%);
 }
 
 .floating-btn.phone:hover {
-    background: linear-gradient(135deg, #0051D5 0%, #003D99 100%);
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 15px 35px rgba(0, 122, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Efecto de pulso para WhatsApp */
-.floating-btn.whatsapp::before {
+/* Efecto de pulso para ambos botones */
+.floating-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -65,50 +66,22 @@
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: rgba(37, 211, 102, 0.7);
-    animation: pulse-whatsapp 2s infinite;
+    background: rgba(46, 75, 198, 0.4);
+    animation: pulse-simir 3s infinite;
     z-index: -1;
 }
 
-.floating-btn.phone::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    background: rgba(0, 122, 255, 0.7);
-    animation: pulse-phone 2s infinite;
-    z-index: -1;
-}
-
-@keyframes pulse-whatsapp {
+@keyframes pulse-simir {
     0% {
         transform: scale(1);
-        opacity: 1;
+        opacity: 0.8;
     }
     70% {
-        transform: scale(1.4);
+        transform: scale(1.2);
         opacity: 0;
     }
     100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
-}
-
-@keyframes pulse-phone {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    70% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1.4);
+        transform: scale(1.2);
         opacity: 0;
     }
 }
@@ -169,6 +142,6 @@
     <a href="tel:+526145518651" 
        class="floating-btn phone" 
        data-tooltip="Llamar">
-        📞
+        <i class="fas fa-phone"></i>
     </a>
 </div>

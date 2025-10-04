@@ -1,8 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import { ViewTransitions } from 'astro:transitions';
-import HeaderApple from '../components/Header_apple_new.astro';
+import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
 
 // Metadatos SEO
 const title = "DINERBOT T9";
@@ -179,5 +180,6 @@ const description = "Presentación del robot DINERBOT T9 - Versión anterior del
     <script src="/components/AnimationManager.js" is:inline></script>
     <script src="/components/app.js" is:inline></script>
 
+    <FloatingButtons />
 </body>
 </html>

@@ -1,20 +1,11 @@
 ---
-// Header estilo Apple con tarjeta grande para SIMIR
+// Header estilo Apple limpio - solo logo y productos a la izquierda
 ---
 
 <style>
-/* Header estilo Apple con tarjeta grande */
+/* Header estilo Apple limpio */
 .apple-header {
-    backgrou    <div class="header-content">
-        <img src="/assets/images/simir.png" alt="SIMIR" class="logo">
-        
-        <a href="/productos" class="products-card">
-            <img src="/assets/images/1.png" alt="DINERBOT T10" class="product-icon-large">
-            <div class="product-text">
-                <h2 class="product-title">Productos</h2>
-            </div>
-        </a>
-    </div>.92);
+    background: rgba(0, 0, 0, 0.92);
     backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
@@ -44,7 +35,7 @@
     flex-shrink: 0;
 }
 
-/* Tarjeta grande de Productos estilo iPhone */
+/* Tarjeta de Productos estilo iPhone */
 .products-card {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
     border: 1px solid rgba(102, 126, 234, 0.3);
@@ -96,41 +87,11 @@
     text-align: center;
 }
 
-.contact-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-.contact-link {
-    color: #f5f5f7;
-    text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px 20px;
+        justify-content: center;
+        gap: 20px;
     }
     
     .products-card {
@@ -146,12 +107,8 @@
     }
     
     .apple-header {
-        min-height: 140px;
+        min-height: 120px;
         padding: 16px 0;
-    }
-    
-    .contact-section {
-        justify-content: center;
     }
 }
 </style>
@@ -166,15 +123,6 @@
                 <h2 class="product-title">Productos</h2>
             </div>
         </a>
-        
-        <div class="contact-section">
-            <a href="tel:+526145518651" class="contact-link" title="Llamar">
-                📞
-            </a>
-            <a href="https://wa.me/message/PGBVC2B2SREDG1" class="contact-link" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
     </div>
 </header>
 
@@ -186,7 +134,7 @@ main, .presentation-container {
 
 @media (max-width: 768px) {
     main, .presentation-container {
-        margin-top: 160px;
+        margin-top: 140px;
     }
 }
 </style>

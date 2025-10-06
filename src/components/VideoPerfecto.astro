@@ -2,7 +2,9 @@
 export interface Props {
     title: string;
     description: string;
-    videoId: string;
+    videoId?: string;
+    imageUrl?: string;
+    imageAlt?: string;
     titleClass?: string;
     descriptionClass?: string;
 }
@@ -11,6 +13,8 @@ const {
     title,
     description,
     videoId,
+    imageUrl,
+    imageAlt,
     titleClass = 'interaction-title',
     descriptionClass = 'tech-description',
 } = Astro.props;
@@ -20,15 +24,27 @@ const {
     {title}
 </h2>
 <p class={descriptionClass} set:html={description} />
-<div class="video-container">
-    <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1`}
-        title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-    >
-    </iframe>
-</div>
+
+{
+    videoId && (
+        <div class="video-container">
+            <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1`}
+                title={title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+        </div>
+    )
+}
+
+{
+    imageUrl && (
+        <div class="video-container">
+            <img src={imageUrl} alt={imageAlt || title} class="content-image" />
+        </div>
+    )
+}
 
 <style>
     /* EXACTAMENTE como dinerbot-t10 - SOLO CSS para iframe */
@@ -42,6 +58,23 @@ const {
     }
 
     .video-container iframe:hover {
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Mismo estilo para imágenes */
+    .video-container img.content-image {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .video-container img.content-image:hover {
         box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
     }
 

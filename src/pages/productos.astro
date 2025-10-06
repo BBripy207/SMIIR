@@ -4,11 +4,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
+import ProductCard from '../components/ProductCard.astro';
 
 // Metadatos SEO
 const title = 'Productos SIMIR - DINERBOT T9 y T10';
 const description =
     'Explora nuestra línea completa de robots de servicio autónomo - DINERBOT T9 y T10';
+
+// Datos de productos
+const t10Features = [
+    'Navegación y mapeo inteligente',
+    'Algoritmos de IA patentados',
+    'Interacción mejorada',
+    'Estilos versátiles',
+];
+
+const t9Features = [
+    'Capacidad de carga 40kg',
+    'Sistema de navegación estable',
+    'Interfaz intuitiva',
+    'Diseño robusto',
+];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -187,53 +203,23 @@ const description =
             </p>
 
             <div class="products-grid">
-                <!-- DINERBOT T10 -->
-                <a href="/dinerbot-t10" class="product-card">
-                    <div class="product-image">
-                        <Image
-                            src="/assets/images/1.png"
-                            alt="DINERBOT T10"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
-                    <h2 class="product-name">DINERBOT T10</h2>
-                    <p class="product-description">
-                        La última generación de robots de servicio con
-                        tecnología avanzada de IA y navegación autónoma
-                    </p>
-                    <ul class="product-features">
-                        <li>Navegación y mapeo inteligente</li>
-                        <li>Algoritmos de IA patentados</li>
-                        <li>Interacción mejorada</li>
-                        <li>Estilos versátiles</li>
-                    </ul>
-                    <span class="cta-button">Ver Detalles</span>
-                </a>
+                <ProductCard
+                    name="DINERBOT T10"
+                    description="La última generación de robots de servicio con tecnología avanzada de IA y navegación autónoma"
+                    features={t10Features}
+                    imageUrl="/assets/images/1.png"
+                    imageAlt="DINERBOT T10"
+                    linkUrl="/dinerbot-t10"
+                />
 
-                <!-- DINERBOT T9 -->
-                <a href="/butlerbot" class="product-card">
-                    <div class="product-image">
-                        <Image
-                            src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
-                            alt="DINERBOT T9"
-                            width={200}
-                            height={200}
-                        />
-                    </div>
-                    <h2 class="product-name">DINERBOT T9</h2>
-                    <p class="product-description">
-                        Robot de servicio confiable con capacidad de carga de
-                        40kg y funcionalidades probadas
-                    </p>
-                    <ul class="product-features">
-                        <li>Capacidad de carga 40kg</li>
-                        <li>Sistema de navegación estable</li>
-                        <li>Interfaz intuitiva</li>
-                        <li>Diseño robusto</li>
-                    </ul>
-                    <span class="cta-button">Ver Detalles</span>
-                </a>
+                <ProductCard
+                    name="DINERBOT T9"
+                    description="Robot de servicio confiable con capacidad de carga de 40kg y funcionalidades probadas"
+                    features={t9Features}
+                    imageUrl="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                    imageAlt="DINERBOT T9"
+                    linkUrl="/butlerbot"
+                />
             </div>
         </div>
     </main>

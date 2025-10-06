@@ -5,12 +5,12 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 
 // Metadatos SEO
-const title = "SIMIR - Sistemas de Robótica";
-const description = "Soluciones avanzadas de robótica para servicio autónomo - DINERBOT T9 y T10";
+const title = 'SIMIR - Sistemas de Robótica';
+const description =
+    'Soluciones avanzadas de robótica para servicio autónomo - DINERBOT T9 y T10';
 ---
 
 <BaseLayout title={title} description={description}>
-    
     <style>
         /* Sección de Novedades */
         .novedades-section {
@@ -19,24 +19,24 @@ const description = "Soluciones avanzadas de robótica para servicio autónomo -
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .novedades-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .dinerbots-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
             margin-top: 1rem;
         }
-        
+
         .dinerbot-card {
             position: relative;
             border-radius: 20px;
@@ -45,12 +45,11 @@ const description = "Soluciones avanzadas de robótica para servicio autónomo -
             cursor: pointer;
             text-decoration: none;
         }
-        
+
         .dinerbot-card:hover {
-            transform: translateY(-10px) scale(1.02);
             box-shadow: 0 20px 40px rgba(74, 158, 255, 0.3);
         }
-        
+
         .dinerbot-image {
             width: 100%;
             height: 400px;
@@ -58,21 +57,21 @@ const description = "Soluciones avanzadas de robótica para servicio autónomo -
             border-radius: 20px;
             transition: all 0.4s ease;
         }
-        
+
         @media (max-width: 768px) {
             .novedades-section {
                 padding: 1.5rem 1rem;
             }
-            
+
             .novedades-title {
                 font-size: 2rem;
             }
-            
+
             .dinerbots-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-            
+
             .dinerbot-image {
                 height: 300px;
             }
@@ -85,10 +84,18 @@ const description = "Soluciones avanzadas de robótica para servicio autónomo -
         <h2 class="novedades-title">Novedades</h2>
         <div class="dinerbots-grid">
             <a href="/dinerbot-t10" class="dinerbot-card">
-                <img src="/assets/images/1.png" alt="DINERBOT T10" class="dinerbot-image">
+                <img
+                    src="/assets/images/1.png"
+                    alt="DINERBOT T10"
+                    class="dinerbot-image"
+                />
             </a>
             <a href="/butlerbot" class="dinerbot-card">
-                <img src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" class="dinerbot-image">
+                <img
+                    src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                    alt="DINERBOT T9"
+                    class="dinerbot-image"
+                />
             </a>
         </div>
     </section>

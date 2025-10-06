@@ -6,8 +6,9 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 
 // Metadatos SEO
-const title = "Productos SIMIR - DINERBOT T9 y T10";
-const description = "Explora nuestra línea completa de robots de servicio autónomo - DINERBOT T9 y T10";
+const title = 'Productos SIMIR - DINERBOT T9 y T10';
+const description =
+    'Explora nuestra línea completa de robots de servicio autónomo - DINERBOT T9 y T10';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -16,23 +17,23 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             min-height: 100vh;
             padding: 20px 20px 60px;
         }
-        
+
         .products-container {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
-        
+
         .page-title {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .page-subtitle {
             font-size: 1.2rem;
             color: #a1a1aa;
@@ -41,14 +42,14 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 60px;
             margin-top: 4rem;
         }
-        
+
         .product-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -60,7 +61,7 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             overflow: hidden;
         }
-        
+
         .product-card::before {
             content: '';
             position: absolute;
@@ -68,21 +69,24 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            background: linear-gradient(
+                135deg,
+                rgba(30, 58, 138, 0.1) 0%,
+                rgba(59, 130, 246, 0.1) 100%
+            );
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        
+
         .product-card:hover::before {
             opacity: 1;
         }
-        
+
         .product-card:hover {
-            transform: translateY(-8px);
             border-color: rgba(30, 58, 138, 0.5);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        
+
         .product-image {
             width: 200px;
             height: 200px;
@@ -92,18 +96,13 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             z-index: 1;
         }
-        
+
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
         }
-        
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-        
+
         .product-name {
             font-size: 2rem;
             font-weight: 600;
@@ -111,7 +110,7 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             z-index: 1;
         }
-        
+
         .product-description {
             font-size: 1rem;
             color: #a1a1aa;
@@ -120,7 +119,7 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             z-index: 1;
         }
-        
+
         .product-features {
             list-style: none;
             text-align: left;
@@ -128,26 +127,26 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             z-index: 1;
         }
-        
+
         .product-features li {
             padding: 8px 0;
             padding-left: 20px;
             position: relative;
             color: #d1d1d6;
         }
-        
+
         .product-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: #1E3A8A;
+            color: #1e3a8a;
             font-weight: bold;
         }
-        
+
         .cta-button {
             display: inline-block;
             padding: 12px 32px;
-            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
             text-decoration: none;
             border-radius: 12px;
@@ -156,22 +155,21 @@ const description = "Explora nuestra línea completa de robots de servicio autó
             position: relative;
             z-index: 1;
         }
-        
+
         .cta-button:hover {
-            transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
         }
-        
+
         @media (max-width: 768px) {
             .page-title {
                 font-size: 2.5rem;
             }
-            
+
             .products-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .product-card {
                 padding: 30px;
             }
@@ -184,18 +182,25 @@ const description = "Explora nuestra línea completa de robots de servicio autó
         <div class="products-container">
             <h1 class="page-title">Nuestros Productos</h1>
             <p class="page-subtitle">
-                Descubre nuestra línea completa de robots de servicio autónomo, diseñados para revolucionar la experiencia de servicio
+                Descubre nuestra línea completa de robots de servicio autónomo,
+                diseñados para revolucionar la experiencia de servicio
             </p>
-            
+
             <div class="products-grid">
                 <!-- DINERBOT T10 -->
                 <a href="/dinerbot-t10" class="product-card">
                     <div class="product-image">
-                        <Image src="/assets/images/1.png" alt="DINERBOT T10" width={200} height={200} />
+                        <Image
+                            src="/assets/images/1.png"
+                            alt="DINERBOT T10"
+                            width={200}
+                            height={200}
+                        />
                     </div>
                     <h2 class="product-name">DINERBOT T10</h2>
                     <p class="product-description">
-                        La última generación de robots de servicio con tecnología avanzada de IA y navegación autónoma
+                        La última generación de robots de servicio con
+                        tecnología avanzada de IA y navegación autónoma
                     </p>
                     <ul class="product-features">
                         <li>Navegación y mapeo inteligente</li>
@@ -205,15 +210,21 @@ const description = "Explora nuestra línea completa de robots de servicio autó
                     </ul>
                     <span class="cta-button">Ver Detalles</span>
                 </a>
-                
+
                 <!-- DINERBOT T9 -->
                 <a href="/butlerbot" class="product-card">
                     <div class="product-image">
-                        <Image src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" width={200} height={200} />
+                        <Image
+                            src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                            alt="DINERBOT T9"
+                            width={200}
+                            height={200}
+                        />
                     </div>
                     <h2 class="product-name">DINERBOT T9</h2>
                     <p class="product-description">
-                        Robot de servicio confiable con capacidad de carga de 40kg y funcionalidades probadas
+                        Robot de servicio confiable con capacidad de carga de
+                        40kg y funcionalidades probadas
                     </p>
                     <ul class="product-features">
                         <li>Capacidad de carga 40kg</li>

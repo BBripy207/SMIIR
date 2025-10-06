@@ -6,180 +6,220 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 
 // Metadatos SEO
-const title = "DINERBOT T9 - SIMIR";
-const description = "Presentación del robot DINERBOT T9 - Versión anterior del sistema de servicio autónomo";
+const title = 'DINERBOT T9 - SIMIR';
+const description =
+    'Presentación del robot DINERBOT T9 - Versión anterior del sistema de servicio autónomo';
 ---
 
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <meta name="description" content={description}>
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smiir.com.mx/butlerbot">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/typography.css">
-    <link rel="stylesheet" href="/styles/components.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* CSS moderno para iframes */
-        .video-container iframe {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .video-container iframe:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
-        }
-    </style>
-    
-    <!-- View Transitions para navegación fluida -->
-    <ViewTransitions />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx/butlerbot" />
 
-<body>
-    <HeaderApple />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/typography.css" />
+        <link rel="stylesheet" href="/styles/components.css" />
+        <link rel="stylesheet" href="/styles/responsive.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
 
-    <div class="presentation-container">
-        <div class="content">
-            <div class="content-text">
-                <h1 class="main-title">
-                    DINERBOT <span class="highlight">T9</span>
-                </h1>
+        <style>
+            /* CSS moderno para iframes */
+            .video-container iframe {
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
 
-                <div class="image-container">
-                    <Image src="/assets/images/DINERBOT-09/DINERBOT-9-01.png" alt="DINERBOT T9" class="presentation-image" width={800} height={600} loading="lazy" />
-                </div>
-                <h2 class="interaction-title-purple">
-                    Bandejas Ajustables
-                </h2>
-                <p class="tech-description">
-                    Las bandejas permiten alturas de espacio ajustable de 19.5cm, 16.9cm, 25.3, 22.8cm
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/vwnUBjHUBak?autoplay=1&mute=1&loop=1&playlist=vwnUBjHUBak&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Capacidad de carga de 40 kg
-                </h2>
-                <p class="tech-description">
-                    Total de 40kg 10kg por bandeja, para un servicio de alimentos y bebidas eficiente
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/lata0fMeANM?autoplay=1&mute=1&loop=1&playlist=lata0fMeANM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Carga Automática
-                </h2>
-                <p class="tech-description">
-                    Mayor duración de la batería, con una sola carga puede durar hasta 18 horas
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/Asa_U5sVsNE?autoplay=1&mute=1&loop=1&playlist=Asa_U5sVsNE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Gran pantalla Táctil, Altura Perfecta
-                </h2>
-                <p class="tech-description">
-                    Optimiza las operaciones diarias con una gran pantalla táctil y una altura ideal
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/bQ-HiL7wgNo?autoplay=1&mute=1&loop=1&playlist=bQ-HiL7wgNo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Navegación y posicionamiento precisos
-                </h2>
-                <p class="tech-description">
-                    Elaboración de mapas de posicionamiento precisos con recolección de datos espaciales sin
-                    interrupciones para máxima fiabilidad
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/_iX0L_B2m24?autoplay=1&mute=1&loop=1&playlist=_iX0L_B2m24&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Sinergia de percepción 3D con respuesta instantánea
-                </h2>
-                <p class="tech-description">
-                    Percepción ambiental precisa para una rápida evasión
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/x-XpJ0r-zlg?autoplay=1&mute=1&loop=1&playlist=x-XpJ0r-zlg&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <h2 class="interaction-title-purple">
-                    Algoritmos patentados y distribución multi-robot
-                </h2>
-                <p class="tech-description">
-                    Los algoritmos de IA patentados permiten a los robots optimizar la planificación de rutas para una
-                    ejecución eficiente de tareas
-                </p>
-                <div class="video-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/-6H7yR8JRBU?autoplay=1&mute=1&loop=1&playlist=-6H7yR8JRBU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                        title="DINERBOT T9 Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="image-gallery">
-                    <div class="image-container-dual">
-                        <Image src="/assets/images/DINERBOT-09/DINERBOT-9-02.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
-                        <Image src="/assets/images/DINERBOT-09/DINERBOT-9-03.png" alt="DINERBOT T9" class="presentation-image" width={500} height={400} loading="lazy" />
+            .video-container iframe:hover {
+                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            }
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <div class="presentation-container">
+            <div class="content">
+                <div class="content-text">
+                    <h1 class="main-title">
+                        DINERBOT <span class="highlight">T9</span>
+                    </h1>
+
+                    <div class="image-container">
+                        <Image
+                            src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                            alt="DINERBOT T9"
+                            class="presentation-image"
+                            width={800}
+                            height={600}
+                            loading="lazy"
+                        />
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Bandejas Ajustables
+                    </h2>
+                    <p class="tech-description">
+                        Las bandejas permiten alturas de espacio ajustable de
+                        19.5cm, 16.9cm, 25.3, 22.8cm
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/vwnUBjHUBak?autoplay=1&mute=1&loop=1&playlist=vwnUBjHUBak&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Capacidad de carga de 40 kg
+                    </h2>
+                    <p class="tech-description">
+                        Total de 40kg 10kg por bandeja, para un servicio de
+                        alimentos y bebidas eficiente
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/lata0fMeANM?autoplay=1&mute=1&loop=1&playlist=lata0fMeANM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">Carga Automática</h2>
+                    <p class="tech-description">
+                        Mayor duración de la batería, con una sola carga puede
+                        durar hasta 18 horas
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/Asa_U5sVsNE?autoplay=1&mute=1&loop=1&playlist=Asa_U5sVsNE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Gran pantalla Táctil, Altura Perfecta
+                    </h2>
+                    <p class="tech-description">
+                        Optimiza las operaciones diarias con una gran pantalla
+                        táctil y una altura ideal
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/bQ-HiL7wgNo?autoplay=1&mute=1&loop=1&playlist=bQ-HiL7wgNo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Navegación y posicionamiento precisos
+                    </h2>
+                    <p class="tech-description">
+                        Elaboración de mapas de posicionamiento precisos con
+                        recolección de datos espaciales sin interrupciones para
+                        máxima fiabilidad
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/_iX0L_B2m24?autoplay=1&mute=1&loop=1&playlist=_iX0L_B2m24&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Sinergia de percepción 3D con respuesta instantánea
+                    </h2>
+                    <p class="tech-description">
+                        Percepción ambiental precisa para una rápida evasión
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/x-XpJ0r-zlg?autoplay=1&mute=1&loop=1&playlist=x-XpJ0r-zlg&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <h2 class="interaction-title-purple">
+                        Algoritmos patentados y distribución multi-robot
+                    </h2>
+                    <p class="tech-description">
+                        Los algoritmos de IA patentados permiten a los robots
+                        optimizar la planificación de rutas para una ejecución
+                        eficiente de tareas
+                    </p>
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/-6H7yR8JRBU?autoplay=1&mute=1&loop=1&playlist=-6H7yR8JRBU&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
+                            title="DINERBOT T9 Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                    <div class="image-gallery">
+                        <div class="image-container-dual">
+                            <Image
+                                src="/assets/images/DINERBOT-09/DINERBOT-9-02.png"
+                                alt="DINERBOT T9"
+                                class="presentation-image"
+                                width={500}
+                                height={400}
+                                loading="lazy"
+                            />
+                            <Image
+                                src="/assets/images/DINERBOT-09/DINERBOT-9-03.png"
+                                alt="DINERBOT T9"
+                                class="presentation-image"
+                                width={500}
+                                height={400}
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <Footer />
 
-    <!-- Scripts modulares -->
-    <script src="/components/SlideshowManager.js" is:inline></script>
-    <script src="/components/NavigationManager.js" is:inline></script>
-    <script src="/components/AnimationManager.js" is:inline></script>
-    <script src="/components/app.js" is:inline></script>
+        <Footer />
 
-    <FloatingButtons />
-</body>
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
 </html>

@@ -4,108 +4,121 @@ import HeaderApple from '../components/Header_apple.astro';
 import Footer from '../components/Footer.astro';
 
 // Metadatos SEO
-const title = "SIMIR - Sistemas de Robótica";
-const description = "Soluciones avanzadas de robótica para servicio autónomo - DINERBOT T9 y T10";
+const title = 'SIMIR - Sistemas de Robótica';
+const description =
+    'Soluciones avanzadas de robótica para servicio autónomo - DINERBOT T9 y T10';
 ---
 
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <meta name="description" content={description}>
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content={title}>
-    <meta property="og:description" content={description}>
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smiir.com.mx">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #000;
-            color: #f5f5f7;
-            line-height: 1.6;
-        }
-        
-        .main-content {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px 20px;
-        }
-        
-        .welcome-section {
-            max-width: 800px;
-        }
-        
-        .welcome-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .welcome-subtitle {
-            font-size: 1.2rem;
-            color: #a1a1aa;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 32px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
-        
-        @media (max-width: 768px) {
-            .welcome-title {
-                font-size: 2.5rem;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-        }
-    </style>
-    
-    <!-- View Transitions para navegación fluida -->
-    <ViewTransitions />
-</head>
 
-<body>
-    <HeaderApple />
+            body {
+                font-family:
+                    'Inter',
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;
+                background: #000;
+                color: #f5f5f7;
+                line-height: 1.6;
+            }
 
-    <main class="main-content">
-        <div class="welcome-section">
-            <h1 class="welcome-title">Bienvenido a SIMIR</h1>
-            <p class="welcome-subtitle">
-                Soluciones avanzadas de robótica para el futuro del servicio autónomo
-            </p>
-            <a href="#" class="cta-button">Explorar Productos</a>
-        </div>
-    </main>
+            .main-content {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 80px 20px 20px;
+            }
 
-    <Footer />
-</body>
+            .welcome-section {
+                max-width: 800px;
+            }
+
+            .welcome-title {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .welcome-subtitle {
+                font-size: 1.2rem;
+                color: #a1a1aa;
+                margin-bottom: 2rem;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 12px 32px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: 500;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .cta-button:hover {
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            }
+
+            @media (max-width: 768px) {
+                .welcome-title {
+                    font-size: 2.5rem;
+                }
+            }
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <main class="main-content">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Bienvenido a SIMIR</h1>
+                <p class="welcome-subtitle">
+                    Soluciones avanzadas de robótica para el futuro del servicio
+                    autónomo
+                </p>
+                <a href="#" class="cta-button">Explorar Productos</a>
+            </div>
+        </main>
+
+        <Footer />
+    </body>
 </html>

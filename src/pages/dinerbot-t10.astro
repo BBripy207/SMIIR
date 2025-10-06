@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import VideoPerfecto from '../components/VideoPerfecto.astro';
 import ImageContainer from '../components/ImageContainer.astro';
+import MainTitle from '../components/MainTitle.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T10 - SIMIR';
@@ -64,9 +65,7 @@ const description =
 
         <div class="presentation-container">
             <div class="content">
-                <h1 class="main-title">
-                    DINERBOT <span class="highlight">T10</span>
-                </h1>
+                <MainTitle robotName="DINERBOT" version="T10" />
                 <ImageContainer
                     src="/assets/images/1.png"
                     alt="DINERBOT T10 Introducción"

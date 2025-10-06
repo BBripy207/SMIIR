@@ -1,0 +1,13 @@
+---
+export interface Props {
+    robotName: string;
+    version: string;
+}
+
+const { robotName, version } = Astro.props;
+---
+
+<h1 class="main-title">
+    {robotName}
+    <span class="highlight">{version}</span>
+</h1>

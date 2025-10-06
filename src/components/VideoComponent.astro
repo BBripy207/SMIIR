@@ -1,0 +1,105 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    videoId: string;
+    titleClass?: string;
+    descriptionClass?: string;
+}
+
+const {
+    title,
+    description,
+    videoId,
+    titleClass = 'interaction-title',
+    descriptionClass = 'tech-description',
+} = Astro.props;
+---
+
+<h2 class={titleClass}>
+    {title}
+</h2>
+<p class={descriptionClass} set:html={description} />
+<div class="video-container">
+    <iframe
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+    >
+    </iframe>
+</div>
+
+<style>
+    /* ESTILOS EXACTOS DEL CSS ORIGINAL */
+    .video-container {
+        margin-top: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        aspect-ratio: 16 / 9;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(74, 158, 255, 0.2);
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Títulos de navegación */
+    .navigation-title,
+    .interaction-title,
+    .service-title,
+    .safeguard-title,
+    .styles-title,
+    .algorithms-title,
+    .simplicity-title {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 700;
+        text-align: center;
+        margin-top: 3rem;
+        color: #4a9eff;
+        background: linear-gradient(135deg, #4a9eff 0%, #007bff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Títulos morados para T9 */
+    .interaction-title-purple {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 700;
+        text-align: center;
+        margin-top: 3rem;
+        color: #ba55d3;
+        background: linear-gradient(135deg, #ba55d3 0%, #8a2be2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Descripciones de secciones */
+    .customization-description,
+    .mapping-description,
+    .algorithms-description,
+    .tech-description,
+    .detection-description {
+        font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+        font-weight: 400;
+        line-height: 1.6;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        max-width: 800px;
+        opacity: 0.9;
+    }
+</style>

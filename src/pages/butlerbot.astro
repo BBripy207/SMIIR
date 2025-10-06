@@ -4,7 +4,7 @@ import { ViewTransitions } from 'astro:transitions';
 import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
-import VideoComponent from '../components/VideoComponent.astro';
+import VideoPerfecto from '../components/VideoPerfecto.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T9 - SIMIR';
@@ -78,68 +78,30 @@ const description =
                             loading="lazy"
                         />
                     </div>
-                    <h2 class="interaction-title-purple">
-                        Bandejas Ajustables
-                    </h2>
-                    <p class="tech-description">
-                        Las bandejas permiten alturas de espacio ajustable de
-                        19.5cm, 16.9cm, 25.3, 22.8cm
-                    </p>
-                    <div class="video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/vwnUBjHUBak?autoplay=1&mute=1&loop=1&playlist=vwnUBjHUBak&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                            title="DINERBOT T9 Video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        >
-                        </iframe>
-                    </div>
-                    <h2 class="interaction-title-purple">
-                        Capacidad de carga de 40 kg
-                    </h2>
-                    <p class="tech-description">
-                        Total de 40kg 10kg por bandeja, para un servicio de
-                        alimentos y bebidas eficiente
-                    </p>
-                    <div class="video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/lata0fMeANM?autoplay=1&mute=1&loop=1&playlist=lata0fMeANM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                            title="DINERBOT T9 Video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        >
-                        </iframe>
-                    </div>
-                    <h2 class="interaction-title-purple">Carga Automática</h2>
-                    <p class="tech-description">
-                        Mayor duración de la batería, con una sola carga puede
-                        durar hasta 18 horas
-                    </p>
-                    <div class="video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/Asa_U5sVsNE?autoplay=1&mute=1&loop=1&playlist=Asa_U5sVsNE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                            title="DINERBOT T9 Video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        >
-                        </iframe>
-                    </div>
-                    <h2 class="interaction-title-purple">
-                        Gran pantalla Táctil, Altura Perfecta
-                    </h2>
-                    <p class="tech-description">
-                        Optimiza las operaciones diarias con una gran pantalla
-                        táctil y una altura ideal
-                    </p>
-                    <div class="video-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/bQ-HiL7wgNo?autoplay=1&mute=1&loop=1&playlist=bQ-HiL7wgNo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&fs=0&disablekb=1"
-                            title="DINERBOT T9 Video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        >
-                        </iframe>
-                    </div>
+                    <VideoPerfecto
+                        title="Bandejas Ajustables"
+                        titleClass="interaction-title-purple"
+                        description="Las bandejas permiten alturas de espacio ajustable de 19.5cm, 16.9cm, 25.3, 22.8cm"
+                        videoId="vwnUBjHUBak"
+                    />
+                    <VideoPerfecto
+                        title="Capacidad de carga de 40 kg"
+                        titleClass="interaction-title-purple"
+                        description="Total de 40kg 10kg por bandeja, para un servicio de alimentos y bebidas eficiente"
+                        videoId="lata0fMeANM"
+                    />
+                    <VideoPerfecto
+                        title="Carga Automática"
+                        titleClass="interaction-title-purple"
+                        description="Mayor duración de la batería, con una sola carga puede durar hasta 18 horas"
+                        videoId="Asa_U5sVsNE"
+                    />
+                    <VideoPerfecto
+                        title="Gran pantalla Táctil, Altura Perfecta"
+                        titleClass="interaction-title-purple"
+                        description="Optimiza las operaciones diarias con una gran pantalla táctil y una altura ideal"
+                        videoId="bQ-HiL7wgNo"
+                    />
                     <h2 class="interaction-title-purple">
                         Navegación y posicionamiento precisos
                     </h2>

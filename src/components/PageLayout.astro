@@ -1,0 +1,16 @@
+---
+// Este componente envuelve el contenido de las páginas con el layout estándar
+---
+
+<div class="presentation-container">
+    <div class="content">
+        <slot />
+    </div>
+</div>
+
+<style>
+    /* Arreglar el espacio excesivo del header */
+    .presentation-container {
+        margin-top: 10px !important;
+    }
+</style>

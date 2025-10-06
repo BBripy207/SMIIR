@@ -7,6 +7,7 @@ import FloatingButtons from '../components/FloatingButtons.astro';
 import VideoPerfecto from '../components/VideoPerfecto.astro';
 import ImageContainer from '../components/ImageContainer.astro';
 import MainTitle from '../components/MainTitle.astro';
+import PageLayout from '../components/PageLayout.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T9 - SIMIR';
@@ -41,11 +42,6 @@ const description =
         />
 
         <style>
-            /* Arreglar el espacio excesivo del header */
-            .presentation-container {
-                margin-top: 10px !important;
-            }
-
             /* CSS moderno para iframes */
             .video-container iframe {
                 border: none;
@@ -68,76 +64,74 @@ const description =
     <body>
         <HeaderApple />
 
-        <div class="presentation-container">
-            <div class="content">
-                <div class="content-text">
-                    <MainTitle robotName="DINERBOT" version="T9" />
+        <PageLayout>
+            <div class="content-text">
+                <MainTitle robotName="DINERBOT" version="T9" />
 
-                    <ImageContainer
-                        src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
-                        alt="DINERBOT T9"
-                    />
-                    <VideoPerfecto
-                        title="Bandejas Ajustables"
-                        titleClass="interaction-title-purple"
-                        description="Las bandejas permiten alturas de espacio ajustable de 19.5cm, 16.9cm, 25.3, 22.8cm"
-                        videoId="vwnUBjHUBak"
-                    />
-                    <VideoPerfecto
-                        title="Capacidad de carga de 40 kg"
-                        titleClass="interaction-title-purple"
-                        description="Total de 40kg 10kg por bandeja, para un servicio de alimentos y bebidas eficiente"
-                        videoId="lata0fMeANM"
-                    />
-                    <VideoPerfecto
-                        title="Carga Automática"
-                        titleClass="interaction-title-purple"
-                        description="Mayor duración de la batería, con una sola carga puede durar hasta 18 horas"
-                        videoId="Asa_U5sVsNE"
-                    />
-                    <VideoPerfecto
-                        title="Gran pantalla Táctil, Altura Perfecta"
-                        titleClass="interaction-title-purple"
-                        description="Optimiza las operaciones diarias con una gran pantalla táctil y una altura ideal"
-                        videoId="bQ-HiL7wgNo"
-                    />
-                    <VideoPerfecto
-                        title="Navegación y posicionamiento precisos"
-                        titleClass="interaction-title-purple"
-                        description="Elaboración de mapas de posicionamiento precisos con recolección de datos espaciales sin interrupciones para máxima fiabilidad"
-                        videoId="_iX0L_B2m24"
-                    />
-                    <VideoPerfecto
-                        title="Sinergia de percepción 3D con respuesta instantánea"
-                        titleClass="interaction-title-purple"
-                        description="Percepción ambiental precisa para una rápida evasión"
-                        videoId="x-XpJ0r-zlg"
-                    />
-                    <VideoPerfecto
-                        title="Algoritmos patentados y distribución multi-robot"
-                        titleClass="interaction-title-purple"
-                        description="Los algoritmos de IA patentados permiten a los robots optimizar la planificación de rutas para una ejecución eficiente de tareas"
-                        videoId="-6H7yR8JRBU"
-                    />
-                    <div class="image-gallery">
-                        <div class="image-container-dual">
-                            <ImageContainer
-                                src="/assets/images/DINERBOT-09/DINERBOT-9-02.png"
-                                alt="DINERBOT T9"
-                                width={500}
-                                height={400}
-                            />
-                            <ImageContainer
-                                src="/assets/images/DINERBOT-09/DINERBOT-9-03.png"
-                                alt="DINERBOT T9"
-                                width={500}
-                                height={400}
-                            />
-                        </div>
+                <ImageContainer
+                    src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                    alt="DINERBOT T9"
+                />
+                <VideoPerfecto
+                    title="Bandejas Ajustables"
+                    titleClass="interaction-title-purple"
+                    description="Las bandejas permiten alturas de espacio ajustable de 19.5cm, 16.9cm, 25.3, 22.8cm"
+                    videoId="vwnUBjHUBak"
+                />
+                <VideoPerfecto
+                    title="Capacidad de carga de 40 kg"
+                    titleClass="interaction-title-purple"
+                    description="Total de 40kg 10kg por bandeja, para un servicio de alimentos y bebidas eficiente"
+                    videoId="lata0fMeANM"
+                />
+                <VideoPerfecto
+                    title="Carga Automática"
+                    titleClass="interaction-title-purple"
+                    description="Mayor duración de la batería, con una sola carga puede durar hasta 18 horas"
+                    videoId="Asa_U5sVsNE"
+                />
+                <VideoPerfecto
+                    title="Gran pantalla Táctil, Altura Perfecta"
+                    titleClass="interaction-title-purple"
+                    description="Optimiza las operaciones diarias con una gran pantalla táctil y una altura ideal"
+                    videoId="bQ-HiL7wgNo"
+                />
+                <VideoPerfecto
+                    title="Navegación y posicionamiento precisos"
+                    titleClass="interaction-title-purple"
+                    description="Elaboración de mapas de posicionamiento precisos con recolección de datos espaciales sin interrupciones para máxima fiabilidad"
+                    videoId="_iX0L_B2m24"
+                />
+                <VideoPerfecto
+                    title="Sinergia de percepción 3D con respuesta instantánea"
+                    titleClass="interaction-title-purple"
+                    description="Percepción ambiental precisa para una rápida evasión"
+                    videoId="x-XpJ0r-zlg"
+                />
+                <VideoPerfecto
+                    title="Algoritmos patentados y distribución multi-robot"
+                    titleClass="interaction-title-purple"
+                    description="Los algoritmos de IA patentados permiten a los robots optimizar la planificación de rutas para una ejecución eficiente de tareas"
+                    videoId="-6H7yR8JRBU"
+                />
+                <div class="image-gallery">
+                    <div class="image-container-dual">
+                        <ImageContainer
+                            src="/assets/images/DINERBOT-09/DINERBOT-9-02.png"
+                            alt="DINERBOT T9"
+                            width={500}
+                            height={400}
+                        />
+                        <ImageContainer
+                            src="/assets/images/DINERBOT-09/DINERBOT-9-03.png"
+                            alt="DINERBOT T9"
+                            width={500}
+                            height={400}
+                        />
                     </div>
                 </div>
             </div>
-        </div>
+        </PageLayout>
 
         <Footer />
 

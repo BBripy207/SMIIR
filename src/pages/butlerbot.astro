@@ -5,6 +5,7 @@ import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import VideoPerfecto from '../components/VideoPerfecto.astro';
+import ImageContainer from '../components/ImageContainer.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T9 - SIMIR';
@@ -68,16 +69,10 @@ const description =
                         DINERBOT <span class="highlight">T9</span>
                     </h1>
 
-                    <div class="image-container">
-                        <Image
-                            src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
-                            alt="DINERBOT T9"
-                            class="presentation-image"
-                            width={800}
-                            height={600}
-                            loading="lazy"
-                        />
-                    </div>
+                    <ImageContainer
+                        src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
+                        alt="DINERBOT T9"
+                    />
                     <VideoPerfecto
                         title="Bandejas Ajustables"
                         titleClass="interaction-title-purple"
@@ -122,21 +117,17 @@ const description =
                     />
                     <div class="image-gallery">
                         <div class="image-container-dual">
-                            <Image
+                            <ImageContainer
                                 src="/assets/images/DINERBOT-09/DINERBOT-9-02.png"
                                 alt="DINERBOT T9"
-                                class="presentation-image"
                                 width={500}
                                 height={400}
-                                loading="lazy"
                             />
-                            <Image
+                            <ImageContainer
                                 src="/assets/images/DINERBOT-09/DINERBOT-9-03.png"
                                 alt="DINERBOT T9"
-                                class="presentation-image"
                                 width={500}
                                 height={400}
-                                loading="lazy"
                             />
                         </div>
                     </div>

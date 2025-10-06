@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+
+export interface Props {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+    class?: string;
+}
+
+const {
+    src,
+    alt,
+    width = 800,
+    height = 600,
+    class: className = 'presentation-image',
+} = Astro.props;
+---
+
+<div class="image-container">
+    <Image
+        src={src}
+        alt={alt}
+        class={className}
+        width={width}
+        height={height}
+        loading="lazy"
+    />
+</div>
+
+<style>
+    .image-container {
+        margin: 3rem auto;
+        text-align: center;
+    }
+
+    .presentation-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(74, 158, 255, 0.2);
+    }
+</style>

@@ -5,6 +5,7 @@ import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import VideoPerfecto from '../components/VideoPerfecto.astro';
+import ImageContainer from '../components/ImageContainer.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T10 - SIMIR';
@@ -66,16 +67,10 @@ const description =
                 <h1 class="main-title">
                     DINERBOT <span class="highlight">T10</span>
                 </h1>
-                <div class="image-container">
-                    <Image
-                        src="/assets/images/1.png"
-                        alt="DINERBOT T10 Introducción"
-                        class="presentation-image"
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                    />
-                </div>
+                <ImageContainer
+                    src="/assets/images/1.png"
+                    alt="DINERBOT T10 Introducción"
+                />
                 <VideoPerfecto
                     title="Interactivo y atractivo, haciendo cada momento divertido"
                     description="Los movimientos de la cabeza son adaptativos y responden a acciones como movimiento, tacto y entrega, proporcionando feedback dinámico."
@@ -115,16 +110,10 @@ const description =
                         >Pantalla grande</span
                     >
                 </p>
-                <div class="image-container">
-                    <Image
-                        src="/assets/images/2.png"
-                        alt="DINERBOT T10 Estilos y Accesorios"
-                        class="presentation-image"
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                    />
-                </div>
+                <ImageContainer
+                    src="/assets/images/2.png"
+                    alt="DINERBOT T10 Estilos y Accesorios"
+                />
                 <VideoPerfecto
                     title="Navegación y posicionamiento precisos"
                     titleClass="navigation-title"
@@ -140,26 +129,14 @@ const description =
                     description="Los algoritmos de IA patentados permiten a los robots optimizar la planificación de rutas para una ejecución eficiente de <span class='highlight-text'>tareas</span>"
                     videoId="MqtkzA1MbYc"
                 />
-                <div class="image-container">
-                    <Image
-                        src="/assets/images/5.png"
-                        alt="DINERBOT T10 Final"
-                        class="presentation-image"
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                    />
-                </div>
-                <div class="image-container">
-                    <Image
-                        src="/assets/images/6.png"
-                        alt="DINERBOT T10 Conclusión"
-                        class="presentation-image"
-                        width={800}
-                        height={600}
-                        loading="lazy"
-                    />
-                </div>
+                <ImageContainer
+                    src="/assets/images/5.png"
+                    alt="DINERBOT T10 Final"
+                />
+                <ImageContainer
+                    src="/assets/images/6.png"
+                    alt="DINERBOT T10 Conclusión"
+                />
             </div>
         </div>
 

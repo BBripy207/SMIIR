@@ -5,11 +5,12 @@ import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import ProductCard from '../components/ProductCard.astro';
+import ProductsHero from '../components/ProductsHero.astro';
 
-// Metadatos SEO
-const title = 'Productos SIMIR - DINERBOT T9 y T10';
+// Metadatos SEO mejorados
+const title = 'Robots Meseros - Línea Completa de Robots de Servicio';
 const description =
-    'Explora nuestra línea completa de robots de servicio autónomo - DINERBOT T9 y T10';
+    'Descubre nuestra línea completa de robots de servicio autónomo: DINERBOT T10, T9, T8, T3, T11 y MAYORDOMO W3. Tecnología de vanguardia para revolucionar la industria de servicios con navegación inteligente, IA patentada y diseño innovador.';
 
 // Datos de productos
 const t10Features = [
@@ -59,7 +60,7 @@ const w3Features = [
     <style>
         .products-page {
             min-height: 100vh;
-            padding: 20px 20px 60px;
+            padding: 0 20px 60px;
         }
 
         .products-container {
@@ -68,30 +69,11 @@ const w3Features = [
             text-align: center;
         }
 
-        .page-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            color: #a1a1aa;
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 60px;
-            margin-top: 4rem;
+            margin-top: 1rem;
         }
 
         .product-card {
@@ -205,10 +187,6 @@ const w3Features = [
         }
 
         @media (max-width: 768px) {
-            .page-title {
-                font-size: 2.5rem;
-            }
-
             .products-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -223,13 +201,9 @@ const w3Features = [
     <HeaderApple />
 
     <main class="products-page">
-        <div class="products-container">
-            <h1 class="page-title">Nuestros Productos</h1>
-            <p class="page-subtitle">
-                Descubre nuestra línea completa de robots de servicio autónomo,
-                diseñados para revolucionar la experiencia de servicio
-            </p>
+        <ProductsHero />
 
+        <div class="products-container">
             <div class="products-grid">
                 <ProductCard
                     name="DINERBOT T10"

@@ -1,0 +1,63 @@
+---
+export interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = 'Robots Meseros',
+    description = 'Descubre nuestra línea completa de robots de servicio autónomo diseñados para revolucionar la industria de servicios con tecnología de vanguardia.',
+} = Astro.props;
+---
+
+<section class="products-hero">
+    <div class="hero-content">
+        <h1 class="hero-title">{title}</h1>
+        <p class="hero-description">{description}</p>
+    </div>
+</section>
+
+<style>
+    .products-hero {
+        padding: 1rem 2rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        color: #b3b3b3;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .products-hero {
+            padding: 0.5rem 1rem 0;
+        }
+
+        .hero-description {
+            margin-bottom: 0.25rem;
+        }
+    }
+</style>

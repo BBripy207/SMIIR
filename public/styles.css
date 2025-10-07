@@ -29,17 +29,6 @@ body {
     margin: 0 auto;
 }
 
-.main-title {
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 2rem;
-    background: linear-gradient(135deg, #4A9EFF 0%, #007BFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-}
-
 .highlight {
     color: #4A9EFF;
     font-weight: 900;
@@ -105,10 +94,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 2.5rem;
-    }
-
     .interaction-title,
     .service-title,
     .safeguard-title,

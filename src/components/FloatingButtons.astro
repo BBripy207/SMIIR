@@ -90,20 +90,25 @@
         }
     }
 
-    /* Botón de scroll to top */
+    /* Botón de scroll to top - aparece con scroll */
     .floating-btn.scroll-to-top {
+        cursor: pointer;
+        border: none;
         opacity: 0;
         visibility: hidden;
         transform: translateY(20px);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        cursor: pointer;
-        border: none;
+        transition: all 0.3s ease;
     }
 
-    .floating-btn.scroll-to-top.visible {
+    .floating-btn.scroll-to-top.show {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
+    }
+
+    /* Scroll suave */
+    html {
+        scroll-behavior: smooth;
     }
 
     /* Responsive */
@@ -123,9 +128,9 @@
 </style>
 
 <div class="floating-buttons">
-    <button class="floating-btn scroll-to-top" id="scrollToTop">
+    <a href="#top" class="floating-btn scroll-to-top" id="scrollBtn">
         <i class="fas fa-chevron-up"></i>
-    </button>
+    </a>
 
     <a
         href="https://wa.me/message/PGBVC2B2SREDG1"
@@ -140,34 +145,16 @@
     </a>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const scrollButton = document.getElementById(
-            'scrollToTop'
-        ) as HTMLButtonElement;
-
-        if (!scrollButton) return;
-
-        function checkScroll() {
-            if (window.scrollY > 300) {
-                scrollButton.style.opacity = '1';
-                scrollButton.style.visibility = 'visible';
-                scrollButton.style.transform = 'translateY(0)';
-            } else {
-                scrollButton.style.opacity = '0';
-                scrollButton.style.visibility = 'hidden';
-                scrollButton.style.transform = 'translateY(20px)';
-            }
-        }
-
-        scrollButton.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        });
-
-        window.addEventListener('scroll', checkScroll);
-        checkScroll();
-    });
+<script is:inline>
+// Simple y directo
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('scrollBtn');
+    if (window.scrollY > 300) {
+        btn.classList.add('show');
+    } else {
+        btn.classList.remove('show');
+    }
+});
 </script>
+
+

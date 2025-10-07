@@ -1,0 +1,155 @@
+---
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import VideoPerfecto from '../components/VideoPerfecto.astro';
+import ImageContainer from '../components/ImageContainer.astro';
+import MainTitle from '../components/MainTitle.astro';
+import PageLayout from '../components/PageLayout.astro';
+
+// Metadatos SEO
+const title = 'DINERBOT T11 - SIMIR';
+const description =
+    'Presentación del robot DINERBOT T11 - Robot de servicio de próxima generación con tecnología futurista';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx/dinerbot-t11" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/typography.css" />
+        <link rel="stylesheet" href="/styles/components.css" />
+        <link rel="stylesheet" href="/styles/responsive.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* CSS moderno para iframes */
+            .video-container iframe {
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .video-container iframe:hover {
+                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Estilo especial para banner del T11 */
+            .hero-banner {
+                width: 100%;
+                max-width: 98vw;
+                margin: 1rem auto;
+                padding: 0;
+            }
+
+            .hero-banner img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                display: block;
+            }
+
+            /* Ajustes responsivos */
+            @media (max-width: 768px) {
+                .hero-banner {
+                    max-width: 99vw;
+                    margin: 0.5rem auto;
+                }
+
+                .hero-banner img {
+                    border-radius: 15px;
+                }
+            }
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <PageLayout>
+            <div class="content-text">
+                <MainTitle robotName="DINERBOT" version="T11" />
+
+                <div class="hero-banner">
+                    <img
+                        src="/assets/images/DINERBOT-T11/DINERBOT T11-01.png"
+                        alt="DINERBOT T11"
+                    />
+                </div>
+
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-2.png"
+                    alt="DINERBOT T11"
+                />
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-3.png"
+                    alt="DINERBOT T11"
+                />
+                <VideoPerfecto
+                    title=""
+                    titleClass="interaction-title-purple"
+                    description=""
+                    videoId="snqMiWWDTDw"
+                />
+                <VideoPerfecto
+                    title=""
+                    titleClass="interaction-title-purple"
+                    description=""
+                    videoId="lAS78rKC7Nk"
+                />
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-4.png"
+                    alt="DINERBOT T11"
+                />
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-5.png"
+                    alt="DINERBOT T11"
+                />
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-6.png"
+                    alt="DINERBOT T11"
+                />
+                <ImageContainer
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-7.png"
+                    alt="DINERBOT T11"
+                />
+            </div>
+        </PageLayout>
+
+        <Footer />
+
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
+</html>

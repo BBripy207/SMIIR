@@ -8,6 +8,7 @@ import VideoPerfecto from '../components/VideoPerfecto.astro';
 import ImageContainer from '../components/ImageContainer.astro';
 import MainTitle from '../components/MainTitle.astro';
 import PageLayout from '../components/PageLayout.astro';
+import BatteryDisclaimer from '../components/BatteryDisclaimer.astro';
 
 // Metadatos SEO
 const title = 'DINERBOT T3 - SIMIR';
@@ -42,38 +43,7 @@ const description =
         />
 
         <style>
-            /* CSS moderno para iframes */
-            .video-container iframe {
-                border: none;
-                border-radius: 12px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-                transition:
-                    transform 0.3s ease,
-                    box-shadow 0.3s ease;
-            }
-
-            .video-container iframe:hover {
-                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
-            }
-
-            .battery-disclaimer {
-                margin-top: 3rem;
-                padding: 1.5rem;
-                background: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 12px;
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .battery-disclaimer p {
-                font-size: 0.9rem;
-                line-height: 1.5;
-                color: #a1a1aa;
-                margin-bottom: 0;
-                text-align: left;
-            }
+            /* CSS específico solo para T3 si es necesario */
         </style>
 
         <!-- View Transitions para navegación fluida -->
@@ -136,16 +106,7 @@ const description =
                     alt="DINERBOT T3"
                 />
 
-                <div class="battery-disclaimer">
-                    <p>
-                        * Todas las afirmaciones sobre la batería dependen de
-                        muchos factores; los resultados reales pueden variar. La
-                        batería tiene ciclos de recarga limitados y,
-                        eventualmente, podría ser necesario reemplazarla. La
-                        duración de la batería y los ciclos de carga varían
-                        según el uso y la configuración.
-                    </p>
-                </div>
+                <BatteryDisclaimer />
             </div>
         </PageLayout>
 

@@ -1,0 +1,127 @@
+---
+// Botón flotante para ir arriba - aparece cuando scrolleas hacia abajo
+---
+
+<div class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<style>
+    .scroll-to-top {
+        position: fixed;
+        bottom: 160px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: visible;
+        background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
+        cursor: pointer;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+
+    .scroll-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .scroll-to-top:hover {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Efecto de pulso igual que los otros botones */
+    .scroll-to-top::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background: rgba(46, 75, 198, 0.4);
+        animation: pulse-simir 3s infinite;
+        z-index: -1;
+    }
+
+    @keyframes pulse-simir {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        70% {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+    }
+
+    /* Responsive igual que los otros */
+    @media (max-width: 768px) {
+        .scroll-to-top {
+            bottom: 140px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .scroll-to-top {
+            width: 50px;
+            height: 50px;
+            bottom: 90px;
+            left: 15px;
+        }
+
+        .scroll-to-top i {
+            font-size: 20px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        if (scrollToTopBtn) {
+            // Mostrar/ocultar botón según scroll
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Ir arriba cuando se hace clic
+            scrollToTopBtn.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                });
+            });
+        }
+    });
+</script>

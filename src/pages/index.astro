@@ -32,8 +32,8 @@ const description =
 
         .dinerbots-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
             margin-top: 1rem;
         }
 
@@ -52,10 +52,23 @@ const description =
 
         .dinerbot-image {
             width: 100%;
-            height: 400px;
+            height: 350px;
             object-fit: cover;
             border-radius: 20px;
             transition: all 0.4s ease;
+        }
+
+        .product-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
@@ -73,7 +86,7 @@ const description =
             }
 
             .dinerbot-image {
-                height: 300px;
+                height: 280px;
             }
         }
     </style>
@@ -81,21 +94,66 @@ const description =
     <HeaderApple />
 
     <section class="novedades-section">
-        <h2 class="novedades-title">Novedades</h2>
+        <h2 class="novedades-title">Nuestros Productos</h2>
         <div class="dinerbots-grid">
+            <!-- DINERBOT T10 -->
             <a href="/dinerbot-t10" class="dinerbot-card">
                 <img
                     src="/assets/images/1.png"
                     alt="DINERBOT T10"
                     class="dinerbot-image"
                 />
+                <div class="product-title">DINERBOT T10</div>
             </a>
+            
+            <!-- DINERBOT T9 -->
             <a href="/butlerbot" class="dinerbot-card">
                 <img
                     src="/assets/images/DINERBOT-09/DINERBOT-9-01.png"
                     alt="DINERBOT T9"
                     class="dinerbot-image"
                 />
+                <div class="product-title">DINERBOT T9</div>
+            </a>
+            
+            <!-- DINERBOT T8 -->
+            <a href="/dinerbot-t8" class="dinerbot-card">
+                <img
+                    src="/assets/images/DINERBOT-T08/DINERBOT-T8-01.png"
+                    alt="DINERBOT T8"
+                    class="dinerbot-image"
+                />
+                <div class="product-title">DINERBOT T8</div>
+            </a>
+            
+            <!-- DINERBOT T3 -->
+            <a href="/dinerbot-t3" class="dinerbot-card">
+                <img
+                    src="/assets/images/DINERBOT-T3/DINERBOT-T3-01.png"
+                    alt="DINERBOT T3"
+                    class="dinerbot-image"
+                />
+                <div class="product-title">DINERBOT T3</div>
+            </a>
+            
+            <!-- DINERBOT T11 -->
+            <a href="/dinerbot-t11" class="dinerbot-card">
+                <img
+                    src="/assets/images/DINERBOT-T11/DINERBOT T11-01.png"
+                    alt="DINERBOT T11"
+                    class="dinerbot-image"
+                />
+                <div class="product-title">DINERBOT T11</div>
+            </a>
+            
+            <!-- MAYORDOMO W3 -->
+            <a href="/mayordomo-w3" class="dinerbot-card">
+                <img
+                    src="/assets/images/MAYORDOMO-W3/MAYORDOMO W3-01.png"
+                    alt="MAYORDOMO W3"
+                    class="dinerbot-image"
+                />
+                <div class="product-title">MAYORDOMO W3</div>
             </a>
         </div>
     </section>

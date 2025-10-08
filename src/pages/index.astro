@@ -12,36 +12,20 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <style>
-        /* Hero section con imagen de fondo */
-        .hero-section {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-            background-image: url('/assets/images/portadas/novedades.png');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Asegurar que el header esté por encima */
-        .hero-section :global(header) {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Header con fondo blanco igual a la imagen - SOLO EN INDEX */
-        :global(header) {
-            background: #f2f3f4 !important;
-        }
-
         /* Sección de Novedades */
         .novedades-section {
             padding: 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+        }
+
+        /* Imagen de novedades debajo del título */
+        .novedades-image {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border-radius: 15px;
         }
 
         .novedades-title {
@@ -112,20 +96,6 @@ const description =
         }
 
         @media (max-width: 768px) {
-            /* FORZAR que el header sea transparente en móvil */
-            :global(header),
-            :global(header *),
-            :global(.header),
-            :global(.header *) {
-                background: transparent !important;
-                background-color: transparent !important;
-            }
-
-            /* Hero pegado al header en móvil - altura ajustada */
-            .hero-section {
-                min-height: 37vh;
-            }
-
             .novedades-section {
                 padding: 1.5rem 1rem;
             }
@@ -147,11 +117,13 @@ const description =
 
     <HeaderApple />
 
-    <!-- Hero section con imagen de fondo -->
-    <div class="hero-section"></div>
-
     <section class="novedades-section">
-        <h2 class="novedades-title">Novedades</h2>
+        <h2 class="novedades-title">Descubre Novedades</h2>
+        <img
+            src="/assets/images/portadas/novedades.png"
+            alt="Descubre Novedades SIMIR"
+            class="novedades-image"
+        />
         <p class="novedades-subtitle">
             Capacidad e innovación que construyen el futuro.
         </p>

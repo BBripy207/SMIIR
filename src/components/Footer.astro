@@ -5,13 +5,21 @@ const currentYear = new Date().getFullYear();
 
 <footer class="footer-minimal">
     <div class="footer-content">
-        <div class="footer-logo">
+        <div class="footer-logo-section">
             <img
                 src="/assets/images/simir.png"
                 alt="SMIIR"
                 class="logo-minimal"
             />
+            <a 
+                href="https://www.instagram.com/smiir_official?igsh=MW1uYXRjaGc4Nmw1cw%3D%3D&utm_source=qr" 
+                target="_blank" 
+                class="social-link"
+            >
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
+        
         <div class="footer-text">
             <p>Contacto: +52 614 551 8651</p>
             <p>&copy; {currentYear} SMIIR. Todos los derechos reservados.</p>
@@ -36,6 +44,28 @@ const currentYear = new Date().getFullYear();
         padding: 0 2rem;
     }
 
+    .footer-logo-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-link {
+        color: #888;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .social-link:hover {
+        color: #2e4bc6;
+    }
+
     .logo-minimal {
         height: 30px;
         width: auto;
@@ -54,6 +84,10 @@ const currentYear = new Date().getFullYear();
             gap: 1rem;
             text-align: center;
             padding: 0 1rem;
+        }
+        
+        .footer-logo-section {
+            justify-content: center;
         }
     }
 </style>

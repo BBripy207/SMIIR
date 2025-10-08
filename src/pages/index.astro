@@ -12,6 +12,22 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <style>
+        /* Imagen de novedades - 100% ancho sin márgenes */
+        .novedades-hero {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .novedades-hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
         /* Sección de Novedades */
         .novedades-section {
             padding: 2rem 2rem;
@@ -108,6 +124,11 @@ const description =
     </style>
 
     <HeaderApple />
+
+    <!-- Imagen de novedades - 100% ancho, sin márgenes -->
+    <div class="novedades-hero">
+        <img src="/assets/images/portadas/novedades.png" alt="Novedades SMIIR" class="novedades-hero-image">
+    </div>
 
     <section class="novedades-section">
         <h2 class="novedades-title">Novedades</h2>

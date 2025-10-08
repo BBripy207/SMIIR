@@ -5,12 +5,15 @@ const currentYear = new Date().getFullYear();
 
 <footer class="footer-minimal">
     <div class="footer-content">
-        <div class="footer-logo-section">
+        <div class="footer-logo">
             <img
                 src="/assets/images/simir.png"
                 alt="SMIIR"
                 class="logo-minimal"
             />
+        </div>
+
+        <div class="footer-contact-section">
             <a
                 href="https://www.instagram.com/smiir_official?igsh=MW1uYXRjaGc4Nmw1cw%3D%3D&utm_source=qr"
                 target="_blank"
@@ -18,11 +21,10 @@ const currentYear = new Date().getFullYear();
             >
                 <i class="fab fa-instagram"></i>
             </a>
-        </div>
-
-        <div class="footer-text">
-            <p>Contacto: +52 614 551 8651</p>
-            <p>&copy; {currentYear} SMIIR. Todos los derechos reservados.</p>
+            <div class="footer-text">
+                <p>Contacto: +52 614 551 8651</p>
+                <p>&copy; {currentYear} SMIIR. Todos los derechos reservados.</p>
+            </div>
         </div>
     </div>
 </footer>
@@ -45,6 +47,12 @@ const currentYear = new Date().getFullYear();
     }
 
     .footer-logo-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-contact-section {
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -80,14 +88,22 @@ const currentYear = new Date().getFullYear();
 
     @media (max-width: 768px) {
         .footer-content {
-            flex-direction: column;
-            gap: 1rem;
-            text-align: center;
             padding: 0 1rem;
+            /* MANTENER horizontal - logo izquierda, resto derecha */
         }
-
-        .footer-logo-section {
-            justify-content: center;
+        
+        .footer-contact-section {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+        
+        .footer-text {
+            text-align: right;
+        }
+        
+        .footer-text p {
+            font-size: 0.7rem;
         }
     }
 </style>

@@ -24,8 +24,8 @@
         text-decoration: none;
         color: white;
         font-size: 24px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
         backdrop-filter: blur(10px);
         border: 2px solid rgba(255, 255, 255, 0.2);
         position: relative;
@@ -34,7 +34,8 @@
     }
 
     .floating-btn:hover {
-        transform: translateY(-2px) scale(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
     /* Botón de WhatsApp */
@@ -42,15 +43,18 @@
         background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
     }
 
-    .floating-btn.whatsapp:hover {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-
     /* Botón de teléfono */
     .floating-btn.phone {
+        background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
+    }
+
+    /* Botón de Instagram */
+    .floating-btn.instagram {
+        background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
+    }
+
+    /* Botón de Email */
+    .floating-btn.email {
         background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
     }
 
@@ -66,14 +70,7 @@
         background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
     }
 
-    .floating-btn.email:hover {
-        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
-        border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Efecto de pulso para ambos botones */
+    /* Efecto de pulso para todos los botones */
     .floating-btn::before {
         content: '';
         position: absolute;

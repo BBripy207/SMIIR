@@ -112,6 +112,15 @@ const description =
         }
 
         @media (max-width: 768px) {
+            /* FORZAR que el header sea transparente en móvil */
+            :global(header),
+            :global(header *),
+            :global(.header),
+            :global(.header *) {
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+
             /* Hero pegado al header en móvil - altura ajustada */
             .hero-section {
                 min-height: 37vh;

@@ -12,9 +12,9 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <style>
-        /* Sección de Novedades */
+        /* Sección de Novedades - pegada al header */
         .novedades-section {
-            padding: 2rem 2rem;
+            padding: 0 2rem 2rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
@@ -29,7 +29,7 @@ const description =
         }
 
         .novedades-title {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -97,11 +97,11 @@ const description =
 
         @media (max-width: 768px) {
             .novedades-section {
-                padding: 1.5rem 1rem;
+                padding: 0 1rem 1.5rem 1rem;
             }
 
             .novedades-title {
-                font-size: 2rem;
+                font-size: 2.8rem;
             }
 
             .dinerbots-grid {
@@ -114,14 +114,14 @@ const description =
     <HeaderApple />
 
     <section class="novedades-section">
-        <h2 class="novedades-title">Descubre Novedades</h2>
+        <h2 class="novedades-title">¡Descubre Nuestras Novedades!</h2>
         <img
             src="/assets/images/portadas/novedades.png"
-            alt="Descubre Novedades SIMIR"
+            alt="¡Descubre Nuestras Novedades! SIMIR"
             class="novedades-image"
         />
         <p class="novedades-subtitle">
-            Capacidad e innovación que construyen el futuro.
+            ¡Capacidad e innovación que construyen el futuro!
         </p>
         <div class="dinerbots-grid">
             <!-- DINERBOT T10 -->

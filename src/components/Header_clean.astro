@@ -1,5 +1,6 @@
 ---
-// Header estilo Apple limpio - solo logo y productos a la izquierda
+// Header estilo Apple limpio - solo logo y tarjetas a la izquierda
+import HeaderCard from './HeaderCard.astro';
 ---
 
 <style>
@@ -133,16 +134,18 @@
             <img src="/assets/images/simir.png" alt="SIMIR" class="logo" />
         </a>
 
-        <a href="/productos" class="products-card">
-            <img
-                src="/assets/images/portadas/dinerbott10.png"
-                alt="DINERBOT T10"
-                class="product-icon-large"
-            />
-            <div class="product-text">
-                <h2 class="product-title">DINERBOTS</h2>
-            </div>
-        </a>
+        <HeaderCard
+            href="/productos"
+            imageSrc="/assets/images/portadas/dinerbott10.png"
+            title="DINERBOTS"
+            alt="DINERBOT T10"
+        />
+
+        <HeaderCard
+            href="/contacto"
+            iconClass="fas fa-envelope"
+            title="CONTACTO"
+        />
     </div>
 </header>
 

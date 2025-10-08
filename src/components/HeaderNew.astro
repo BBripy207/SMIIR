@@ -1,0 +1,78 @@
+---
+// Header estilo Apple limpio - logo y tarjetas
+import HeaderCard from './HeaderCard.astro';
+---
+
+<header class="apple-header">
+    <div class="header-content">
+        <a href="/">
+            <img src="/assets/images/simir.png" alt="SIMIR" class="logo" />
+        </a>
+
+        <HeaderCard
+            href="/productos"
+            imageSrc="/assets/images/portadas/dinerbott10.png"
+            title="DINERBOTS"
+            alt="DINERBOT T10"
+        />
+
+        <HeaderCard
+            href="/contacto"
+            iconClass="fas fa-envelope"
+            title="CONTACTO"
+        />
+    </div>
+</header>
+
+<style>
+    /* Header estilo Apple limpio */
+    .apple-header {
+        background: transparent;
+        position: static;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 8px 0;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-content {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .logo {
+        height: 130px;
+        width: 110px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .header-content {
+            justify-content: flex-start;
+            gap: 20px;
+            padding-left: 20px;
+        }
+
+        .logo {
+            height: 115px;
+            width: 95px;
+            object-fit: contain;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>

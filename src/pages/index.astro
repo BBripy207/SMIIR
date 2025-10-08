@@ -18,7 +18,7 @@ const description =
             width: 100%;
             min-height: 100vh;
             background-image: url('/assets/images/portadas/novedades.png');
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
             display: flex;
@@ -112,6 +112,13 @@ const description =
         }
 
         @media (max-width: 768px) {
+            /* Hero pegado al header en móvil - altura ajustada */
+            .hero-section {
+                min-height: 40vh;
+                margin-top: 0;
+                padding-top: 0;
+            }
+
             .novedades-section {
                 padding: 1.5rem 1rem;
             }

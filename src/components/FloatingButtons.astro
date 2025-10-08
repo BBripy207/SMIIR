@@ -61,6 +61,18 @@
         border-color: rgba(255, 255, 255, 0.3);
     }
 
+    /* Botón de Email */
+    .floating-btn.email {
+        background: linear-gradient(135deg, #2e4bc6 0%, #1e3a8a 100%);
+    }
+
+    .floating-btn.email:hover {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(46, 75, 198, 0.4);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
     /* Efecto de pulso para ambos botones */
     .floating-btn::before {
         content: '';
@@ -130,6 +142,10 @@
 <div class="floating-buttons">
     <a href="#top" class="floating-btn scroll-to-top" id="scrollBtn">
         <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <a href="mailto:ricardo@smiir.com.mx" class="floating-btn email">
+        <i class="fas fa-envelope"></i>
     </a>
 
     <a

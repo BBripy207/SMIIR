@@ -12,20 +12,35 @@ const description =
 
 <BaseLayout title={title} description={description}>
     <style>
-        /* Imagen de novedades - 100% ancho sin márgenes */
-        .novedades-hero {
+        /* Hero section con imagen de fondo */
+        .hero-section {
+            position: relative;
             width: 100%;
-            margin: 0;
-            padding: 0;
-            display: block;
+            min-height: 100vh;
+            background-image: url('/assets/images/portadas/novedades.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
         }
 
-        .novedades-hero-image {
+        /* Asegurar que el header esté por encima */
+        .hero-section :global(header) {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header con fondo blanco igual a la imagen - SOLO EN INDEX */
+        :global(header) {
+            background: #f2f3f4 !important;
+        }
+
+        /* Espacio en blanco después del hero */
+        .hero-spacer {
+            background: white;
+            min-height: 200px;
             width: 100%;
-            height: auto;
-            display: block;
-            margin: 0;
-            padding: 0;
         }
 
         /* Sección de Novedades */
@@ -124,15 +139,13 @@ const description =
     </style>
 
     <HeaderApple />
-
-    <!-- Imagen de novedades - 100% ancho, sin márgenes -->
-    <div class="novedades-hero">
-        <img
-            src="/assets/images/portadas/novedades.png"
-            alt="Novedades SMIIR"
-            class="novedades-hero-image"
-        />
+    
+    <!-- Hero section con imagen de fondo -->
+    <div class="hero-section">
     </div>
+
+    <!-- Espacio en blanco -->
+    <div class="hero-spacer"></div>
 
     <section class="novedades-section">
         <h2 class="novedades-title">Novedades</h2>

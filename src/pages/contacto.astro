@@ -20,48 +20,12 @@ const description =
                 <h1 class="contact-title">¡Contáctanos!</h1>
                 <p class="contact-subtitle">
                     Estamos aquí para ayudarte con cualquier consulta sobre
-                    nuestros robots de servicio
+                    nuestros robots de servicio.<br />
+                    Contáctanos en: <strong>ricardo@smiir.com.mx</strong>
                 </p>
             </div>
 
             <div class="contact-content">
-                <!-- Información de contacto -->
-                <div class="contact-info">
-                    <h2>Información de Contacto</h2>
-
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>ricardo@smiir.com.mx</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+52 614 551 8651</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fab fa-instagram"></i>
-                        <div>
-                            <h3>Instagram</h3>
-                            <p>@smiir_official</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-robot"></i>
-                        <div>
-                            <h3>Especialidad</h3>
-                            <p>Robots de servicio autónomo</p>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Formulario de contacto -->
                 <div class="contact-form-container">
                     <h2>Envíanos un Mensaje</h2>
@@ -178,13 +142,11 @@ const description =
     }
 
     .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
+        display: flex;
+        justify-content: center;
         align-items: start;
     }
 
-    .contact-info h2,
     .contact-form-container h2 {
         font-size: 1.8rem;
         font-weight: 600;
@@ -192,45 +154,12 @@ const description =
         margin-bottom: 2rem;
     }
 
-    .info-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 2rem;
-        padding: 1.5rem;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-    }
-
-    .info-item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .info-item i {
-        font-size: 1.5rem;
-        color: #2e4bc6;
-        margin-top: 0.2rem;
-    }
-
-    .info-item h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #1e3a8a;
-        margin: 0 0 0.5rem 0;
-    }
-
-    .info-item p {
-        color: #64748b;
-        margin: 0;
-    }
-
     .contact-form-container {
         background: white;
         padding: 2rem;
         border-radius: 16px;
+        max-width: 600px;
+        width: 100%;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
@@ -312,16 +241,11 @@ const description =
         }
 
         .contact-content {
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            justify-content: center;
         }
 
         .contact-form-container {
             padding: 1.5rem;
-        }
-
-        .info-item {
-            padding: 1rem;
         }
     }
 </style>

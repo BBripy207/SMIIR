@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import VideoPerfecto from '../components/VideoPerfecto.astro';
+import ImageContainer from '../components/ImageContainer.astro';
+import MainTitle from '../components/MainTitle.astro';
+import PageLayout from '../components/PageLayout.astro';
+import BatteryDisclaimer from '../components/BatteryDisclaimer.astro';
+
+// Metadatos SEO
+const title = 'KENON-S300 - SIMIR';
+const description =
+    'Presentación del robot KENON-S300 - Robot industrial de alta precisión con tecnología avanzada para automatización';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx/kenon-s300" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/typography.css" />
+        <link rel="stylesheet" href="/styles/components.css" />
+        <link rel="stylesheet" href="/styles/responsive.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* Estilos específicos para KENON-S300 si son necesarios */
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <PageLayout>
+            <div class="content-text">
+                <MainTitle robotName="KENON" version="S300" />
+
+                <ImageContainer
+                    src="/assets/images/KENON-S300/KENON-S300-1.png"
+                    alt="KENON-S300"
+                />
+                <VideoPerfecto
+                    title="Un solo toque levanta 300 kg, lo que facilita la entrega de cargas pesadas"
+                    titleClass="interaction-title-purple"
+                    description="Capacidad de 300 kg, estructura sin estantes, chasis industrial de 23 cm con plataforma elevadora que manipula sin esfuerzo estantes de hasta 120 × 120 cm."
+                    videoId="_HaqBcmsxTA"
+                />
+                <VideoPerfecto
+                    title="Entrega más inteligente, duplica la eficiencia"
+                    titleClass="interaction-title-purple"
+                    description="Admite múltiples modos de entrega inteligentes, incluyendo bucle, directo, multipunto y transporte"
+                    videoId="Jk7ners5NVk"
+                />
+                <VideoPerfecto
+                    title="Planificación automática dinámica, respuesta instantánea"
+                    titleClass="interaction-title-purple"
+                    description="Con la tecnología de fusión de visión estéreo LiDAR SLAM +, la IA vuelve a planificar de forma autónoma las rutas en milisegundos para evitar obstáculos a lo largo del camino"
+                    videoId="y8qfXscATcQ"
+                />
+                <VideoPerfecto
+                    title="Control sin conexión, funcionamiento ininterrumpido"
+                    titleClass="interaction-title-purple"
+                    description="Planificación de rutas en el dispositivo y ejecución de tareas sin depender de sistemas de control central o redes externas (Wi-Fi/5G), lo que garantiza un funcionamiento único sin conexión fiable"
+                    videoId="FbGgzDGtjkU"
+                />
+                <VideoPerfecto
+                    title="Múltiples opciones de carga, funcionamiento continuo 24/7"
+                    titleClass="interaction-title-purple"
+                    description="Hasta 6 horas de funcionamiento a plena carga y 3,5 horas de carga rápida, compatible con la carga automática, la carga manual y el cambio de batería"
+                    videoId="pwo4SrXoLcI"
+                />
+                <VideoPerfecto
+                    title="Escudo de seguridad de 360°: Opera con tranquilidad"
+                    titleClass="interaction-title-purple"
+                    description="Impulsado por una fusión avanzada de visión 3D, doble LiDAR y navegación VSLAM, respaldada por triples paradas de emergencia, nuestro sistema evita proactivamente las colisiones y mantiene las operaciones funcionando de forma segura y sin problemas"
+                    videoId="lkUZbEk-a9Y"
+                />
+                <VideoPerfecto
+                    title="Implementación Flexible, Configuración Rápida Sin Molestias"
+                    titleClass="interaction-title-purple"
+                    description="Equipado con tecnología VSLAM, permite la adaptación inteligente de la ruta y reduce el tiempo de implementación de los tradicionales 3-6 meses a solo 1 día, todo sin cinta magnética o modificaciones de código QR"
+                    videoId=""
+                />
+                <ImageContainer
+                    src="/assets/images/KENON-S300/KENON-S300-4.png"
+                    alt="KENON-S300"
+                />
+                <ImageContainer
+                    src="/assets/images/KENON-S300/KENON-S300-2.png"
+                    alt="KENON-S300"
+                />
+                <ImageContainer
+                    src="/assets/images/KENON-S300/KENON-S300 - 3.png"
+                    alt="KENON-S300"
+                />
+
+                <BatteryDisclaimer />
+            </div>
+        </PageLayout>
+
+        <Footer />
+
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
+</html>

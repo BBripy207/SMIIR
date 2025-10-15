@@ -20,6 +20,13 @@ const kenonFeatures = [
     'Diseño robusto para industria',
     'Integración IoT completa',
 ];
+
+const proximoRobotFeatures = [
+    'Próximamente disponible',
+    'Tecnología avanzada',
+    'Automatización industrial',
+    'Más detalles pronto',
+];
 ---
 
 <BaseLayout title={title} description={description}>
@@ -177,7 +184,16 @@ const kenonFeatures = [
                     features={kenonFeatures}
                     imageUrl="/assets/images/portadas/KENON-S300.png"
                     imageAlt="KENON-S300"
-                    linkUrl="#kenon-s300"
+                    linkUrl="/kenon-s300"
+                />
+
+                <ProductCard
+                    name="Próximo Robot Industrial"
+                    description="Nuevo robot industrial en desarrollo. Más información disponible próximamente."
+                    features={proximoRobotFeatures}
+                    imageUrl="/assets/images/portadas/novedades.png"
+                    imageAlt="Próximo Robot Industrial"
+                    linkUrl="#proximo-robot"
                 />
             </div>
         </div>

@@ -108,12 +108,10 @@ import HeaderCard from './HeaderCard.astro';
             justify-content: flex-start;
             gap: 20px;
             padding: 0 20px;
-            min-width: 600px;
-            width: 600px;
+            width: max-content;
             max-width: none;
             display: flex;
             flex-wrap: nowrap;
-            overflow-x: visible;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             -ms-overflow-style: none;
@@ -128,7 +126,6 @@ import HeaderCard from './HeaderCard.astro';
             width: 95px;
             object-fit: contain;
             flex-shrink: 0;
-            min-width: 95px;
         }
 
         .products-card {
@@ -137,7 +134,6 @@ import HeaderCard from './HeaderCard.astro';
             padding: 6px 4px 4px 4px;
             gap: 2px;
             flex-shrink: 0;
-            min-width: 95px;
         }
 
         .product-icon-large {

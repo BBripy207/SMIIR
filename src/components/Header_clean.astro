@@ -156,6 +156,16 @@ import HeaderCard from './HeaderCard.astro';
     </div>
 </header>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.querySelector('.apple-header') as HTMLElement;
+        if (header && window.innerWidth <= 768) {
+            header.style.overflowX = 'auto';
+            (header.style as any).webkitOverflowScrolling = 'touch';
+        }
+    });
+</script>
+
 <!-- El header ahora es estático y el contenido va justo debajo -->
 <style>
     main,

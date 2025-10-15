@@ -7,7 +7,7 @@ import FloatingButtons from '../components/FloatingButtons.astro';
 // Metadatos SEO
 const title = 'Contacto - SIMIR';
 const description =
-    'Contáctanos para información sobre nuestros robots de servicio - DINERBOT y MAYORDOMO';
+    'Contáctanos para información sobre nuestros robots de servicio - DINERBOT, MAYORDOMO y KENOON';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -31,9 +31,8 @@ const description =
                     <h2>Envíanos un Mensaje</h2>
                     <form
                         class="contact-form"
-                        action="mailto:ricardo@smiir.com.mx"
+                        action="https://formspree.io/f/xpwzgkzk"
                         method="POST"
-                        enctype="text/plain"
                     >
                         <div class="form-group">
                             <label for="name">Nombre completo *</label>

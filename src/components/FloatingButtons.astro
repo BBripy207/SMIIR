@@ -149,6 +149,7 @@
         href="https://wa.me/message/PGBVC2B2SREDG1"
         class="floating-btn whatsapp"
         target="_blank"
+        id="whatsappBtn"
     >
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -166,6 +167,20 @@
             btn.classList.add('show');
         } else {
             btn.classList.remove('show');
+        }
+    });
+
+    // WhatsApp - Detectar dispositivo
+    document.addEventListener('DOMContentLoaded', function() {
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // Móvil - Abrir app de WhatsApp
+            whatsappBtn.href = 'https://wa.me/message/PGBVC2B2SREDG1';
+        } else {
+            // Desktop - Abrir WhatsApp Web
+            whatsappBtn.href = 'https://web.whatsapp.com/send?phone=526145518651&text=Hola,%20me%20interesa%20información%20sobre%20sus%20robots';
         }
     });
 </script>

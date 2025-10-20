@@ -22,7 +22,7 @@ export const robotsData = {
             'Diseño robusto',
         ],
         imageUrl: "/assets/images/DINERBOT-09/DINERBOT-9-01.png",
-        linkUrl: "/butlerbot"
+        linkUrl: "/dinerbot-t9"
     },
     t8: {
         name: "DINERBOT T8",

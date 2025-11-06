@@ -5,8 +5,8 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 import ServiceHero from '../components/ServiceHero.astro';
 import IntroSection from '../components/IntroSection.astro';
-import ServicesGrid from '../components/ServicesGrid.astro';
 import BenefitsSection from '../components/BenefitsSection.astro';
+import ProductsHero from '../components/ProductsHero.astro';
 
 const title = 'Sistemas de videovigilancia y seguridad | SMIIR';
 const description =
@@ -98,11 +98,26 @@ const applications = [
             content="<strong>SMIIR diseña e integra</strong> sistemas de videovigilancia y seguridad electrónica adaptados a entornos industriales, comerciales y corporativos, garantizando monitoreo continuo, protección de activos y control de acceso en tiempo real. Cada sistema se implementa bajo estándares de comunicación profesional y componentes certificados para operación 24/7."
         />
 
-        <ServicesGrid title="Diseño e Ingeniería" services={designServices} />
+        <ProductsHero
+            title="Diseño e Ingeniería"
+            description="Análisis técnico y selección de equipos especializados"
+        />
 
-        <ServicesGrid
+        <BenefitsSection
+            title="Especificaciones Técnicas"
+            benefits={designServices}
+            variant="highlighted"
+        />
+
+        <ProductsHero
             title="Integración Operativa"
-            services={integrationServices}
+            description="Configuración de centros de monitoreo y analítica inteligente"
+        />
+
+        <BenefitsSection
+            title="Proceso de Implementación"
+            benefits={integrationServices}
+            variant="default"
         />
 
         <BenefitsSection
@@ -123,7 +138,7 @@ const applications = [
 
     /* FORZAR que TODOS los títulos sean idénticos */
     .hero h1,
-    .services-section h2,
+    .products-hero h2,
     .benefits-section h2 {
         text-align: center !important;
         font-size: 2.5rem !important;

@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ProductsHero from '../components/ProductsHero.astro';
+
+const title = 'Redes de datos y comunicación estructurada | SMIIR';
+const description =
+    'SMIIR diseña, instala y certifica infraestructura de red estructurada para aplicaciones industriales, comerciales y corporativas bajo estándares internacionales de cableado.';
+
+const designData = [
+    {
+        icon: 'fas fa-project-diagram',
+        title: 'Planeación de topología de red',
+        description:
+            'Según el tipo de operación: anillo, estrella o jerárquica industrial.',
+    },
+    {
+        icon: 'fas fa-cable',
+        title: 'Selección de cableado especializado',
+        description:
+            'UTP, FTP, fibra óptica o coaxial según nivel de interferencia, distancia y ancho de banda requerido.',
+    },
+    {
+        icon: 'fas fa-server',
+        title: 'Diseño de canalizaciones y racks',
+        description:
+            'Con administración ordenada, etiquetado y numeración para trazabilidad técnica.',
+    },
+    {
+        icon: 'fas fa-certificate',
+        title: 'Cumplimiento de normas internacionales',
+        description:
+            'TIA/EIA-568, ISO/IEC 11801 y BICSI, garantizando desempeño en ambientes industriales.',
+    },
+];
+
+const installationData = [
+    {
+        icon: 'fas fa-hard-hat',
+        title: 'Tendido de cableado protegido',
+        description:
+            'En bandejas, ductos o canaletas protegidas, con rutas separadas para energía y datos.',
+    },
+    {
+        icon: 'fas fa-plug',
+        title: 'Terminación profesional',
+        description:
+            'Con patch panels, conectores RJ45, puertos keystone y fibra con terminaciones SC/LC.',
+    },
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Certificación de enlaces',
+        description:
+            'Con equipos de medición categoría 6, 6A o 7, documentando pérdidas, continuidad y capacidad.',
+    },
+    {
+        icon: 'fas fa-microchip',
+        title: 'Integración con sistemas industriales',
+        description:
+            'SCADA, servidores industriales, PLCs y dispositivos IoT con comunicación estable y baja latencia.',
+    },
+];
+
+const applications = [
+    {
+        icon: 'fas fa-industry',
+        title: 'Centros industriales',
+        description:
+            'Centros de control industrial, tableros eléctricos y plantas de proceso automatizadas.',
+    },
+    {
+        icon: 'fas fa-building',
+        title: 'Edificios corporativos',
+        description:
+            'Oficinas, corporativos, centros de datos y edificios inteligentes.',
+    },
+    {
+        icon: 'fas fa-wifi',
+        title: 'Sistemas integrados',
+        description:
+            'Videovigilancia, control de acceso, telefonía IP y redes inalámbricas.',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero
+            title="Redes de datos y comunicación estructurada"
+        />
+
+        <IntroSection
+            content="<strong>SMIIR diseña, instala y certifica</strong> infraestructura de red estructurada para aplicaciones industriales, comerciales y corporativas. Cada red se construye bajo estándares internacionales de cableado, garantizando transmisión confiable, alta velocidad y compatibilidad con sistemas de control y automatización."
+        />
+
+        <ProductsHero
+            title="Diseño e Ingeniería"
+            description="Infraestructura de red planificada bajo estándares internacionales"
+        />
+
+        <BenefitsSection
+            title="Especificaciones Técnicas"
+            benefits={designData}
+            variant="default"
+        />
+
+        <ProductsHero
+            title="Instalación y Certificación"
+            description="Implementación profesional con certificación de cada enlace"
+        />
+
+        <BenefitsSection
+            title="Proceso de Implementación"
+            benefits={installationData}
+            variant="highlighted"
+        />
+
+        <BenefitsSection
+            title="Aplicaciones"
+            benefits={applications}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .products-hero h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title = 'Sistemas de videovigilancia y seguridad | SMIIR';
+const description =
+    'SMIIR diseña e integra sistemas de videovigilancia y seguridad electrónica adaptados a entornos industriales, comerciales y corporativos, garantizando monitoreo continuo, protección de activos y control de acceso en tiempo real.';
+
+const designServices = [
+    {
+        icon: 'fas fa-search-location',
+        title: 'Análisis de zonas críticas',
+        description:
+            'Análisis de puntos ciegos y niveles de iluminación para determinar ubicación óptima de cámaras.',
+    },
+    {
+        icon: 'fas fa-video',
+        title: 'Selección de equipos especializados',
+        description:
+            'Cámaras IP, PTZ, térmicas, domo, bullet o multisensor, con resolución hasta 4K y visión nocturna avanzada.',
+    },
+    {
+        icon: 'fas fa-network-wired',
+        title: 'Red estructurada segura',
+        description:
+            'Diseño de enlaces seguros entre dispositivos, servidores y estaciones de monitoreo.',
+    },
+    {
+        icon: 'fas fa-cloud-upload-alt',
+        title: 'Almacenamiento inteligente',
+        description:
+            'Planificación de almacenamiento local o en nube, con redundancia y respaldo automático.',
+    },
+];
+
+const integrationServices = [
+    {
+        icon: 'fas fa-desktop',
+        title: 'Centros de monitoreo',
+        description:
+            'Configuración de NVR/DVR o plataformas VMS con acceso remoto seguro.',
+    },
+    {
+        icon: 'fas fa-brain',
+        title: 'Analítica inteligente',
+        description:
+            'Reconocimiento facial, detección de intrusión, conteo de personas y control de acceso.',
+    },
+    {
+        icon: 'fas fa-plug',
+        title: 'Integración eléctrica',
+        description:
+            'Conexión a tableros eléctricos e infraestructura existente para control centralizado.',
+    },
+    {
+        icon: 'fas fa-graduation-cap',
+        title: 'Capacitación especializada',
+        description:
+            'Pruebas de conectividad, configuración y entrega con capacitación al usuario final.',
+    },
+];
+
+const applications = [
+    {
+        icon: 'fas fa-industry',
+        title: 'Instalaciones industriales',
+        description:
+            'Plantas industriales, almacenes logísticos, parques fotovoltaicos y estaciones de bombeo.',
+    },
+    {
+        icon: 'fas fa-building',
+        title: 'Complejos comerciales',
+        description:
+            'Corporativos y residenciales de alto flujo con supervisión integral.',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Áreas críticas',
+        description:
+            'Centros de datos, tableros eléctricos y zonas restringidas con vigilancia permanente.',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Sistemas de videovigilancia y seguridad" />
+
+        <IntroSection
+            content="<strong>SMIIR diseña e integra</strong> sistemas de videovigilancia y seguridad electrónica adaptados a entornos industriales, comerciales y corporativos, garantizando monitoreo continuo, protección de activos y control de acceso en tiempo real. Cada sistema se implementa bajo estándares de comunicación profesional y componentes certificados para operación 24/7."
+        />
+
+        <ServicesGrid title="Diseño e Ingeniería" services={designServices} />
+
+        <ServicesGrid
+            title="Integración Operativa"
+            services={integrationServices}
+        />
+
+        <BenefitsSection
+            title="Aplicaciones"
+            benefits={applications}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-section h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

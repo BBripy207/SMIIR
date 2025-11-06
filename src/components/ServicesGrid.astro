@@ -1,0 +1,66 @@
+---
+interface Props {
+    title: string;
+    services: Array<{
+        icon: string;
+        title: string;
+        description: string;
+    }>;
+}
+
+const { title, services } = Astro.props;
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section class="services-section">
+    <div class="services-container">
+        <h2>{title}</h2>
+        <div class="services-grid">
+            {
+                services.map(service => (
+                    <ServiceCard
+                        icon={service.icon}
+                        title={service.title}
+                        description={service.description}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .services-section {
+        padding: 0 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .services-container h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 2rem;
+        color: white;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .services-section {
+            padding: 0 1rem 1rem;
+        }
+
+        .services-container h2 {
+            font-size: 2rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,82 @@
+---
+interface Props {
+    title: string;
+    benefits: Array<{
+        icon: string;
+        title: string;
+        description: string;
+    }>;
+    variant?: 'default' | 'highlighted';
+}
+
+const { title, benefits, variant = 'default' } = Astro.props;
+import BenefitItem from './BenefitItem.astro';
+---
+
+<section
+    class={`benefits-section ${variant === 'highlighted' ? 'highlighted' : ''}`}
+>
+    <div class="benefits-container">
+        <h2>{title}</h2>
+        <div class="benefits-grid">
+            {
+                benefits.map(benefit => (
+                    <BenefitItem
+                        icon={benefit.icon}
+                        title={benefit.title}
+                        description={benefit.description}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .benefits-section {
+        padding: 0 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .benefits-section.highlighted {
+        padding: 2rem;
+        background: rgba(15, 23, 42, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 1.5rem auto;
+        border-radius: 8px;
+    }
+
+    .benefits-container h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 2rem;
+        color: white;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .benefits-section {
+            padding: 0 1rem 1rem;
+        }
+
+        .benefits-section.highlighted {
+            padding: 1.5rem 1rem;
+            margin: 1rem;
+        }
+
+        .benefits-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

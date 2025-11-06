@@ -1,0 +1,48 @@
+---
+interface Props {
+    content: string;
+}
+
+const { content } = Astro.props;
+---
+
+<section class="intro-section">
+    <div class="intro-content">
+        <p class="intro-text" set:html={content} />
+    </div>
+</section>
+
+<style>
+    .intro-section {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #e5e7eb;
+        margin: 0;
+    }
+
+    .intro-text :global(strong) {
+        color: #3b82f6;
+        font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        .intro-section {
+            padding: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+        }
+    }
+</style>

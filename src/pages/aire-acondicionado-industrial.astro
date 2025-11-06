@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title = 'Sistemas de aire acondicionado industrial y comercial | SMIIR';
+const description =
+    'SMIIR diseña e instala sistemas de climatización industrial y comercial que garantizan control térmico, eficiencia energética y operación continua.';
+
+const services = [
+    {
+        icon: "fas fa-calculator",
+        title: "Cálculo térmico detallado",
+        description: "Considerando ocupación, maquinaria y condiciones ambientales para un diseño preciso y eficiente."
+    },
+    {
+        icon: "fas fa-cogs",
+        title: "Selección de equipos HVAC",
+        description: "Roof Top, Chiller, Mini-Split o sistemas VRF de alta eficiencia adaptados a cada proyecto."
+    },
+    {
+        icon: "fas fa-wind",
+        title: "Diseño de ductería optimizada",
+        description: "Retornos y difusores para una distribución de aire uniforme y estable en todo el espacio."
+    },
+    {
+        icon: "fas fa-fan",
+        title: "Ventilación mecánica integrada",
+        description: "Extractores para control de calor, humedad o partículas según las necesidades del proceso."
+    },
+    {
+        icon: "fas fa-wrench",
+        title: "Montaje profesional certificado",
+        description: "Líneas de refrigerante certificadas y aislamiento térmico de grado industrial."
+    },
+    {
+        icon: "fas fa-microchip",
+        title: "Controles automáticos e IoT",
+        description: "Supervisión de temperatura, humedad y consumo energético en tiempo real."
+    }
+];
+
+const benefits = [
+    {
+        icon: "fas fa-industry",
+        title: "Aplicaciones industriales",
+        description: "Naves industriales, plantas de proceso, laboratorios y salas técnicas con regulación térmica específica."
+    },
+    {
+        icon: "fas fa-building",
+        title: "Espacios comerciales",
+        description: "Centros comerciales, espacios corporativos y áreas de producción cerradas con climatización optimizada."
+    },
+    {
+        icon: "fas fa-leaf",
+        title: "Eficiencia energética sostenida",
+        description: "Integración como parte de la infraestructura general, asegurando rendimiento térmico, confiabilidad operativa y ahorro energético."
+    }
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+    
+    <main class="main">
+        <ServiceHero title="Sistemas de aire acondicionado industrial y comercial" />
+        
+        <IntroSection 
+            content="<strong>SMIIR diseña e instala</strong> sistemas de climatización industrial y comercial que garantizan control térmico, eficiencia energética y operación continua. Cada proyecto se adapta a las condiciones reales del entorno, la carga térmica del proceso y las necesidades del cliente."
+        />
+
+        <ServicesGrid 
+            title="Diseño Técnico e Instalación"
+            services={services}
+        />
+
+        <BenefitsSection 
+            title="Aplicaciones y Beneficios"
+            benefits={benefits}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+</style>

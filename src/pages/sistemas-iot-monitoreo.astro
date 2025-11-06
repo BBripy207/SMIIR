@@ -16,64 +16,75 @@ const architectureServices = [
     {
         icon: 'fas fa-microchip',
         title: 'Integración de sensores avanzados',
-        description: 'Sensores de temperatura, presión, humedad, caudal, consumo eléctrico y estado operativo para monitoreo completo.'
+        description:
+            'Sensores de temperatura, presión, humedad, caudal, consumo eléctrico y estado operativo para monitoreo completo.',
     },
     {
         icon: 'fas fa-network-wired',
         title: 'Comunicación industrial',
-        description: 'Protocolos industriales (Modbus, BACnet, MQTT o Profinet) para conectividad robusta y confiable.'
+        description:
+            'Protocolos industriales (Modbus, BACnet, MQTT o Profinet) para conectividad robusta y confiable.',
     },
     {
         icon: 'fas fa-shield-alt',
         title: 'Transmisión segura de datos',
-        description: 'Envío protegido hacia paneles HMI, servidores locales o nubes privadas con máxima seguridad.'
+        description:
+            'Envío protegido hacia paneles HMI, servidores locales o nubes privadas con máxima seguridad.',
     },
     {
         icon: 'fas fa-bell',
         title: 'Programación de alarmas',
-        description: 'Notificaciones automáticas para condiciones fuera de rango o fallas detectadas en tiempo real.'
-    }
+        description:
+            'Notificaciones automáticas para condiciones fuera de rango o fallas detectadas en tiempo real.',
+    },
 ];
 
 const monitoringServices = [
     {
         icon: 'fas fa-bolt',
         title: 'Monitoreo de parámetros eléctricos',
-        description: 'Supervisión de voltaje, corriente, potencia y factor de carga en tiempo real.'
+        description:
+            'Supervisión de voltaje, corriente, potencia y factor de carga en tiempo real.',
     },
     {
         icon: 'fas fa-thermometer-half',
         title: 'Visualización térmica y energética',
-        description: 'Comportamiento térmico y consumo energético en equipos de refrigeración o HVAC.'
+        description:
+            'Comportamiento térmico y consumo energético en equipos de refrigeración o HVAC.',
     },
     {
         icon: 'fas fa-chart-line',
         title: 'Registro histórico y trazabilidad',
-        description: 'Datos para mantenimiento predictivo y auditorías técnicas con análisis detallado.'
+        description:
+            'Datos para mantenimiento predictivo y auditorías técnicas con análisis detallado.',
     },
     {
         icon: 'fas fa-desktop',
         title: 'Acceso remoto personalizado',
-        description: 'Paneles SCADA o dashboards web personalizados para cada cliente y aplicación.'
-    }
+        description:
+            'Paneles SCADA o dashboards web personalizados para cada cliente y aplicación.',
+    },
 ];
 
 const benefits = [
     {
         icon: 'fas fa-industry',
         title: 'Supervisión industrial completa',
-        description: 'Plantas industriales, cámaras frías, sistemas HVAC y tableros eléctricos monitoreados 24/7.'
+        description:
+            'Plantas industriales, cámaras frías, sistemas HVAC y tableros eléctricos monitoreados 24/7.',
     },
     {
         icon: 'fas fa-cogs',
         title: 'Control de procesos automatizados',
-        description: 'Variables en procesos automatizados o líneas de producción con control preciso.'
+        description:
+            'Variables en procesos automatizados o líneas de producción con control preciso.',
     },
     {
         icon: 'fas fa-leaf',
         title: 'Gestión energética inteligente',
-        description: 'Reducción de costos operativos mediante análisis de consumo y optimización automática.'
-    }
+        description:
+            'Reducción de costos operativos mediante análisis de consumo y optimización automática.',
+    },
 ];
 ---
 
@@ -81,23 +92,25 @@ const benefits = [
     <HeaderApple />
 
     <main class="main">
-        <ServiceHero title="Integración con sistemas inteligentes de monitoreo IoT" />
-        
-        <IntroSection 
+        <ServiceHero
+            title="Integración con sistemas inteligentes de monitoreo IoT"
+        />
+
+        <IntroSection
             content="<strong>SMIIR implementa</strong> soluciones de monitoreo inteligente basadas en tecnología IoT (Internet of Things) para supervisar en tiempo real el funcionamiento de sistemas eléctricos, térmicos y mecánicos dentro de instalaciones industriales y comerciales. Estos sistemas permiten controlar, registrar y optimizar el desempeño de equipos críticos desde una sola plataforma."
         />
 
-        <ServicesGrid 
+        <ServicesGrid
             title="Arquitectura del Sistema"
             services={architectureServices}
         />
 
-        <ServicesGrid 
+        <ServicesGrid
             title="Supervisión y Control en Tiempo Real"
             services={monitoringServices}
         />
 
-        <BenefitsSection 
+        <BenefitsSection
             title="Aplicaciones"
             benefits={benefits}
             variant="default"

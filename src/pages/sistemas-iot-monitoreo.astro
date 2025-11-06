@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title = 'Integración con sistemas inteligentes de monitoreo IoT | SMIIR';
+const description =
+    'SMIIR implementa soluciones de monitoreo inteligente basadas en tecnología IoT para supervisar en tiempo real el funcionamiento de sistemas eléctricos, térmicos y mecánicos.';
+
+const architectureServices = [
+    {
+        icon: 'fas fa-microchip',
+        title: 'Integración de sensores avanzados',
+        description: 'Sensores de temperatura, presión, humedad, caudal, consumo eléctrico y estado operativo para monitoreo completo.'
+    },
+    {
+        icon: 'fas fa-network-wired',
+        title: 'Comunicación industrial',
+        description: 'Protocolos industriales (Modbus, BACnet, MQTT o Profinet) para conectividad robusta y confiable.'
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Transmisión segura de datos',
+        description: 'Envío protegido hacia paneles HMI, servidores locales o nubes privadas con máxima seguridad.'
+    },
+    {
+        icon: 'fas fa-bell',
+        title: 'Programación de alarmas',
+        description: 'Notificaciones automáticas para condiciones fuera de rango o fallas detectadas en tiempo real.'
+    }
+];
+
+const monitoringServices = [
+    {
+        icon: 'fas fa-bolt',
+        title: 'Monitoreo de parámetros eléctricos',
+        description: 'Supervisión de voltaje, corriente, potencia y factor de carga en tiempo real.'
+    },
+    {
+        icon: 'fas fa-thermometer-half',
+        title: 'Visualización térmica y energética',
+        description: 'Comportamiento térmico y consumo energético en equipos de refrigeración o HVAC.'
+    },
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Registro histórico y trazabilidad',
+        description: 'Datos para mantenimiento predictivo y auditorías técnicas con análisis detallado.'
+    },
+    {
+        icon: 'fas fa-desktop',
+        title: 'Acceso remoto personalizado',
+        description: 'Paneles SCADA o dashboards web personalizados para cada cliente y aplicación.'
+    }
+];
+
+const benefits = [
+    {
+        icon: 'fas fa-industry',
+        title: 'Supervisión industrial completa',
+        description: 'Plantas industriales, cámaras frías, sistemas HVAC y tableros eléctricos monitoreados 24/7.'
+    },
+    {
+        icon: 'fas fa-cogs',
+        title: 'Control de procesos automatizados',
+        description: 'Variables en procesos automatizados o líneas de producción con control preciso.'
+    },
+    {
+        icon: 'fas fa-leaf',
+        title: 'Gestión energética inteligente',
+        description: 'Reducción de costos operativos mediante análisis de consumo y optimización automática.'
+    }
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Integración con sistemas inteligentes de monitoreo IoT" />
+        
+        <IntroSection 
+            content="<strong>SMIIR implementa</strong> soluciones de monitoreo inteligente basadas en tecnología IoT (Internet of Things) para supervisar en tiempo real el funcionamiento de sistemas eléctricos, térmicos y mecánicos dentro de instalaciones industriales y comerciales. Estos sistemas permiten controlar, registrar y optimizar el desempeño de equipos críticos desde una sola plataforma."
+        />
+
+        <ServicesGrid 
+            title="Arquitectura del Sistema"
+            services={architectureServices}
+        />
+
+        <ServicesGrid 
+            title="Supervisión y Control en Tiempo Real"
+            services={monitoringServices}
+        />
+
+        <BenefitsSection 
+            title="Aplicaciones"
+            benefits={benefits}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-section h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

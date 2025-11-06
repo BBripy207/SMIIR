@@ -85,38 +85,29 @@ const benefits = [
             content="<strong>SMIIR diseña e instala</strong> sistemas de climatización industrial y comercial que garantizan control térmico, eficiencia energética y operación continua. Cada proyecto se adapta a las condiciones reales del entorno, la carga térmica del proceso y las necesidades del cliente."
         />
 
-        <!-- Sección de Diseño Técnico -->
-        <section class="design-section">
-            <div class="container">
-                <h2>Diseño Técnico</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-calculator"></i>
-                        <h3>Cálculo térmico detallado</h3>
-                        <p>
-                            Considerando ocupación, maquinaria y condiciones
-                            ambientales para un diseño preciso y eficiente.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Selección de equipos HVAC</h3>
-                        <p>
-                            Roof Top, Chiller, Mini-Split o sistemas VRF de alta
-                            eficiencia adaptados a cada proyecto.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-wind"></i>
-                        <h3>Diseño de ductería optimizada</h3>
-                        <p>
-                            Retornos y difusores para una distribución de aire
-                            uniforme y estable en todo el espacio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <ServicesGrid
+            title="Diseño Técnico"
+            services={[
+                {
+                    icon: 'fas fa-calculator',
+                    title: 'Cálculo térmico detallado',
+                    description:
+                        'Considerando ocupación, maquinaria y condiciones ambientales para un diseño preciso y eficiente.',
+                },
+                {
+                    icon: 'fas fa-cogs',
+                    title: 'Selección de equipos HVAC',
+                    description:
+                        'Roof Top, Chiller, Mini-Split o sistemas VRF de alta eficiencia adaptados a cada proyecto.',
+                },
+                {
+                    icon: 'fas fa-wind',
+                    title: 'Diseño de ductería optimizada',
+                    description:
+                        'Retornos y difusores para una distribución de aire uniforme y estable en todo el espacio.',
+                },
+            ]}
+        />
 
         <!-- Sección de Instalación y Control -->
         <section class="installation-section">

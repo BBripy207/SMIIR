@@ -85,10 +85,96 @@ const benefits = [
             content="<strong>SMIIR diseña e instala</strong> sistemas de climatización industrial y comercial que garantizan control térmico, eficiencia energética y operación continua. Cada proyecto se adapta a las condiciones reales del entorno, la carga térmica del proceso y las necesidades del cliente."
         />
 
-        <ServicesGrid
-            title="Diseño Técnico e Instalación"
-            services={services}
-        />
+        <!-- Sección de Diseño Técnico -->
+        <section class="design-section">
+            <div class="container">
+                <h2>Diseño Técnico</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Cálculo térmico detallado</h3>
+                        <p>
+                            Considerando ocupación, maquinaria y condiciones
+                            ambientales para un diseño preciso y eficiente.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Selección de equipos HVAC</h3>
+                        <p>
+                            Roof Top, Chiller, Mini-Split o sistemas VRF de alta
+                            eficiencia adaptados a cada proyecto.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-wind"></i>
+                        <h3>Diseño de ductería optimizada</h3>
+                        <p>
+                            Retornos y difusores para una distribución de aire
+                            uniforme y estable en todo el espacio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Instalación y Control -->
+        <section class="installation-section">
+            <div class="container">
+                <h2>Instalación y Control</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Montaje profesional certificado</h3>
+                            <p>
+                                Líneas de refrigerante certificadas y
+                                aislamiento térmico de grado industrial.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Tableros eléctricos coordinados</h3>
+                            <p>
+                                Protecciones coordinadas para equipos de
+                                climatización con sistemas de control
+                                automatizado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Controles automáticos e IoT</h3>
+                            <p>
+                                Supervisión de temperatura, humedad y consumo
+                                energético en tiempo real.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Mantenimiento especializado</h3>
+                            <p>
+                                Preventivo y correctivo para maximizar
+                                eficiencia y vida útil de los equipos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <BenefitsSection
             title="Aplicaciones y Beneficios"
@@ -104,5 +190,141 @@ const benefits = [
 <style>
     .main {
         margin-top: 0;
+    }
+
+    .design-section {
+        padding: 3rem 2rem;
+    }
+
+    .installation-section {
+        padding: 3rem 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .design-section h2,
+    .installation-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 2rem;
+        color: white;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-card {
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        font-size: 3rem;
+        color: #3b82f6;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+        color: white;
+    }
+
+    .feature-card p {
+        color: #b3b3b3;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .services-list {
+        display: grid;
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .service-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: translateX(10px);
+    }
+
+    .service-icon {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-icon i {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .service-content h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        color: white;
+    }
+
+    .service-content p {
+        color: #b3b3b3;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .design-section,
+        .installation-section {
+            padding: 2rem 1rem;
+        }
+
+        .design-section h2,
+        .installation-section h2 {
+            font-size: 2rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
     }
 </style>

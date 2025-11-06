@@ -83,7 +83,63 @@ const benefits = [
             content="<strong>Diseño y tendido</strong> de sistemas de canalización eléctrica industrial con los más altos estándares de calidad y certificación. Implementamos soluciones integrales que garantizan la protección, funcionalidad y durabilidad de las instalaciones eléctricas industriales."
         />
 
-        <ServicesGrid title="Nuestros Servicios" services={services} />
+        <!-- Sección de servicios principales -->
+        <section class="main-services">
+            <div class="container">
+                <h2>Servicios Especializados</h2>
+                <div class="asymmetric-grid">
+                    <div class="large-card">
+                        <div class="card-content">
+                            <i class="fas fa-route"></i>
+                            <h3>Elaboración de rutas eléctricas optimizadas</h3>
+                            <p>Diseño de distribución de fuerza y control, respetando trayectorias lógicas y accesibilidad para mantenimiento.</p>
+                        </div>
+                    </div>
+                    <div class="small-cards">
+                        <div class="small-card">
+                            <i class="fas fa-tools"></i>
+                            <h4>Selección y montaje especializado</h4>
+                            <p>Tuberías y bandejas portacables según ambiente.</p>
+                        </div>
+                        <div class="small-card">
+                            <i class="fas fa-anchor"></i>
+                            <h4>Aseguramiento de fijación</h4>
+                            <p>Correcta fijación para evitar tensión y vibraciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de procesos -->
+        <section class="process-section">
+            <div class="container">
+                <h2>Proceso de Implementación</h2>
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Canalización protegida y certificada</h3>
+                            <p>Sistemas de tuberías y ductos que protegen conductores de daños mecánicos, humedad, interferencias electromagnéticas y ambientes corrosivos.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Materiales certificados</h3>
+                            <p>Empleo de materiales homologados: tuberías galvanizadas, PVC de alta resistencia, bandejas escalera o charola portacable.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Documentación completa</h3>
+                            <p>Pruebas y certificaciones: verificación de continuidad, aislamiento, etiquetado claro y entrega del sistema listo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <BenefitsSection
             title="Beneficios Clave"
@@ -99,5 +155,193 @@ const benefits = [
 <style>
     .main {
         margin-top: 0;
+    }
+
+    .main-services {
+        padding: 1rem 2rem;
+    }
+
+    .process-section {
+        padding: 1rem 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-services h2,
+    .process-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0;
+        color: white;
+    }
+
+    .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .large-card {
+        border-radius: 20px;
+        padding: 1.5rem;
+        border: 2px solid rgba(59, 130, 246, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .large-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(59, 130, 246, 0.4);
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+    }
+
+    .large-card i {
+        font-size: 4rem;
+        color: #3b82f6;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .large-card h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin: 0;
+        color: white;
+        line-height: 1.3;
+    }
+
+    .large-card p {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .small-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .small-card {
+        border-radius: 16px;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .small-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(10px);
+    }
+
+    .small-card i {
+        font-size: 2rem;
+        color: #3b82f6;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .small-card h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+        line-height: 1.3;
+    }
+
+    .small-card p {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .process-steps {
+        display: grid;
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .step-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        border-radius: 16px;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .step-item:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .step-number {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: white;
+    }
+
+    .step-content h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .step-content p {
+        color: #b3b3b3;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .main-services,
+        .process-section {
+            padding: 2rem 1rem;
+        }
+
+        .main-services h2,
+        .process-section h2 {
+            font-size: 2rem;
+        }
+
+        .asymmetric-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .large-card {
+            padding: 2rem;
+        }
+
+        .large-card h3 {
+            font-size: 1.5rem;
+        }
+
+        .step-item {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .step-number {
+            align-self: center;
+        }
     }
 </style>

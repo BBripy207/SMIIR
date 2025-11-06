@@ -324,19 +324,11 @@ const services = [
         const c = document.getElementById(`content-${i}`);
         const h = c.previousElementSibling;
 
+        // Simplemente toggle el estado actual sin cerrar otros
         if (c.classList.contains('active')) {
             c.classList.remove('active');
             h.classList.remove('active');
         } else {
-            // Cerrar todos los otros
-            document
-                .querySelectorAll('.content.active')
-                .forEach(el => el.classList.remove('active'));
-            document
-                .querySelectorAll('.header.active')
-                .forEach(el => el.classList.remove('active'));
-
-            // Abrir el actual
             c.classList.add('active');
             h.classList.add('active');
         }

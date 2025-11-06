@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title = 'Tendido y canalización eléctrica certificada | SMIIR';
+const description =
+    'Servicios especializados en tendido y canalización eléctrica certificada para la industria, con materiales homologados y documentación completa.';
+
+const services = [
+    {
+        icon: 'fas fa-route',
+        title: 'Elaboración de rutas eléctricas optimizadas',
+        description:
+            'Diseño de distribución de fuerza y control, respetando trayectorias lógicas y accesibilidad para mantenimiento.',
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Selección y montaje especializado',
+        description:
+            'Tuberías y bandejas portacables metálicas o plásticas (conduit, charolas, ductos corrugados) según esfuerzo mecánico, corrosión y tipo de ambiente.',
+    },
+    {
+        icon: 'fas fa-anchor',
+        title: 'Aseguramiento de fijación',
+        description:
+            'Correcta fijación, nivelado y soporte de la canalización para evitar tensión, vibración o desplazamientos.',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Canalización protegida y certificada',
+        description:
+            'Sistemas de tuberías y ductos que protegen conductores de daños mecánicos, humedad, interferencias electromagnéticas y ambientes corrosivos.',
+    },
+    {
+        icon: 'fas fa-certificate',
+        title: 'Materiales certificados',
+        description:
+            'Empleo de materiales homologados para canalización según ambiente industrial: tuberías galvanizadas, PVC de alta resistencia, bandejas escalera o charola portacable.',
+    },
+    {
+        icon: 'fas fa-file-alt',
+        title: 'Documentación completa',
+        description:
+            'Pruebas y certificaciones: verificación de continuidad, aislamiento, etiquetado claro en canalizaciones, y entrega del sistema listo para operación industrial.',
+    },
+];
+
+const benefits = [
+    {
+        icon: 'fas fa-plug',
+        title: 'Integración al sistema eléctrico industrial',
+        description:
+            'Coordinación del tendido con tableros de distribución, tableros de control, motores, luminarias, sistemas de automatización y redes de datos.',
+    },
+    {
+        icon: 'fas fa-expand-arrows-alt',
+        title: 'Red estructurada para futuras ampliaciones',
+        description:
+            'Diseñada para modificaciones o integración de sistemas SCADA/PLC, facilitando cambios sin interrupción mayor.',
+    },
+    {
+        icon: 'fas fa-check-circle',
+        title: 'Cumplimiento normativo',
+        description:
+            'Instalación conforme a normativas aplicables y buenas prácticas de ingeniería eléctrica industrial, garantizando seguridad, operación continua y mantenimiento simplificado.',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Tendido y canalización eléctrica certificada" />
+
+        <IntroSection
+            content="<strong>Diseño y tendido</strong> de sistemas de canalización eléctrica industrial con los más altos estándares de calidad y certificación. Implementamos soluciones integrales que garantizan la protección, funcionalidad y durabilidad de las instalaciones eléctricas industriales."
+        />
+
+        <ServicesGrid title="Nuestros Servicios" services={services} />
+
+        <BenefitsSection
+            title="Beneficios Clave"
+            benefits={benefits}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+</style>

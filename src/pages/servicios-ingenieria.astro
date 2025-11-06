@@ -323,12 +323,18 @@ const services = [
     function toggle(i) {
         const c = document.getElementById(`content-${i}`);
         const h = c.previousElementSibling;
+        const isOpen = c.classList.contains('active');
 
-        // Simplemente toggle el estado actual sin cerrar otros
-        if (c.classList.contains('active')) {
-            c.classList.remove('active');
-            h.classList.remove('active');
-        } else {
+        // Cerrar todos los menús primero
+        document
+            .querySelectorAll('.content.active')
+            .forEach(el => el.classList.remove('active'));
+        document
+            .querySelectorAll('.header.active')
+            .forEach(el => el.classList.remove('active'));
+
+        // Si no estaba abierto, abrir solo este (sin delay)
+        if (!isOpen) {
             c.classList.add('active');
             h.classList.add('active');
         }

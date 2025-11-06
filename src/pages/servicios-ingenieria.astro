@@ -4,447 +4,115 @@ import HeaderApple from '../components/Header_clean.astro';
 import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 
-// Metadatos SEO
-const title =
-    'Ingeniería y Construcción | SIMIR - Servicios Industriales Integrales';
-const description =
-    'Servicios especializados de ingeniería y construcción: automatización industrial, plantas de tratamiento, energías renovables, construcción civil e instalaciones especiales.';
+const title = 'Ingeniería y Construcción | SIMIR';
+const description = 'Servicios de ingeniería industrial, automatización, plantas de tratamiento y construcción especializada.';
+
+// Datos de servicios optimizados
+const services = [
+    {
+        icon: 'fas fa-flask',
+        title: 'Ingeniería Avanzada',
+        items: [
+            { icon: 'fas fa-atom', title: 'Ingeniería Química', desc: 'Diseño de procesos químicos industriales y control de calidad.' },
+            { icon: 'fas fa-solar-panel', title: 'Energías Renovables', desc: 'Sistemas solares, eólicos y energía limpia industrial.' },
+            { icon: 'fas fa-chart-line', title: 'Consultoría Técnica', desc: 'Asesoría especializada y análisis de viabilidad.' }
+        ]
+    },
+    {
+        icon: 'fas fa-microchip',
+        title: 'Automatización y Control Industrial',
+        items: [
+            { icon: 'fas fa-code', title: 'Programación PLC y SCADA', desc: 'Control automatizado y supervisión industrial.' },
+            { icon: 'fas fa-satellite-dish', title: 'Control de Sensores', desc: 'Integración de sensores y sistemas de actuación.' },
+            { icon: 'fas fa-plug', title: 'Tableros Eléctricos', desc: 'Diseño e instalación de control eléctrico.' }
+        ]
+    },
+    {
+        icon: 'fas fa-tint',
+        title: 'Plantas de Tratamiento (PTAR)',
+        items: [
+            { icon: 'fas fa-project-diagram', title: 'Diseño de Procesos', desc: 'Desarrollo integral de plantas de tratamiento.' },
+            { icon: 'fas fa-robot', title: 'Automatización', desc: 'Sensores especializados y control avanzado.' },
+            { icon: 'fas fa-desktop', title: 'Monitoreo SCADA', desc: 'Supervisión y control remoto en tiempo real.' }
+        ]
+    },
+    {
+        icon: 'fas fa-hard-hat',
+        title: 'Construcción y Obra Civil',
+        items: [
+            { icon: 'fas fa-home', title: 'Vivienda y Remodelación', desc: 'Construcción residencial e industrial.' },
+            { icon: 'fas fa-bolt', title: 'Instalaciones Eléctricas', desc: 'Instalaciones industriales y residenciales.' },
+            { icon: 'fas fa-drafting-compass', title: 'Planos y Supervisión', desc: 'Planos arquitectónicos y supervisión técnica.' }
+        ]
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Instalaciones Especiales',
+        items: [
+            { icon: 'fas fa-lightbulb', title: 'Fuerza y Alumbrado', desc: 'Iluminación industrial y distribución eléctrica.' },
+            { icon: 'fas fa-brain', title: 'Sistemas Inteligentes', desc: 'Domótica industrial y automatización IoT.' },
+            { icon: 'fas fa-battery-full', title: 'Energía de Respaldo (UPS)', desc: 'Sistemas UPS para procesos críticos.' }
+        ]
+    }
+];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout {title} {description}>
     <HeaderApple />
+    
+    <main class="main">
+        <div class="hero">
+            <h1>INGENIERÍA Y CONSTRUCCIÓN</h1>
+            <p>Soluciones integrales para proyectos industriales y construcción especializada</p>
+        </div>
 
-    <main class="engineering-main">
-        <section class="engineering-hero">
-            <h1 class="engineering-title">INGENIERÍA Y CONSTRUCCIÓN</h1>
-            <p class="engineering-subtitle">
-                Soluciones integrales para proyectos industriales y construcción
-                especializada
-            </p>
-        </section>
-
-        <section class="services-menu">
-            <div class="menu-container">
-                <!-- Ingeniería Avanzada -->
-                <div class="service-category">
-                    <div class="category-header" onclick="toggleCategory(this)">
-                        <i class="fas fa-flask"></i>
-                        <h2>Ingeniería Avanzada</h2>
+        <div class="services">
+            {services.map((service, index) => (
+                <div class="category">
+                    <button class="header" onclick={`toggle(${index})`} type="button">
+                        <i class={service.icon}></i>
+                        <h2>{service.title}</h2>
                         <i class="fas fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-item">
-                            <i class="fas fa-atom"></i>
-                            <h3>Ingeniería Química</h3>
-                            <p>
-                                Diseño de procesos químicos industriales,
-                                optimización de reacciones y control de calidad
-                                en producción.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-solar-panel"></i>
-                            <h3>Energías Renovables</h3>
-                            <p>
-                                Implementación de sistemas solares, eólicos y
-                                otras fuentes de energía limpia para industrias.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Consultoría Técnica</h3>
-                            <p>
-                                Asesoría especializada en proyectos de
-                                ingeniería, análisis de viabilidad y
-                                optimización de procesos.
-                            </p>
-                        </div>
+                    </button>
+                    <div class="content" id={`content-${index}`}>
+                        {service.items.map((item) => (
+                            <div class="item">
+                                <i class={item.icon}></i>
+                                <div>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
-
-                <!-- Automatización y Control Industrial -->
-                <div class="service-category">
-                    <div class="category-header" onclick="toggleCategory(this)">
-                        <i class="fas fa-microchip"></i>
-                        <h2>Automatización y Control Industrial</h2>
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-item">
-                            <i class="fas fa-code"></i>
-                            <h3>Programación PLC y SCADA</h3>
-                            <p>
-                                Desarrollo de sistemas de control automatizado
-                                con PLC y supervisión SCADA para procesos
-                                industriales.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-satellite-dish"></i>
-                            <h3>Control de Sensores y Actuadores</h3>
-                            <p>
-                                Integración y configuración de sensores
-                                industriales y sistemas de actuación para
-                                control de procesos.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-plug"></i>
-                            <h3>Tableros Eléctricos y Control de Potencia</h3>
-                            <p>
-                                Diseño e instalación de tableros de control
-                                eléctrico y sistemas de distribución de potencia
-                                industrial.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PTAR -->
-                <div class="service-category">
-                    <div class="category-header" onclick="toggleCategory(this)">
-                        <i class="fas fa-tint"></i>
-                        <h2>
-                            Plantas de Tratamiento de Aguas Residuales (PTAR)
-                        </h2>
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <h3>Diseño y Desarrollo de Procesos</h3>
-                            <p>
-                                Desarrollo integral de plantas de tratamiento,
-                                desde el diseño conceptual hasta la
-                                implementación completa.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-robot"></i>
-                            <h3>Integración de Sensores y Automatización</h3>
-                            <p>
-                                Automatización de procesos de tratamiento con
-                                sensores especializados y sistemas de control
-                                avanzado.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-desktop"></i>
-                            <h3>Monitoreo SCADA</h3>
-                            <p>
-                                Sistemas de supervisión y control remoto para
-                                monitoreo en tiempo real de plantas de
-                                tratamiento.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Construcción y Obra Civil -->
-                <div class="service-category">
-                    <div class="category-header" onclick="toggleCategory(this)">
-                        <i class="fas fa-hard-hat"></i>
-                        <h2>Construcción y Obra Civil</h2>
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-item">
-                            <i class="fas fa-home"></i>
-                            <h3>Vivienda y Remodelación</h3>
-                            <p>
-                                Construcción de viviendas residenciales e
-                                industriales, remodelaciones y ampliaciones
-                                especializadas.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-bolt"></i>
-                            <h3>Instalaciones Eléctricas</h3>
-                            <p>
-                                Instalaciones eléctricas industriales y
-                                residenciales, cumpliendo con normativas de
-                                seguridad vigentes.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-drafting-compass"></i>
-                            <h3>Planos y Supervisión de Obra</h3>
-                            <p>
-                                Elaboración de planos arquitectónicos y
-                                estructurales, supervisión técnica de
-                                construcción.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Instalaciones Especiales -->
-                <div class="service-category">
-                    <div class="category-header" onclick="toggleCategory(this)">
-                        <i class="fas fa-tools"></i>
-                        <h2>Instalaciones Especiales</h2>
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h3>Fuerza y Alumbrado</h3>
-                            <p>
-                                Sistemas de iluminación industrial y
-                                distribución de fuerza eléctrica para maquinaria
-                                pesada.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-brain"></i>
-                            <h3>Sistemas Inteligentes</h3>
-                            <p>
-                                Implementación de domótica industrial, sistemas
-                                IoT y automatización inteligente de edificios.
-                            </p>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-battery-full"></i>
-                            <h3>Energía de Respaldo (UPS)</h3>
-                            <p>
-                                Sistemas de alimentación ininterrumpida y
-                                respaldo energético para procesos críticos
-                                industriales.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            ))}
+        </div>
     </main>
 
     <Footer />
     <FloatingButtons />
 </BaseLayout>
-
 <style>
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .engineering-main {
-        margin-top: 0;
-    }
-
-    .engineering-hero {
-        text-align: center;
-        padding: 1rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto 1rem;
-    }
-
-    .engineering-title {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        margin: 0 0 0.5rem 0;
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.1;
-    }
-
-    .engineering-subtitle {
-        font-size: 1.2rem;
-        margin: 0;
-        color: #b3b3b3;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .services-menu {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem 3rem;
-    }
-
-    .menu-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .service-category {
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .service-category:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(59, 130, 246, 0.3);
-    }
-
-    .category-header {
-        display: flex;
-        align-items: center;
-        padding: 1.5rem 2rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-left: 4px solid #3b82f6;
-    }
-
-    .category-header:hover {
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .category-header i:first-child {
-        font-size: 1.5rem;
-        color: #3b82f6;
-        margin-right: 1rem;
-    }
-
-    .category-header h2 {
-        flex: 1;
-        margin: 0;
-        color: white;
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-
-    .arrow {
-        font-size: 1rem;
-        color: #3b82f6;
-        transition: transform 0.3s ease;
-    }
-
-    .category-header.active .arrow {
-        transform: rotate(180deg);
-    }
-
-    .category-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background: rgba(255, 255, 255, 0.02);
-        will-change: max-height;
-    }
-
-    .category-content.active {
-        max-height: 800px;
-    }
-
-    .service-item {
-        padding: 1.5rem 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .service-item:last-child {
-        border-bottom: none;
-    }
-
-    .service-item i {
-        font-size: 1.2rem;
-        color: #3b82f6;
-        margin-top: 0.2rem;
-        min-width: 20px;
-    }
-
-    .service-item h3 {
-        margin: 0 0 0.5rem 0;
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
-
-    .service-item p {
-        margin: 0;
-        color: #b3b3b3;
-        line-height: 1.5;
-        font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-        .services-menu {
-            padding: 0 1rem 2rem;
-        }
-
-        .category-header {
-            padding: 1rem 1.5rem;
-        }
-
-        .category-header h2 {
-            font-size: 1.1rem;
-        }
-
-        .service-item {
-            padding: 1rem 1.5rem;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .service-item i {
-            margin-top: 0;
-        }
-
-        .engineering-hero {
-            padding: 1rem 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .engineering-title {
-            font-size: 2rem;
-        }
-
-        .engineering-subtitle {
-            font-size: 1rem;
-        }
-
-        .category-header {
-            padding: 0.8rem 1rem;
-        }
-
-        .category-header h2 {
-            font-size: 1rem;
-        }
-
-        .service-item {
-            padding: 0.8rem 1rem;
-        }
-    }
+.main{margin-top:0}.hero{text-align:center;padding:1rem 2rem;max-width:1200px;margin:0 auto 1rem}.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;margin:0 0 .5rem;background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}.hero p{font-size:1.2rem;margin:0;color:#b3b3b3;max-width:600px;margin:0 auto}.services{max-width:1200px;margin:0 auto;padding:0 2rem 2rem;display:flex;flex-direction:column;gap:1.5rem}.category{background:rgba(255,255,255,.05);border-radius:12px;border:1px solid rgba(255,255,255,.1);overflow:hidden}.category:hover{background:rgba(255,255,255,.08);border-color:rgba(59,130,246,.3)}.header{display:flex;align-items:center;padding:1.5rem 2rem;width:100%;background:none;border:none;color:white;cursor:pointer;border-left:4px solid #3b82f6;transition:background .1s}.header:hover{background:rgba(255,255,255,.05)}.header i:first-child{font-size:1.5rem;color:#3b82f6;margin-right:1rem}.header h2{flex:1;margin:0;font-size:1.3rem;font-weight:700;text-align:left}.arrow{font-size:1rem;color:#3b82f6;transition:transform .1s ease-out}.header.active .arrow{transform:rotate(180deg)}.content{max-height:0;overflow:hidden;background:rgba(255,255,255,.02);transition:max-height .15s ease-out}.content.active{max-height:800px}.item{padding:1.5rem 2rem;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:1rem}.item:last-child{border-bottom:none}.item i{font-size:1.2rem;color:#3b82f6;margin-top:.2rem;min-width:20px}.item h3{margin:0 0 .5rem;color:white;font-size:1.1rem;font-weight:600}.item p{margin:0;color:#b3b3b3;line-height:1.5;font-size:.95rem}@media(max-width:768px){.services{padding:0 1rem 2rem}.header{padding:1rem 1.5rem}.header h2{font-size:1.1rem}.item{padding:1rem 1.5rem;flex-direction:column;gap:.5rem}.item i{margin-top:0}.hero{padding:1rem}}@media(max-width:480px){.hero h1{font-size:2rem}.hero p{font-size:1rem}.header{padding:.8rem 1rem}.header h2{font-size:1rem}.item{padding:.8rem 1rem}}
 </style>
 
 <script is:inline>
-    function toggleCategory(header) {
-        // Guardar la posición actual del scroll
-        const currentScrollY = window.scrollY;
-
-        const content = header.nextElementSibling;
-
-        // Toggle active class
-        header.classList.toggle('active');
-        content.classList.toggle('active');
-
-        // Close other categories (optional - remove if you want multiple open)
-        const allHeaders = document.querySelectorAll('.category-header');
-        const allContents = document.querySelectorAll('.category-content');
-
-        allHeaders.forEach((otherHeader, index) => {
-            if (otherHeader !== header) {
-                otherHeader.classList.remove('active');
-                allContents[index].classList.remove('active');
-            }
-        });
-
-        // Restaurar la posición del scroll después de un pequeño delay
-        setTimeout(() => {
-            window.scrollTo(0, currentScrollY);
-        }, 10);
+function toggle(i){
+    const c=document.getElementById(`content-${i}`);
+    const h=c.previousElementSibling;
+    
+    if(c.classList.contains('active')){
+        c.classList.remove('active');
+        h.classList.remove('active');
+    }else{
+        // Cerrar todos los otros
+        document.querySelectorAll('.content.active').forEach(el=>el.classList.remove('active'));
+        document.querySelectorAll('.header.active').forEach(el=>el.classList.remove('active'));
+        
+        // Abrir el actual
+        c.classList.add('active');
+        h.classList.add('active');
     }
+}
 </script>

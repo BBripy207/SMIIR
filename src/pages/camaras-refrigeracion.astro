@@ -1,0 +1,364 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title = 'Cámaras de refrigeración y cuartos fríos | SMIIR';
+const description =
+    'SMIIR desarrolla, instala y pone en marcha cámaras de refrigeración y cuartos fríos diseñados para conservar productos, materias primas o procesos sensibles a la temperatura.';
+
+const services = [
+    {
+        icon: 'fas fa-thermometer-half',
+        title: 'Análisis térmico especializado',
+        description:
+            'Análisis de carga y tipo de producto (alimentario, químico, farmacéutico o industrial) para diseño óptimo.',
+    },
+    {
+        icon: 'fas fa-ruler-combined',
+        title: 'Dimensionamiento preciso',
+        description:
+            'Cámaras según volumen útil, nivel de aislamiento y temperatura requerida (de 0 °C a –40 °C).',
+    },
+    {
+        icon: 'fas fa-microchip',
+        title: 'Selección de equipos premium',
+        description:
+            'Compresores, condensadoras y evaporadoras de alta eficiencia según demanda térmica y tiempo de recuperación.',
+    },
+    {
+        icon: 'fas fa-cube',
+        title: 'Diseño modular avanzado',
+        description:
+            'Paneles aislantes tipo PIR, PUR o poliuretano inyectado, con espesores ajustados a la temperatura de trabajo.',
+    },
+    {
+        icon: 'fas fa-wrench',
+        title: 'Montaje profesional',
+        description:
+            'Paneles térmicos con sellado hermético y sistemas de piso reforzados para tránsito de carga.',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Integración eléctrica completa',
+        description:
+            'Protecciones termomagnéticas, tableros dedicados y sensores de seguridad integrados.',
+    },
+];
+
+const benefits = [
+    {
+        icon: 'fas fa-snowflake',
+        title: 'Cámaras industriales',
+        description:
+            'Conservación, congelación o preenfriado industrial con control preciso de temperatura y humedad.',
+    },
+    {
+        icon: 'fas fa-hospital',
+        title: 'Aplicaciones especializadas',
+        description:
+            'Cuartos fríos para plantas de alimentos, laboratorios, hospitales o centros logísticos.',
+    },
+    {
+        icon: 'fas fa-cogs',
+        title: 'Áreas de proceso controlado',
+        description:
+            'Temperatura controlada para manufactura o ensamble técnico con monitoreo automatizado.',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Cámaras de refrigeración y cuartos fríos" />
+
+        <IntroSection
+            content="<strong>SMIIR desarrolla, instala y pone en marcha</strong> cámaras de refrigeración y cuartos fríos diseñados para conservar productos, materias primas o procesos sensibles a la temperatura. Cada sistema se fabrica con componentes certificados, aislamiento de alto rendimiento y control automatizado de temperatura y humedad."
+        />
+
+        <!-- Sección de Diseño Técnico -->
+        <section class="technical-design">
+            <div class="container">
+                <h2>Diseño Técnico</h2>
+                <div class="design-grid">
+                    <div class="design-card primary">
+                        <div class="card-header">
+                            <i class="fas fa-thermometer-half"></i>
+                            <h3>Análisis térmico especializado</h3>
+                        </div>
+                        <p>
+                            Análisis de carga y tipo de producto (alimentario,
+                            químico, farmacéutico o industrial) para diseño
+                            óptimo.
+                        </p>
+                    </div>
+                    <div class="design-card">
+                        <div class="card-header">
+                            <i class="fas fa-ruler-combined"></i>
+                            <h3>Dimensionamiento preciso</h3>
+                        </div>
+                        <p>
+                            Cámaras según volumen útil, nivel de aislamiento y
+                            temperatura requerida (de 0 °C a –40 °C).
+                        </p>
+                    </div>
+                    <div class="design-card">
+                        <div class="card-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Selección de equipos premium</h3>
+                        </div>
+                        <p>
+                            Compresores, condensadoras y evaporadoras de alta
+                            eficiencia según demanda térmica.
+                        </p>
+                    </div>
+                    <div class="design-card">
+                        <div class="card-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Diseño modular avanzado</h3>
+                        </div>
+                        <p>
+                            Paneles aislantes tipo PIR, PUR o poliuretano
+                            inyectado, con espesores ajustados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Instalación y Control -->
+        <section class="installation-control">
+            <div class="container">
+                <h2>Instalación y Control</h2>
+                <div class="control-features">
+                    <div class="feature-row">
+                        <div class="feature-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Montaje profesional</h3>
+                            <p>
+                                Paneles térmicos con sellado hermético y
+                                sistemas de piso reforzados para tránsito de
+                                carga.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-row">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Integración eléctrica completa</h3>
+                            <p>
+                                Protecciones termomagnéticas, tableros dedicados
+                                y sensores de seguridad integrados.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-row">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Control automatizado</h3>
+                            <p>
+                                Termostatos digitales o sistemas PLC/IoT, con
+                                monitoreo remoto de temperatura, presión y
+                                estado del sistema.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-row">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Alarmas y registros</h3>
+                            <p>
+                                Registros históricos para trazabilidad y control
+                                de calidad con alertas automáticas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <BenefitsSection
+            title="Aplicaciones"
+            benefits={benefits}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .technical-design h2,
+    .installation-control h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+
+    .technical-design {
+        padding: 0.5rem 2rem;
+    }
+
+    .installation-control {
+        padding: 0.5rem 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .design-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .design-card {
+        border-radius: 12px;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .design-card.primary {
+        grid-column: 1 / -1;
+        border: 2px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .design-card:hover {
+        transform: scale(1.02);
+        border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-header i {
+        font-size: 1.5rem;
+        color: #3b82f6;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .design-card p {
+        color: #b3b3b3;
+        line-height: 1.4;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .control-features {
+        display: grid;
+        gap: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .feature-row {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .feature-row:hover {
+        border-color: rgba(59, 130, 246, 0.3);
+        transform: translateX(10px);
+    }
+
+    .feature-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-icon i {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .feature-info h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 0;
+        color: white;
+    }
+
+    .feature-info p {
+        color: #b3b3b3;
+        line-height: 1.4;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .technical-design,
+        .installation-control {
+            padding: 1rem;
+        }
+
+        .design-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .design-card.primary {
+            grid-column: 1;
+        }
+
+        .feature-row {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .feature-row:hover {
+            transform: translateY(-5px);
+        }
+    }
+</style>

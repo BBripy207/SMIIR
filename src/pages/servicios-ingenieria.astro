@@ -223,6 +223,14 @@ const description =
 </BaseLayout>
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
     .engineering-main {
         margin-top: 0;
     }
@@ -319,12 +327,13 @@ const description =
     .category-content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         background: rgba(255, 255, 255, 0.02);
+        will-change: max-height;
     }
 
     .category-content.active {
-        max-height: 1000px;
+        max-height: 800px;
     }
 
     .service-item {
@@ -413,6 +422,9 @@ const description =
 
 <script is:inline>
     function toggleCategory(header) {
+        // Guardar la posición actual del scroll
+        const currentScrollY = window.scrollY;
+
         const content = header.nextElementSibling;
 
         // Toggle active class
@@ -429,5 +441,10 @@ const description =
                 allContents[index].classList.remove('active');
             }
         });
+
+        // Restaurar la posición del scroll después de un pequeño delay
+        setTimeout(() => {
+            window.scrollTo(0, currentScrollY);
+        }, 10);
     }
 </script>

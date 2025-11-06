@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+
+const title =
+    'Naves Industriales y Plantas de Proceso | SMIIR - Construcción Industrial';
+const description =
+    'Diseño y construcción de naves industriales, plantas de proceso y obras comerciales. Infraestructura preparada para operar con eficiencia, seguridad y continuidad.';
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <div class="hero">
+            <h1>NAVES INDUSTRIALES, PLANTAS DE PROCESO Y OBRAS COMERCIALES</h1>
+            <p>
+                Infraestructura industrial y comercial preparada para operar con
+                eficiencia, seguridad y continuidad
+            </p>
+        </div>
+
+        <section class="intro-section">
+            <div class="intro-content">
+                <p class="intro-text">
+                    Diseñamos y construimos infraestructura industrial y
+                    comercial preparada para operar con eficiencia, seguridad y
+                    continuidad. Cada proyecto se ejecuta con <strong
+                        >precisión estructural</strong
+                    >, <strong>materiales certificados</strong> y una planeación
+                    orientada a la productividad del cliente.
+                </p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="services-container">
+                <h2>
+                    SMIIR desarrolla desde el concepto hasta la entrega final
+                </h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Diseño arquitectónico y estructural</h3>
+                        <p>
+                            Adaptado a la operación específica de cada cliente
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Montaje de estructuras metálicas</h3>
+                        <p>De alta resistencia y durabilidad industrial</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Pisos industriales nivelados</h3>
+                        <p>Acabados técnicos de alto desempeño</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Cubiertas, muros y cerramientos</h3>
+                        <p>Con aislamiento térmico y acústico especializado</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Instalaciones eléctricas e hidráulicas</h3>
+                        <p>
+                            Listas para automatización y servicios industriales
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h3>Sistemas de ventilación y climatización</h3>
+                        <p>Adecuados a cada tipo de proceso industrial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefits-container">
+                <h2>Garantías de Operación</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Operación continua</h3>
+                        <p>Diseño para funcionamiento ininterrumpido</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Mantenimiento mínimo</h3>
+                        <p>Materiales y sistemas de bajo mantenimiento</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3>Expansión futura</h3>
+                        <p>Estructuras preparadas para crecimiento</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
+        margin: 0 0 1rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #b3b3b3;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .intro-section {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #e5e7eb;
+        margin: 0;
+    }
+
+    .intro-text strong {
+        color: #3b82f6;
+        font-weight: 700;
+    }
+
+    .services-section {
+        padding: 0 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .services-container h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 1.5rem;
+        color: white;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(59, 130, 246, 0.3);
+        transform: translateY(-5px);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: #3b82f6;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+        color: white;
+    }
+
+    .service-card p {
+        color: #b3b3b3;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .benefits-section {
+        padding: 1.5rem 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .benefits-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .benefits-container h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 1rem;
+        color: white;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-item {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .benefit-item i {
+        font-size: 2.5rem;
+        color: #3b82f6;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        color: white;
+    }
+
+    .benefit-item p {
+        color: #b3b3b3;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        .intro-section {
+            padding: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+        }
+
+        .services-section {
+            padding: 0 1rem 1rem;
+        }
+
+        .services-container h2 {
+            font-size: 2rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            padding: 1.5rem;
+        }
+
+        .benefits-section {
+            padding: 1rem;
+        }
+
+        .benefits-container h2 {
+            font-size: 2rem;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .services-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .benefits-container h2 {
+            font-size: 1.8rem;
+        }
+    }
+</style>

@@ -17,6 +17,7 @@ const services = [
             {
                 icon: 'fas fa-industry',
                 title: 'Naves industriales, plantas de proceso y obras comerciales',
+                link: '/naves-industriales',
             },
             {
                 icon: 'fas fa-hammer',
@@ -149,7 +150,13 @@ const services = [
                             {service.items.map(item => (
                                 <div class="item">
                                     <i class={item.icon} />
-                                    <h3>{item.title}</h3>
+                                    {item.link ? (
+                                        <a href={item.link} class="item-link">
+                                            <h3>{item.title}</h3>
+                                        </a>
+                                    ) : (
+                                        <h3>{item.title}</h3>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -271,6 +278,17 @@ const services = [
         font-size: 1.1rem;
         font-weight: 600;
     }
+
+    .item-link {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
+    .item-link:hover h3 {
+        color: #3b82f6;
+    }
+
     .item p {
         margin: 0;
         color: #b3b3b3;

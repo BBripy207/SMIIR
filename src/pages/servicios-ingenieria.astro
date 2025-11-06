@@ -11,110 +11,62 @@ const description =
 // Datos de servicios optimizados
 const services = [
     {
-        icon: 'fas fa-flask',
+        icon: 'fas fa-building',
+        title: 'Obra Civil e Industrial',
+        items: [
+            { icon: 'fas fa-industry', title: 'Naves industriales, plantas de proceso y obras comerciales' },
+            { icon: 'fas fa-hammer', title: 'Diseño estructural, cimentación y acabados técnicos' },
+            { icon: 'fas fa-certificate', title: 'Cumplimiento con normativas NOM, STPS y estándares industriales' }
+        ]
+    },
+    {
+        icon: 'fas fa-wind',
+        title: 'Refrigeración, HVAC y Control Térmico',
+        items: [
+            { icon: 'fas fa-snowflake', title: 'Sistemas de aire acondicionado industrial y comercial' },
+            { icon: 'fas fa-thermometer-half', title: 'Cámaras de refrigeración y cuartos fríos' },
+            { icon: 'fas fa-wifi', title: 'Integración con sistemas inteligentes de monitoreo IoT' }
+        ]
+    },
+    {
+        icon: 'fas fa-bolt',
+        title: 'Instalaciones Eléctricas, CCTV y Cableado Estructurado',
+        items: [
+            { icon: 'fas fa-plug', title: 'Tendido y canalización eléctrica certificada' },
+            { icon: 'fas fa-video', title: 'Sistemas de videovigilancia y seguridad' },
+            { icon: 'fas fa-network-wired', title: 'Redes de datos y comunicación estructurada' }
+        ]
+    },
+    {
+        icon: 'fas fa-key',
+        title: 'Proyectos Llave en Mano',
+        items: [
+            { icon: 'fas fa-drafting-compass', title: 'Diseño, construcción, integración y entrega funcional' },
+            { icon: 'fas fa-clipboard-check', title: 'Supervisión integral bajo estándares industriales' },
+            { icon: 'fas fa-handshake', title: 'Ideal para clientes que buscan un solo proveedor técnico' }
+        ]
+    },
+    {
+        icon: 'fas fa-cogs',
         title: 'Ingeniería Avanzada',
         items: [
-            {
-                icon: 'fas fa-atom',
-                title: 'Ingeniería Química',
-                desc: 'Diseño de procesos químicos industriales y control de calidad.',
-            },
-            {
-                icon: 'fas fa-solar-panel',
-                title: 'Energías Renovables',
-                desc: 'Sistemas solares, eólicos y energía limpia industrial.',
-            },
-            {
-                icon: 'fas fa-chart-line',
-                title: 'Consultoría Técnica',
-                desc: 'Asesoría especializada y análisis de viabilidad.',
-            },
-        ],
+            { icon: 'fas fa-atom', title: 'Ingeniería Química' },
+            { icon: 'fas fa-solar-panel', title: 'Energías Renovables' },
+            { icon: 'fas fa-chart-line', title: 'Consultoría Técnica' },
+            { icon: 'fas fa-tint', title: 'Plantas de Tratamiento de Aguas Residuales (PTAR)' },
+            { icon: 'fas fa-microchip', title: 'Automatización y Control Industrial' }
+        ]
     },
     {
         icon: 'fas fa-microchip',
-        title: 'Automatización y Control Industrial',
+        title: 'Automatización y Control Industrial — Detalle',
         items: [
-            {
-                icon: 'fas fa-code',
-                title: 'Programación PLC y SCADA',
-                desc: 'Control automatizado y supervisión industrial.',
-            },
-            {
-                icon: 'fas fa-satellite-dish',
-                title: 'Control de Sensores',
-                desc: 'Integración de sensores y sistemas de actuación.',
-            },
-            {
-                icon: 'fas fa-plug',
-                title: 'Tableros Eléctricos',
-                desc: 'Diseño e instalación de control eléctrico.',
-            },
-        ],
-    },
-    {
-        icon: 'fas fa-tint',
-        title: 'Plantas de Tratamiento (PTAR)',
-        items: [
-            {
-                icon: 'fas fa-project-diagram',
-                title: 'Diseño de Procesos',
-                desc: 'Desarrollo integral de plantas de tratamiento.',
-            },
-            {
-                icon: 'fas fa-robot',
-                title: 'Automatización',
-                desc: 'Sensores especializados y control avanzado.',
-            },
-            {
-                icon: 'fas fa-desktop',
-                title: 'Monitoreo SCADA',
-                desc: 'Supervisión y control remoto en tiempo real.',
-            },
-        ],
-    },
-    {
-        icon: 'fas fa-hard-hat',
-        title: 'Construcción y Obra Civil',
-        items: [
-            {
-                icon: 'fas fa-home',
-                title: 'Vivienda y Remodelación',
-                desc: 'Construcción residencial e industrial.',
-            },
-            {
-                icon: 'fas fa-bolt',
-                title: 'Instalaciones Eléctricas',
-                desc: 'Instalaciones industriales y residenciales.',
-            },
-            {
-                icon: 'fas fa-drafting-compass',
-                title: 'Planos y Supervisión',
-                desc: 'Planos arquitectónicos y supervisión técnica.',
-            },
-        ],
-    },
-    {
-        icon: 'fas fa-tools',
-        title: 'Instalaciones Especiales',
-        items: [
-            {
-                icon: 'fas fa-lightbulb',
-                title: 'Fuerza y Alumbrado',
-                desc: 'Iluminación industrial y distribución eléctrica.',
-            },
-            {
-                icon: 'fas fa-brain',
-                title: 'Sistemas Inteligentes',
-                desc: 'Domótica industrial y automatización IoT.',
-            },
-            {
-                icon: 'fas fa-battery-full',
-                title: 'Energía de Respaldo (UPS)',
-                desc: 'Sistemas UPS para procesos críticos.',
-            },
-        ],
-    },
+            { icon: 'fas fa-code', title: 'Programación de PLC Siemens, Allen-Bradley y Schneider Electric' },
+            { icon: 'fas fa-desktop', title: 'Implementación de sistemas SCADA para supervisión en tiempo real' },
+            { icon: 'fas fa-tools', title: 'Instalación y calibración de equipos de control y fuerza: tableros eléctricos, motores, luminarias, variadores y sensores' },
+            { icon: 'fas fa-lightning-bolt', title: 'Control de potencia en plantas industriales y sistemas eléctricos inteligentes' }
+        ]
+    }
 ];
 ---
 
@@ -147,10 +99,7 @@ const services = [
                             {service.items.map(item => (
                                 <div class="item">
                                     <i class={item.icon} />
-                                    <div>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.desc}</p>
-                                    </div>
+                                    <h3>{item.title}</h3>
                                 </div>
                             ))}
                         </div>

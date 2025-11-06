@@ -5,7 +5,8 @@ import Footer from '../components/Footer.astro';
 import FloatingButtons from '../components/FloatingButtons.astro';
 
 const title = 'Ingeniería y Construcción | SIMIR';
-const description = 'Servicios de ingeniería industrial, automatización, plantas de tratamiento y construcción especializada.';
+const description =
+    'Servicios de ingeniería industrial, automatización, plantas de tratamiento y construcción especializada.';
 
 // Datos de servicios optimizados
 const services = [
@@ -13,80 +14,149 @@ const services = [
         icon: 'fas fa-flask',
         title: 'Ingeniería Avanzada',
         items: [
-            { icon: 'fas fa-atom', title: 'Ingeniería Química', desc: 'Diseño de procesos químicos industriales y control de calidad.' },
-            { icon: 'fas fa-solar-panel', title: 'Energías Renovables', desc: 'Sistemas solares, eólicos y energía limpia industrial.' },
-            { icon: 'fas fa-chart-line', title: 'Consultoría Técnica', desc: 'Asesoría especializada y análisis de viabilidad.' }
-        ]
+            {
+                icon: 'fas fa-atom',
+                title: 'Ingeniería Química',
+                desc: 'Diseño de procesos químicos industriales y control de calidad.',
+            },
+            {
+                icon: 'fas fa-solar-panel',
+                title: 'Energías Renovables',
+                desc: 'Sistemas solares, eólicos y energía limpia industrial.',
+            },
+            {
+                icon: 'fas fa-chart-line',
+                title: 'Consultoría Técnica',
+                desc: 'Asesoría especializada y análisis de viabilidad.',
+            },
+        ],
     },
     {
         icon: 'fas fa-microchip',
         title: 'Automatización y Control Industrial',
         items: [
-            { icon: 'fas fa-code', title: 'Programación PLC y SCADA', desc: 'Control automatizado y supervisión industrial.' },
-            { icon: 'fas fa-satellite-dish', title: 'Control de Sensores', desc: 'Integración de sensores y sistemas de actuación.' },
-            { icon: 'fas fa-plug', title: 'Tableros Eléctricos', desc: 'Diseño e instalación de control eléctrico.' }
-        ]
+            {
+                icon: 'fas fa-code',
+                title: 'Programación PLC y SCADA',
+                desc: 'Control automatizado y supervisión industrial.',
+            },
+            {
+                icon: 'fas fa-satellite-dish',
+                title: 'Control de Sensores',
+                desc: 'Integración de sensores y sistemas de actuación.',
+            },
+            {
+                icon: 'fas fa-plug',
+                title: 'Tableros Eléctricos',
+                desc: 'Diseño e instalación de control eléctrico.',
+            },
+        ],
     },
     {
         icon: 'fas fa-tint',
         title: 'Plantas de Tratamiento (PTAR)',
         items: [
-            { icon: 'fas fa-project-diagram', title: 'Diseño de Procesos', desc: 'Desarrollo integral de plantas de tratamiento.' },
-            { icon: 'fas fa-robot', title: 'Automatización', desc: 'Sensores especializados y control avanzado.' },
-            { icon: 'fas fa-desktop', title: 'Monitoreo SCADA', desc: 'Supervisión y control remoto en tiempo real.' }
-        ]
+            {
+                icon: 'fas fa-project-diagram',
+                title: 'Diseño de Procesos',
+                desc: 'Desarrollo integral de plantas de tratamiento.',
+            },
+            {
+                icon: 'fas fa-robot',
+                title: 'Automatización',
+                desc: 'Sensores especializados y control avanzado.',
+            },
+            {
+                icon: 'fas fa-desktop',
+                title: 'Monitoreo SCADA',
+                desc: 'Supervisión y control remoto en tiempo real.',
+            },
+        ],
     },
     {
         icon: 'fas fa-hard-hat',
         title: 'Construcción y Obra Civil',
         items: [
-            { icon: 'fas fa-home', title: 'Vivienda y Remodelación', desc: 'Construcción residencial e industrial.' },
-            { icon: 'fas fa-bolt', title: 'Instalaciones Eléctricas', desc: 'Instalaciones industriales y residenciales.' },
-            { icon: 'fas fa-drafting-compass', title: 'Planos y Supervisión', desc: 'Planos arquitectónicos y supervisión técnica.' }
-        ]
+            {
+                icon: 'fas fa-home',
+                title: 'Vivienda y Remodelación',
+                desc: 'Construcción residencial e industrial.',
+            },
+            {
+                icon: 'fas fa-bolt',
+                title: 'Instalaciones Eléctricas',
+                desc: 'Instalaciones industriales y residenciales.',
+            },
+            {
+                icon: 'fas fa-drafting-compass',
+                title: 'Planos y Supervisión',
+                desc: 'Planos arquitectónicos y supervisión técnica.',
+            },
+        ],
     },
     {
         icon: 'fas fa-tools',
         title: 'Instalaciones Especiales',
         items: [
-            { icon: 'fas fa-lightbulb', title: 'Fuerza y Alumbrado', desc: 'Iluminación industrial y distribución eléctrica.' },
-            { icon: 'fas fa-brain', title: 'Sistemas Inteligentes', desc: 'Domótica industrial y automatización IoT.' },
-            { icon: 'fas fa-battery-full', title: 'Energía de Respaldo (UPS)', desc: 'Sistemas UPS para procesos críticos.' }
-        ]
-    }
+            {
+                icon: 'fas fa-lightbulb',
+                title: 'Fuerza y Alumbrado',
+                desc: 'Iluminación industrial y distribución eléctrica.',
+            },
+            {
+                icon: 'fas fa-brain',
+                title: 'Sistemas Inteligentes',
+                desc: 'Domótica industrial y automatización IoT.',
+            },
+            {
+                icon: 'fas fa-battery-full',
+                title: 'Energía de Respaldo (UPS)',
+                desc: 'Sistemas UPS para procesos críticos.',
+            },
+        ],
+    },
 ];
 ---
 
 <BaseLayout {title} {description}>
     <HeaderApple />
-    
+
     <main class="main">
         <div class="hero">
             <h1>INGENIERÍA Y CONSTRUCCIÓN</h1>
-            <p>Soluciones integrales para proyectos industriales y construcción especializada</p>
+            <p>
+                Soluciones integrales para proyectos industriales y construcción
+                especializada
+            </p>
         </div>
 
         <div class="services">
-            {services.map((service, index) => (
-                <div class="category">
-                    <button class="header" onclick={`toggle(${index})`} type="button">
-                        <i class={service.icon}></i>
-                        <h2>{service.title}</h2>
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </button>
-                    <div class="content" id={`content-${index}`}>
-                        {service.items.map((item) => (
-                            <div class="item">
-                                <i class={item.icon}></i>
-                                <div>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.desc}</p>
+            {
+                services.map((service, index) => (
+                    <div class="category">
+                        <button
+                            class="header"
+                            onclick={`toggle(${index})`}
+                            type="button"
+                        >
+                            <i class={service.icon} />
+                            <h2>{service.title}</h2>
+                            <i class="fas fa-chevron-down arrow" />
+                        </button>
+                        <div class="content" id={`content-${index}`}>
+                            {service.items.map(item => (
+                                <div class="item">
+                                    <i class={item.icon} />
+                                    <div>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))
+            }
         </div>
     </main>
 
@@ -94,25 +164,181 @@ const services = [
     <FloatingButtons />
 </BaseLayout>
 <style>
-.main{margin-top:0}.hero{text-align:center;padding:1rem 2rem;max-width:1200px;margin:0 auto 1rem}.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;margin:0 0 .5rem;background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}.hero p{font-size:1.2rem;margin:0;color:#b3b3b3;max-width:600px;margin:0 auto}.services{max-width:1200px;margin:0 auto;padding:0 2rem 2rem;display:flex;flex-direction:column;gap:1.5rem}.category{background:rgba(255,255,255,.05);border-radius:12px;border:1px solid rgba(255,255,255,.1);overflow:hidden}.category:hover{background:rgba(255,255,255,.08);border-color:rgba(59,130,246,.3)}.header{display:flex;align-items:center;padding:1.5rem 2rem;width:100%;background:none;border:none;color:white;cursor:pointer;border-left:4px solid #3b82f6;transition:background .1s}.header:hover{background:rgba(255,255,255,.05)}.header i:first-child{font-size:1.5rem;color:#3b82f6;margin-right:1rem}.header h2{flex:1;margin:0;font-size:1.3rem;font-weight:700;text-align:left}.arrow{font-size:1rem;color:#3b82f6;transition:transform .1s ease-out}.header.active .arrow{transform:rotate(180deg)}.content{max-height:0;overflow:hidden;background:rgba(255,255,255,.02);transition:max-height .15s ease-out}.content.active{max-height:800px}.item{padding:1.5rem 2rem;border-bottom:1px solid rgba(255,255,255,.1);display:flex;gap:1rem}.item:last-child{border-bottom:none}.item i{font-size:1.2rem;color:#3b82f6;margin-top:.2rem;min-width:20px}.item h3{margin:0 0 .5rem;color:white;font-size:1.1rem;font-weight:600}.item p{margin:0;color:#b3b3b3;line-height:1.5;font-size:.95rem}@media(max-width:768px){.services{padding:0 1rem 2rem}.header{padding:1rem 1.5rem}.header h2{font-size:1.1rem}.item{padding:1rem 1.5rem;flex-direction:column;gap:.5rem}.item i{margin-top:0}.hero{padding:1rem}}@media(max-width:480px){.hero h1{font-size:2rem}.hero p{font-size:1rem}.header{padding:.8rem 1rem}.header h2{font-size:1rem}.item{padding:.8rem 1rem}}
+    .main {
+        margin-top: 0;
+    }
+    .hero {
+        text-align: center;
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto 1rem;
+    }
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        margin: 0 0 0.5rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #b3b3b3;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .services {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .category {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+    }
+    .category:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        width: 100%;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-left: 4px solid #3b82f6;
+        transition: background 0.1s;
+    }
+    .header:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .header i:first-child {
+        font-size: 1.5rem;
+        color: #3b82f6;
+        margin-right: 1rem;
+    }
+    .header h2 {
+        flex: 1;
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-align: left;
+    }
+    .arrow {
+        font-size: 1rem;
+        color: #3b82f6;
+        transition: transform 0.1s ease-out;
+    }
+    .header.active .arrow {
+        transform: rotate(180deg);
+    }
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        transition: max-height 0.15s ease-out;
+    }
+    .content.active {
+        max-height: 800px;
+    }
+    .item {
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        gap: 1rem;
+    }
+    .item:last-child {
+        border-bottom: none;
+    }
+    .item i {
+        font-size: 1.2rem;
+        color: #3b82f6;
+        margin-top: 0.2rem;
+        min-width: 20px;
+    }
+    .item h3 {
+        margin: 0 0 0.5rem;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    .item p {
+        margin: 0;
+        color: #b3b3b3;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+        .services {
+            padding: 0 1rem 2rem;
+        }
+        .header {
+            padding: 1rem 1.5rem;
+        }
+        .header h2 {
+            font-size: 1.1rem;
+        }
+        .item {
+            padding: 1rem 1.5rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .item i {
+            margin-top: 0;
+        }
+        .hero {
+            padding: 1rem;
+        }
+    }
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        .header {
+            padding: 0.8rem 1rem;
+        }
+        .header h2 {
+            font-size: 1rem;
+        }
+        .item {
+            padding: 0.8rem 1rem;
+        }
+    }
 </style>
 
 <script is:inline>
-function toggle(i){
-    const c=document.getElementById(`content-${i}`);
-    const h=c.previousElementSibling;
-    
-    if(c.classList.contains('active')){
-        c.classList.remove('active');
-        h.classList.remove('active');
-    }else{
-        // Cerrar todos los otros
-        document.querySelectorAll('.content.active').forEach(el=>el.classList.remove('active'));
-        document.querySelectorAll('.header.active').forEach(el=>el.classList.remove('active'));
-        
-        // Abrir el actual
-        c.classList.add('active');
-        h.classList.add('active');
+    function toggle(i) {
+        const c = document.getElementById(`content-${i}`);
+        const h = c.previousElementSibling;
+
+        if (c.classList.contains('active')) {
+            c.classList.remove('active');
+            h.classList.remove('active');
+        } else {
+            // Cerrar todos los otros
+            document
+                .querySelectorAll('.content.active')
+                .forEach(el => el.classList.remove('active'));
+            document
+                .querySelectorAll('.header.active')
+                .forEach(el => el.classList.remove('active'));
+
+            // Abrir el actual
+            c.classList.add('active');
+            h.classList.add('active');
+        }
     }
-}
 </script>

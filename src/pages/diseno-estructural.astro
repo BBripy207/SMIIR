@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+
+const title =
+    'Diseño Estructural, Cimentación y Acabados Técnicos | SMIIR - Ingeniería Estructural';
+const description =
+    'Servicios especializados de diseño estructural, cimentación y acabados técnicos para proyectos industriales. Análisis de cargas, modelado 3D y coordinación integral.';
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <div class="hero">
+            <h1>DISEÑO ESTRUCTURAL, CIMENTACIÓN Y ACABADOS TÉCNICOS</h1>
+        </div>
+
+        <section class="intro-section">
+            <div class="intro-content">
+                <p class="intro-text">
+                    Desarrollamos proyectos de ingeniería estructural con
+                    <strong>precisión técnica</strong> y <strong
+                        >coordinación integral</strong
+                    >. Desde el análisis de cargas hasta la entrega documentada,
+                    garantizamos estructuras seguras y funcionales para la
+                    industria.
+                </p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="services-container">
+                <h2>Servicios especializados de ingeniería estructural</h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Dimensionamiento de marcos rígidos</h3>
+                        <p>
+                            Columnas, vigas, cerchas y travesaños conforme a
+                            cargas de viento, sismo y operación
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-weight-hanging"></i>
+                        </div>
+                        <h3>Análisis de cargas</h3>
+                        <p>
+                            Peso propio, maquinaria, almacenamiento, equipos
+                            suspendidos, impacto, viento y sismo
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Modelado 3D y planos ejecutivos</h3>
+                        <p>
+                            Detalle para taller y montaje, garantizando
+                            coordinación entre estructuras y procesos
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Estudios geotécnicos y topográficos</h3>
+                        <p>
+                            Capacidades portantes, niveles freáticos y tipo de
+                            suelo para cimentación adecuada
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Diseño de cimentaciones</h3>
+                        <p>
+                            Cargas dinámicas, control de asentamientos y
+                            preparación de plataforma industrial
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-grip-horizontal"></i>
+                        </div>
+                        <h3>Pisos industriales de alto desempeño</h3>
+                        <p>
+                            Concreto pulido, recubrimientos epóxicos o
+                            autonivelantes según uso y cargas
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h3>Sistemas de cerramiento y cubierta</h3>
+                        <p>
+                            Paneles metálicos, aislamiento térmico, ventilación
+                            natural y techos con pendiente
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Entrega documentada</h3>
+                        <p>
+                            Planos "as-built", memoria de cálculos, reperfilado
+                            de materiales y manuales
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefits-container">
+                <h2>Garantías de Calidad Técnica</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Cumplimiento normativo</h3>
+                        <p>Diseños conforme a códigos y estándares vigentes</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-tools"></i>
+                        <h3>Coordinación integral</h3>
+                        <p>Interfaces perfectas entre estructura y servicios</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3>Diseño optimizado</h3>
+                        <p>Estructuras eficientes y económicamente viables</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
+        margin: 0 0 1rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+    }
+
+    .intro-section {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .intro-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        color: #e5e7eb;
+        margin: 0;
+    }
+
+    .intro-text strong {
+        color: #3b82f6;
+        font-weight: 700;
+    }
+
+    .services-section {
+        padding: 0 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .services-container h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 2rem;
+        color: white;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(59, 130, 246, 0.3);
+        transform: translateY(-4px);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+    }
+
+    .service-icon i {
+        font-size: 1.8rem;
+        color: #3b82f6;
+    }
+
+    .service-card h3 {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 1rem;
+        line-height: 1.3;
+    }
+
+    .service-card p {
+        color: #b3b3b3;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .benefits-section {
+        padding: 2rem;
+        background: rgba(15, 23, 42, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 1.5rem auto;
+        max-width: 1200px;
+        border-radius: 8px;
+    }
+
+    .benefits-container h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 0 2rem;
+        color: white;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-item {
+        text-align: center;
+    }
+
+    .benefit-item i {
+        font-size: 2.5rem;
+        color: #3b82f6;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-item h3 {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+    }
+
+    .benefit-item p {
+        color: #b3b3b3;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .intro-section {
+            padding: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+        }
+
+        .services-section {
+            padding: 0 1rem 1rem;
+        }
+
+        .services-container h2 {
+            font-size: 2rem;
+        }
+
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .benefits-section {
+            padding: 1.5rem 1rem;
+            margin: 1rem;
+        }
+
+        .benefits-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .services-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .benefits-container h2 {
+            font-size: 1.6rem;
+        }
+    }
+</style>

@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title = 'Diseño, construcción, integración y entrega funcional | SMIIR';
+const description =
+    'SMIIR desarrolla proyectos industriales y comerciales bajo un enfoque integral, donde todas las etapas — desde el diseño conceptual hasta la puesta en marcha — son ejecutadas bajo una sola dirección técnica.';
+
+const disenoServices = [
+    {
+        icon: 'fas fa-search',
+        title: 'Análisis de Sitio',
+        description: 'Levantamiento de condiciones reales del sitio y análisis técnico de requerimientos operativos'
+    },
+    {
+        icon: 'fas fa-drafting-compass',
+        title: 'Planos Ejecutivos',
+        description: 'Elaboración de planos ejecutivos, memorias de cálculo y modelado 3D para coordinación civil, eléctrica y mecánica'
+    },
+    {
+        icon: 'fas fa-cogs',
+        title: 'Selección Técnica',
+        description: 'Selección de materiales, equipos y sistemas conforme a normativas y estándares de desempeño'
+    },
+    {
+        icon: 'fas fa-calendar-alt',
+        title: 'Planificación',
+        description: 'Planeación de tiempos, logística y ejecución conforme a cronogramas controlados'
+    }
+];
+
+const construccionServices = [
+    {
+        icon: 'fas fa-hard-hat',
+        title: 'Supervisión Directa',
+        description: 'Ejecución de obra civil, estructura metálica y sistemas electromecánicos con supervisión directa de ingeniería'
+    },
+    {
+        icon: 'fas fa-users',
+        title: 'Coordinación Integral',
+        description: 'Coordinación entre contratistas, proveedores y especialidades para evitar interferencias técnicas'
+    },
+    {
+        icon: 'fas fa-clipboard-check',
+        title: 'Control de Calidad',
+        description: 'Control de calidad en materiales, procedimientos y pruebas de carga, resistencia y continuidad'
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Seguridad Industrial',
+        description: 'Implementación de protocolos de seguridad industrial y control documental de avances'
+    }
+];
+
+const integracionServices = [
+    {
+        icon: 'fas fa-plug',
+        title: 'Conexión de Sistemas',
+        description: 'Ensamble y conexión de sistemas eléctricos, hidráulicos, térmicos y de automatización'
+    },
+    {
+        icon: 'fas fa-network-wired',
+        title: 'Interconexión',
+        description: 'Interconexión de tableros, sensores, PLCs y redes de comunicación estructurada'
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Calibración',
+        description: 'Calibración y pruebas de funcionamiento para garantizar operación sincronizada de todos los sistemas'
+    },
+    {
+        icon: 'fas fa-tachometer-alt',
+        title: 'Validación Técnica',
+        description: 'Validación técnica de rendimiento, consumo y estabilidad operativa'
+    }
+];
+
+const entregaServices = [
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Informes de Desempeño',
+        description: 'Comprobación general de sistemas y elaboración de informes de desempeño'
+    },
+    {
+        icon: 'fas fa-book',
+        title: 'Documentación Completa',
+        description: 'Entrega de manuales, planos "as-built" y capacitación técnica al personal del cliente'
+    },
+    {
+        icon: 'fas fa-certificate',
+        title: 'Validación Normativa',
+        description: 'Validación final de cumplimiento normativo y funcional antes de la entrega'
+    },
+    {
+        icon: 'fas fa-headset',
+        title: 'Seguimiento Post-Entrega',
+        description: 'Acompañamiento post-puesta en marcha para ajustes, mantenimiento inicial y seguimiento técnico'
+    }
+];
+
+const garantiaFinal = [
+    {
+        icon: 'fas fa-key',
+        title: 'Llave en Mano',
+        description: 'Proyectos entregados completamente funcionales y documentados'
+    },
+    {
+        icon: 'fas fa-award',
+        title: 'Garantía Técnica',
+        description: 'Respaldo profesional en cada etapa del proceso'
+    },
+    {
+        icon: 'fas fa-eye',
+        title: 'Supervisión Integral',
+        description: 'Una sola dirección técnica especializada para todo el proyecto'
+    },
+    {
+        icon: 'fas fa-rocket',
+        title: 'Listo para Crecer',
+        description: 'Instalaciones preparadas para producir, automatizar y expandirse'
+    }
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Diseño, construcción, integración y entrega funcional" />
+
+        <IntroSection
+            content="<strong>SMIIR desarrolla proyectos industriales y comerciales</strong> bajo un enfoque integral, donde todas las etapas — desde el diseño conceptual hasta la puesta en marcha — son ejecutadas bajo una sola dirección técnica. El objetivo es entregar instalaciones completamente operativas, listas para producir, automatizar y crecer."
+        />
+
+        <ServicesGrid
+            title="Diseño"
+            services={disenoServices}
+        />
+
+        <ServicesGrid
+            title="Construcción"
+            services={construccionServices}
+        />
+
+        <ServicesGrid
+            title="Integración"
+            services={integracionServices}
+        />
+
+        <BenefitsSection
+            title="Entrega Funcional"
+            benefits={entregaServices}
+            variant="highlighted"
+        />
+
+        <BenefitsSection
+            title="Garantía SMIIR"
+            benefits={garantiaFinal}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

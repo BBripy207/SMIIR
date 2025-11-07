@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title = 'Ingeniería química | SMIIR';
+const description =
+    'SMIIR desarrolla proyectos de ingeniería química aplicada orientados al diseño, integración y optimización de procesos industriales. Los sistemas se diseñan con base en principios termodinámicos, transferencia de masa y reacción química, priorizando eficiencia, seguridad operativa y sustentabilidad.';
+
+const disenoDesarrollo = [
+    {
+        icon: 'fas fa-flask',
+        title: 'Análisis de Procesos',
+        description:
+            'Análisis de procesos físico-químicos para tratamiento, separación, neutralización o producción de compuestos',
+    },
+    {
+        icon: 'fas fa-project-diagram',
+        title: 'Diagramas de Proceso',
+        description:
+            'Elaboración de diagramas de flujo de proceso (PFD) y diagramas de instrumentación y control (P&ID) conforme a estándares ISA',
+    },
+    {
+        icon: 'fas fa-calculator',
+        title: 'Dimensionamiento de Equipos',
+        description:
+            'Dimensionamiento de tanques, reactores, bombas y sistemas de tubería con materiales compatibles según tipo de fluido o sustancia',
+    },
+    {
+        icon: 'fas fa-desktop',
+        title: 'Simulación de Procesos',
+        description:
+            'Simulación de procesos mediante software especializado para garantizar rendimiento, temperatura y presión óptimos',
+    },
+];
+
+const integracionControl = [
+    {
+        icon: 'fas fa-thermometer-half',
+        title: 'Instrumentación Industrial',
+        description:
+            'Incorporación de instrumentación industrial: sensores de pH, conductividad, nivel, caudal, presión y temperatura',
+    },
+    {
+        icon: 'fas fa-microchip',
+        title: 'Automatización de Secuencias',
+        description:
+            'Automatización de secuencias químicas mediante PLC y sistemas SCADA, con control de válvulas, reactores y bombas dosificadoras',
+    },
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Monitoreo en Tiempo Real',
+        description:
+            'Monitoreo en tiempo real de parámetros críticos con registro digital y trazabilidad operativa',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Sistemas de Seguridad',
+        description:
+            'Implementación de sistemas de seguridad ante sobrepresión, fugas o desviaciones de proceso',
+    },
+];
+
+const aplicaciones = [
+    {
+        icon: 'fas fa-tint',
+        title: 'Plantas de Tratamiento',
+        description: 'Plantas de tratamiento de agua y efluentes',
+    },
+    {
+        icon: 'fas fa-balance-scale',
+        title: 'Procesos de Neutralización',
+        description: 'Procesos de neutralización, mezcla o dilución química',
+    },
+    {
+        icon: 'fas fa-industry',
+        title: 'Dosificación Automatizada',
+        description:
+            'Sistemas de dosificación automatizada para plantas industriales',
+    },
+    {
+        icon: 'fas fa-microscope',
+        title: 'Laboratorios de Control',
+        description:
+            'Laboratorios de control de calidad y procesos de producción en pequeña y mediana escala',
+    },
+];
+
+const garantias = [
+    {
+        icon: 'fas fa-cogs',
+        title: 'Soluciones Integradas',
+        description: 'Soluciones químicas integradas, seguras y eficientes',
+    },
+    {
+        icon: 'fas fa-chart-bar',
+        title: 'Mejora de Rendimiento',
+        description: 'Diseñadas para mejorar el rendimiento de los procesos',
+    },
+    {
+        icon: 'fas fa-leaf',
+        title: 'Estándares Ambientales',
+        description:
+            'Cumplimiento con los estándares ambientales e industriales más exigentes',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Ingeniería química" />
+
+        <IntroSection
+            content="<strong>SMIIR desarrolla proyectos de ingeniería química aplicada</strong> orientados al diseño, integración y optimización de procesos industriales. Los sistemas se diseñan con base en principios termodinámicos, transferencia de masa y reacción química, priorizando eficiencia, seguridad operativa y sustentabilidad."
+        />
+
+        <ServicesGrid
+            title="Diseño y Desarrollo de Procesos"
+            services={disenoDesarrollo}
+        />
+
+        <BenefitsSection
+            title="Integración y Control"
+            benefits={integracionControl}
+            variant="highlighted"
+        />
+
+        <ServicesGrid title="Aplicaciones" services={aplicaciones} />
+
+        <BenefitsSection
+            title="Garantía SMIIR"
+            benefits={garantias}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

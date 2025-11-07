@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title =
+    'Ideal para clientes que buscan un solo proveedor técnico | SMIIR';
+const description =
+    'SMIIR actúa como un proveedor técnico integral, concentrando en una sola dirección todos los procesos de diseño, construcción, automatización y puesta en marcha. Este enfoque elimina la fragmentación entre contratistas, reduce costos operativos y garantiza una ejecución técnica coherente.';
+
+const gestionCentralizada = [
+    {
+        icon: 'fas fa-user-tie',
+        title: 'Responsable Técnico Único',
+        description:
+            'Un solo responsable técnico coordina ingeniería, obra civil, sistemas eléctricos, control, automatización y pruebas de operación',
+    },
+    {
+        icon: 'fas fa-comments',
+        title: 'Comunicación Directa',
+        description:
+            'Comunicación directa entre el cliente y la dirección de proyecto, sin intermediarios',
+    },
+    {
+        icon: 'fas fa-calendar-check',
+        title: 'Planeación Unificada',
+        description:
+            'Planeación, seguimiento y ejecución controlada mediante cronogramas unificados y reportes técnicos digitales',
+    },
+];
+
+const ventajasOperativas = [
+    {
+        icon: 'fas fa-puzzle-piece',
+        title: 'Eliminación de Incompatibilidades',
+        description:
+            'Eliminación de incompatibilidades entre especialidades técnicas',
+    },
+    {
+        icon: 'fas fa-tachometer-alt',
+        title: 'Aceleración de Tiempos',
+        description:
+            'Aceleración de los tiempos de ejecución al reducir pasos de validación entre contratistas',
+    },
+    {
+        icon: 'fas fa-search',
+        title: 'Mayor Trazabilidad',
+        description:
+            'Mayor trazabilidad de materiales, planos y documentación técnica bajo una misma estructura de control',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Garantías Unificadas',
+        description:
+            'Unificación de garantías y soporte técnico bajo contrato directo con SMIIR',
+    },
+];
+
+const beneficiosCliente = [
+    {
+        icon: 'fas fa-handshake',
+        title: 'Un Solo Punto de Contacto',
+        description:
+            'Evita la complejidad de coordinar múltiples proveedores y contratistas especializados',
+    },
+    {
+        icon: 'fas fa-dollar-sign',
+        title: 'Reducción de Costos',
+        description:
+            'Eliminación de márgenes intermedios y optimización de recursos técnicos y materiales',
+    },
+    {
+        icon: 'fas fa-clock',
+        title: 'Tiempos Optimizados',
+        description:
+            'Ejecución más rápida al eliminar tiempos muertos entre coordinaciones de especialidades',
+    },
+    {
+        icon: 'fas fa-award',
+        title: 'Calidad Integral',
+        description:
+            'Control de calidad unificado desde el diseño hasta la puesta en operación',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero
+            title="Ideal para clientes que buscan un solo proveedor técnico"
+        />
+
+        <IntroSection
+            content="<strong>SMIIR actúa como un proveedor técnico integral</strong>, concentrando en una sola dirección todos los procesos de diseño, construcción, automatización y puesta en marcha. Este enfoque elimina la fragmentación entre contratistas, reduce costos operativos y garantiza una ejecución técnica coherente desde el inicio hasta la entrega final."
+        />
+
+        <ServicesGrid
+            title="Gestión Centralizada"
+            services={gestionCentralizada}
+        />
+
+        <BenefitsSection
+            title="Ventajas Operativas"
+            benefits={ventajasOperativas}
+            variant="highlighted"
+        />
+
+        <BenefitsSection
+            title="Beneficios para el Cliente"
+            benefits={beneficiosCliente}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

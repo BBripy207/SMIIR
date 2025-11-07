@@ -8,7 +8,8 @@ import IntroSection from '../components/IntroSection.astro';
 import BenefitsSection from '../components/BenefitsSection.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
 
-const title = 'Control de potencia en plantas industriales y sistemas eléctricos inteligentes | SMIIR';
+const title =
+    'Control de potencia en plantas industriales y sistemas eléctricos inteligentes | SMIIR';
 const description =
     'SMIIR diseña e implementa sistemas de control de potencia orientados a la gestión eficiente de la energía eléctrica en entornos industriales y comerciales de alta demanda. Los proyectos se desarrollan con base en normas NOM-001-SEDE, IEEE, IEC y NFPA 70E, asegurando confiabilidad, seguridad y desempeño continuo.';
 
@@ -16,110 +17,127 @@ const disenoDimensionamiento = [
     {
         icon: 'fas fa-calculator',
         title: 'Cálculo de Capacidad',
-        description: 'Cálculo de capacidad instalada, factor de potencia y demanda máxima conforme a la operación del proceso industrial'
+        description:
+            'Cálculo de capacidad instalada, factor de potencia y demanda máxima conforme a la operación del proceso industrial',
     },
     {
         icon: 'fas fa-cogs',
         title: 'Selección de Equipos',
-        description: 'Selección de tableros de distribución, bancos de capacitores, transformadores y sistemas de respaldo con criterios de eficiencia energética'
+        description:
+            'Selección de tableros de distribución, bancos de capacitores, transformadores y sistemas de respaldo con criterios de eficiencia energética',
     },
     {
         icon: 'fas fa-sitemap',
         title: 'Modelado Unifilar',
-        description: 'Modelado unifilar y coordinación de protecciones para prevenir sobrecargas, cortocircuitos o pérdidas por desequilibrio'
+        description:
+            'Modelado unifilar y coordinación de protecciones para prevenir sobrecargas, cortocircuitos o pérdidas por desequilibrio',
     },
     {
         icon: 'fas fa-tachometer-alt',
         title: 'Medición Inteligente',
-        description: 'Implementación de sensores y medidores inteligentes para monitoreo en tiempo real de corriente, voltaje y consumo energético'
-    }
+        description:
+            'Implementación de sensores y medidores inteligentes para monitoreo en tiempo real de corriente, voltaje y consumo energético',
+    },
 ];
 
 const automatizacionGestion = [
     {
         icon: 'fas fa-microchip',
         title: 'Integración PLC y SCADA',
-        description: 'Integración de sistemas PLC y SCADA para control y supervisión de circuitos de potencia, motores y cargas críticas'
+        description:
+            'Integración de sistemas PLC y SCADA para control y supervisión de circuitos de potencia, motores y cargas críticas',
     },
     {
         icon: 'fas fa-play-circle',
         title: 'Secuencias Automáticas',
-        description: 'Programación de secuencias automáticas de arranque, paro y conmutación para reducir picos de demanda'
+        description:
+            'Programación de secuencias automáticas de arranque, paro y conmutación para reducir picos de demanda',
     },
     {
         icon: 'fas fa-cloud',
         title: 'Comunicación IoT',
-        description: 'Comunicación con plataformas IoT o BMS para análisis de consumo, alarmas de sobrecarga y mantenimiento predictivo'
+        description:
+            'Comunicación con plataformas IoT o BMS para análisis de consumo, alarmas de sobrecarga y mantenimiento predictivo',
     },
     {
         icon: 'fas fa-chart-bar',
         title: 'Tableros Inteligentes',
-        description: 'Configuración de tableros inteligentes con medición avanzada (kWh, kVARh, kW, FP) y visualización gráfica'
-    }
+        description:
+            'Configuración de tableros inteligentes con medición avanzada (kWh, kVARh, kW, FP) y visualización gráfica',
+    },
 ];
 
 const sistemasInteligentes = [
     {
         icon: 'fas fa-exchange-alt',
         title: 'Redes Inteligentes',
-        description: 'Implementación de redes eléctricas inteligentes con conmutación automática (ATS), control remoto y respaldo UPS'
+        description:
+            'Implementación de redes eléctricas inteligentes con conmutación automática (ATS), control remoto y respaldo UPS',
     },
     {
         icon: 'fas fa-solar-panel',
         title: 'Energías Renovables',
-        description: 'Integración con energías renovables y bancos de baterías para operación híbrida o autónoma'
+        description:
+            'Integración con energías renovables y bancos de baterías para operación híbrida o autónoma',
     },
     {
         icon: 'fas fa-sync',
         title: 'Sincronización de Generadores',
-        description: 'Sincronización de generadores y gestión dinámica de potencia activa y reactiva'
+        description:
+            'Sincronización de generadores y gestión dinámica de potencia activa y reactiva',
     },
     {
         icon: 'fas fa-expand-arrows-alt',
         title: 'Diseño Escalable',
-        description: 'Diseño preparado para crecimiento modular y expansión futura sin interrupciones de servicio'
-    }
+        description:
+            'Diseño preparado para crecimiento modular y expansión futura sin interrupciones de servicio',
+    },
 ];
 
 const normativas = [
     {
         icon: 'fas fa-certificate',
         title: 'NOM-001-SEDE',
-        description: 'Cumplimiento con normas mexicanas de instalaciones eléctricas'
+        description:
+            'Cumplimiento con normas mexicanas de instalaciones eléctricas',
     },
     {
         icon: 'fas fa-globe',
         title: 'IEEE e IEC',
-        description: 'Estándares internacionales de sistemas eléctricos y energéticos'
+        description:
+            'Estándares internacionales de sistemas eléctricos y energéticos',
     },
     {
         icon: 'fas fa-hard-hat',
         title: 'NFPA 70E',
-        description: 'Seguridad eléctrica en lugares de trabajo industriales'
-    }
+        description: 'Seguridad eléctrica en lugares de trabajo industriales',
+    },
 ];
 
 const resultados = [
     {
         icon: 'fas fa-shield-alt',
         title: 'Sistemas Seguros',
-        description: 'Sistemas eléctricos seguros, eficientes y monitoreables'
+        description: 'Sistemas eléctricos seguros, eficientes y monitoreables',
     },
     {
         icon: 'fas fa-chart-line',
         title: 'Optimización Energética',
-        description: 'Optimización de la distribución de energía y reducción de pérdidas'
+        description:
+            'Optimización de la distribución de energía y reducción de pérdidas',
     },
     {
         icon: 'fas fa-clock',
         title: 'Continuidad Operativa',
-        description: 'Aumento de la continuidad operativa en procesos industriales'
+        description:
+            'Aumento de la continuidad operativa en procesos industriales',
     },
     {
         icon: 'fas fa-award',
         title: 'Instalación Certificada',
-        description: 'Cada instalación se entrega calibrada, documentada y certificada'
-    }
+        description:
+            'Cada instalación se entrega calibrada, documentada y certificada',
+    },
 ];
 ---
 
@@ -127,7 +145,9 @@ const resultados = [
     <HeaderApple />
 
     <main class="main">
-        <ServiceHero title="Control de potencia en plantas industriales y sistemas eléctricos inteligentes" />
+        <ServiceHero
+            title="Control de potencia en plantas industriales y sistemas eléctricos inteligentes"
+        />
 
         <IntroSection
             content="<strong>SMIIR diseña e implementa sistemas de control de potencia</strong> orientados a la gestión eficiente de la energía eléctrica en entornos industriales y comerciales de alta demanda. Los proyectos se desarrollan con base en normas NOM-001-SEDE, IEEE, IEC y NFPA 70E, asegurando confiabilidad, seguridad y desempeño continuo."

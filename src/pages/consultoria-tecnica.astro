@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title = 'Consultoría técnica | SMIIR';
+const description =
+    'SMIIR ofrece consultoría técnica especializada en ingeniería industrial, automatización, energía y procesos productivos, brindando asesoría integral desde la evaluación inicial hasta la optimización operativa. El enfoque es proporcionar soluciones precisas, medibles y sostenibles.';
+
+const diagnosticoEvaluacion = [
+    {
+        icon: 'fas fa-search',
+        title: 'Análisis Detallado',
+        description: 'Análisis detallado de instalaciones eléctricas, mecánicas y de control'
+    },
+    {
+        icon: 'fas fa-exclamation-triangle',
+        title: 'Puntos Críticos',
+        description: 'Identificación de puntos críticos de operación, consumo y seguridad'
+    },
+    {
+        icon: 'fas fa-certificate',
+        title: 'Cumplimiento Normativo',
+        description: 'Evaluación de cumplimiento con normativas NOM, STPS, CFE, NFPA y IEC'
+    },
+    {
+        icon: 'fas fa-file-alt',
+        title: 'Revisión Documental',
+        description: 'Revisión de planos, cálculos estructurales, diagramas eléctricos y documentación técnica existente'
+    }
+];
+
+const desarrolloSoluciones = [
+    {
+        icon: 'fas fa-lightbulb',
+        title: 'Estrategias de Modernización',
+        description: 'Diseño de estrategias para modernización, eficiencia energética y automatización de procesos'
+    },
+    {
+        icon: 'fas fa-cogs',
+        title: 'Selección de Equipos',
+        description: 'Asesoría en selección de equipos, materiales y tecnologías adecuadas al entorno industrial'
+    },
+    {
+        icon: 'fas fa-microchip',
+        title: 'Actualización Tecnológica',
+        description: 'Propuestas técnicas para actualización de tableros, sensores, PLC, variadores y sistemas SCADA'
+    },
+    {
+        icon: 'fas fa-clipboard-list',
+        title: 'Reportes Técnicos',
+        description: 'Elaboración de reportes técnicos y memorias de ingeniería con recomendaciones ejecutables'
+    }
+];
+
+const supervisionAcompanamiento = [
+    {
+        icon: 'fas fa-eye',
+        title: 'Seguimiento Técnico',
+        description: 'Seguimiento técnico durante la ejecución de proyectos de terceros para validar cumplimiento con especificaciones de ingeniería'
+    },
+    {
+        icon: 'fas fa-vial',
+        title: 'Pruebas de Aceptación',
+        description: 'Coordinación de pruebas de aceptación (FAT/SAT) y revisión de protocolos de seguridad'
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Asistencia Continua',
+        description: 'Asistencia técnica continua para mantenimiento predictivo y control de calidad'
+    }
+];
+
+const valorAgregado = [
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Mayor Eficiencia',
+        description: 'Cada inversión técnica se traduce en mayor eficiencia operativa'
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Seguridad Operativa',
+        description: 'Incremento en los niveles de seguridad y confiabilidad operativa'
+    },
+    {
+        icon: 'fas fa-industry',
+        title: 'Rendimiento Industrial',
+        description: 'Mejora del rendimiento industrial y productividad general'
+    },
+    {
+        icon: 'fas fa-handshake',
+        title: 'Soporte Profesional',
+        description: 'Aporte de soporte profesional en la toma de decisiones estratégicas'
+    }
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Consultoría técnica" />
+
+        <IntroSection
+            content="<strong>SMIIR ofrece consultoría técnica especializada</strong> en ingeniería industrial, automatización, energía y procesos productivos, brindando asesoría integral desde la evaluación inicial hasta la optimización operativa. El enfoque es proporcionar soluciones precisas, medibles y sostenibles, alineadas con los objetivos técnicos y económicos del cliente."
+        />
+
+        <ServicesGrid
+            title="Diagnóstico y Evaluación"
+            services={diagnosticoEvaluacion}
+        />
+
+        <BenefitsSection
+            title="Desarrollo de Soluciones"
+            benefits={desarrolloSoluciones}
+            variant="highlighted"
+        />
+
+        <ServicesGrid
+            title="Supervisión y Acompañamiento"
+            services={supervisionAcompanamiento}
+        />
+
+        <BenefitsSection
+            title="Valor Agregado"
+            benefits={valorAgregado}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

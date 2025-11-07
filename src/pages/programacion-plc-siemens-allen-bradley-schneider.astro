@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title = 'Programación de PLC Siemens, Allen-Bradley y Schneider Electric | SMIIR';
+const description =
+    'SMIIR desarrolla y programa controladores lógicos programables (PLC) para sistemas industriales, plantas automatizadas y procesos de monitoreo en tiempo real. Cada aplicación se diseña con base en la arquitectura del cliente, priorizando estabilidad, seguridad operativa y escalabilidad tecnológica.';
+
+const desarrolloConfiguracion = [
+    {
+        icon: 'fas fa-code',
+        title: 'Programación Especializada',
+        description: 'Programación de PLC Siemens (TIA Portal, Step 7), Allen-Bradley (RSLogix, Studio 5000) y Schneider Electric (EcoStruxure Machine Expert, Unity Pro)'
+    },
+    {
+        icon: 'fas fa-sitemap',
+        title: 'Lógica de Control',
+        description: 'Estructuración de lógica secuencial, control PID, temporizadores, contadores y manejo de interrupciones'
+    },
+    {
+        icon: 'fas fa-cubes',
+        title: 'Rutinas Modulares',
+        description: 'Creación de rutinas modulares y parametrizables para facilitar mantenimiento y actualización'
+    },
+    {
+        icon: 'fas fa-file-code',
+        title: 'Documentación Completa',
+        description: 'Documentación completa del código con diagramas de flujo y descripción funcional'
+    }
+];
+
+const integracionSistemas = [
+    {
+        icon: 'fas fa-network-wired',
+        title: 'Redes Industriales',
+        description: 'Conexión del PLC a sistemas SCADA, HMI y redes industriales (Profinet, EtherNet/IP, Modbus TCP, Profibus, CANopen)'
+    },
+    {
+        icon: 'fas fa-server',
+        title: 'Comunicación Múltiple',
+        description: 'Comunicación entre múltiples controladores y tableros de campo mediante gateways o switches industriales'
+    },
+    {
+        icon: 'fas fa-bell',
+        title: 'Monitoreo y Alarmas',
+        description: 'Configuración de alarmas, monitoreo remoto y sincronización con bases de datos de producción'
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Tableros Eléctricos',
+        description: 'Ensamble de tableros eléctricos con cableado, señalización y protecciones coordinadas'
+    }
+];
+
+const pruebasPuestaMarcha = [
+    {
+        icon: 'fas fa-desktop',
+        title: 'Simulación de Programas',
+        description: 'Simulación de programas antes de la instalación para validar tiempos, secuencias y condiciones de seguridad'
+    },
+    {
+        icon: 'fas fa-vials',
+        title: 'Pruebas FAT y SAT',
+        description: 'Pruebas FAT (Factory Acceptance Test) y SAT (Site Acceptance Test) bajo protocolos documentados'
+    },
+    {
+        icon: 'fas fa-sliders-h',
+        title: 'Ajuste Fino',
+        description: 'Ajuste fino de parámetros en sitio, verificación de señales de entrada/salida y calibración de instrumentos'
+    },
+    {
+        icon: 'fas fa-chalkboard-teacher',
+        title: 'Capacitación Técnica',
+        description: 'Capacitación al personal técnico del cliente en operación y diagnóstico del sistema'
+    }
+];
+
+const garantias = [
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Estabilidad y Seguridad',
+        description: 'Soluciones de control estables y seguras diseñadas bajo estándares IEC 61131-3'
+    },
+    {
+        icon: 'fas fa-sync',
+        title: 'Operación Continua',
+        description: 'Aseguramiento de operación continua y mantenimiento sencillo'
+    },
+    {
+        icon: 'fas fa-expand-arrows-alt',
+        title: 'Escalabilidad',
+        description: 'Compatibilidad con futuras expansiones industriales y actualizaciones tecnológicas'
+    }
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="Programación de PLC Siemens, Allen-Bradley y Schneider Electric" />
+
+        <IntroSection
+            content="<strong>SMIIR desarrolla y programa controladores lógicos programables (PLC)</strong> para sistemas industriales, plantas automatizadas y procesos de monitoreo en tiempo real. Cada aplicación se diseña con base en la arquitectura del cliente, priorizando estabilidad, seguridad operativa y escalabilidad tecnológica."
+        />
+
+        <ServicesGrid
+            title="Desarrollo y Configuración"
+            services={desarrolloConfiguracion}
+        />
+
+        <BenefitsSection
+            title="Integración con Sistemas de Control"
+            benefits={integracionSistemas}
+            variant="highlighted"
+        />
+
+        <ServicesGrid
+            title="Pruebas y Puesta en Marcha"
+            services={pruebasPuestaMarcha}
+        />
+
+        <BenefitsSection
+            title="Garantías SMIIR"
+            benefits={garantias}
+            variant="default"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

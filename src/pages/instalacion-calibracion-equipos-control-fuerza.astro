@@ -8,7 +8,8 @@ import IntroSection from '../components/IntroSection.astro';
 import BenefitsSection from '../components/BenefitsSection.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
 
-const title = 'Instalación y calibración de equipos de control y fuerza | SMIIR';
+const title =
+    'Instalación y calibración de equipos de control y fuerza | SMIIR';
 const description =
     'SMIIR realiza la instalación, conexión y calibración de equipos eléctricos y de control industrial garantizando precisión operativa, seguridad y confiabilidad en la operación continua de plantas y sistemas automatizados. Cada instalación se ejecuta bajo planos de ingeniería eléctrica, cumpliendo normas NOM-001-SEDE, NFPA 70E e IEC 60204-1.';
 
@@ -16,105 +17,123 @@ const instalacionElectrica = [
     {
         icon: 'fas fa-th-large',
         title: 'Tableros Eléctricos',
-        description: 'Montaje y conexionado de tableros eléctricos de fuerza, control y distribución, con canalización certificada y protecciones coordinadas'
+        description:
+            'Montaje y conexionado de tableros eléctricos de fuerza, control y distribución, con canalización certificada y protecciones coordinadas',
     },
     {
         icon: 'fas fa-cog',
         title: 'Motores Trifásicos',
-        description: 'Instalación de motores trifásicos, arrancadores directos, estrella-triángulo o por variador de frecuencia (VFD)'
+        description:
+            'Instalación de motores trifásicos, arrancadores directos, estrella-triángulo o por variador de frecuencia (VFD)',
     },
     {
         icon: 'fas fa-sliders-h',
         title: 'Variadores de Velocidad',
-        description: 'Integración de variadores de velocidad (Siemens, Danfoss, Schneider, Allen-Bradley) para control preciso de torque y eficiencia energética'
+        description:
+            'Integración de variadores de velocidad (Siemens, Danfoss, Schneider, Allen-Bradley) para control preciso de torque y eficiencia energética',
     },
     {
         icon: 'fas fa-lightbulb',
         title: 'Luminarias LED',
-        description: 'Montaje de luminarias industriales LED, sistemas de alumbrado de emergencia y control por sensores de presencia o fotocélulas'
-    }
+        description:
+            'Montaje de luminarias industriales LED, sistemas de alumbrado de emergencia y control por sensores de presencia o fotocélulas',
+    },
 ];
 
 const instrumentacionCalibracion = [
     {
         icon: 'fas fa-microchip',
         title: 'Instalación de Sensores',
-        description: 'Instalación de sensores de nivel, caudal, temperatura, presión, proximidad y posición, con ajuste de señal analógica o digital (4–20 mA, 0–10 V, Modbus, Profinet)'
+        description:
+            'Instalación de sensores de nivel, caudal, temperatura, presión, proximidad y posición, con ajuste de señal analógica o digital (4–20 mA, 0–10 V, Modbus, Profinet)',
     },
     {
         icon: 'fas fa-tools',
         title: 'Calibración Certificada',
-        description: 'Calibración en campo mediante instrumentos certificados para asegurar lecturas exactas y respuesta rápida'
+        description:
+            'Calibración en campo mediante instrumentos certificados para asegurar lecturas exactas y respuesta rápida',
     },
     {
         icon: 'fas fa-shield-alt',
         title: 'Verificación Eléctrica',
-        description: 'Verificación de continuidad eléctrica, aislamiento y puesta a tierra conforme a normas internacionales'
+        description:
+            'Verificación de continuidad eléctrica, aislamiento y puesta a tierra conforme a normas internacionales',
     },
     {
         icon: 'fas fa-network-wired',
         title: 'Configuración de Lazos',
-        description: 'Configuración de lazos de control, ajuste de escalas y prueba funcional de dispositivos conectados a PLC o SCADA'
-    }
+        description:
+            'Configuración de lazos de control, ajuste de escalas y prueba funcional de dispositivos conectados a PLC o SCADA',
+    },
 ];
 
 const puestaMarchaVerificacion = [
     {
         icon: 'fas fa-play',
         title: 'Pruebas de Encendido',
-        description: 'Pruebas de encendido, secuencia de operación y respuesta ante fallas'
+        description:
+            'Pruebas de encendido, secuencia de operación y respuesta ante fallas',
     },
     {
         icon: 'fas fa-file-alt',
         title: 'Documentación Técnica',
-        description: 'Documentación de parámetros eléctricos (corriente, voltaje, factor de potencia) antes de entrega'
+        description:
+            'Documentación de parámetros eléctricos (corriente, voltaje, factor de potencia) antes de entrega',
     },
     {
         icon: 'fas fa-balance-scale',
         title: 'Alineación Mecánica',
-        description: 'Alineación mecánica y verificación de giro en motores, balanceo de fases y ajuste de protecciones térmicas'
+        description:
+            'Alineación mecánica y verificación de giro en motores, balanceo de fases y ajuste de protecciones térmicas',
     },
     {
         icon: 'fas fa-check-double',
         title: 'Validación de Sistemas',
-        description: 'Validación conjunta con sistemas de automatización para garantizar sincronización total'
-    }
+        description:
+            'Validación conjunta con sistemas de automatización para garantizar sincronización total',
+    },
 ];
 
 const normativas = [
     {
         icon: 'fas fa-certificate',
         title: 'NOM-001-SEDE',
-        description: 'Cumplimiento con la Norma Oficial Mexicana de instalaciones eléctricas'
+        description:
+            'Cumplimiento con la Norma Oficial Mexicana de instalaciones eléctricas',
     },
     {
         icon: 'fas fa-hard-hat',
         title: 'NFPA 70E',
-        description: 'Seguridad eléctrica en lugares de trabajo según estándares NFPA'
+        description:
+            'Seguridad eléctrica en lugares de trabajo según estándares NFPA',
     },
     {
         icon: 'fas fa-globe',
         title: 'IEC 60204-1',
-        description: 'Estándares internacionales para seguridad de equipos eléctricos en maquinaria'
-    }
+        description:
+            'Estándares internacionales para seguridad de equipos eléctricos en maquinaria',
+    },
 ];
 
 const garantias = [
     {
         icon: 'fas fa-crosshairs',
         title: 'Precisión Operativa',
-        description: 'Sistemas que funcionan con precisión, estabilidad y trazabilidad completa'
+        description:
+            'Sistemas que funcionan con precisión, estabilidad y trazabilidad completa',
     },
     {
         icon: 'fas fa-industry',
         title: 'Condiciones Industriales',
-        description: 'Equipos listos para operar bajo condiciones industriales exigentes'
+        description:
+            'Equipos listos para operar bajo condiciones industriales exigentes',
     },
     {
         icon: 'fas fa-handshake',
         title: 'Respaldo Profesional',
-        description: 'Respaldo técnico y garantía profesional en cada instalación'
-    }
+        description:
+            'Respaldo técnico y garantía profesional en cada instalación',
+    },
 ];
 ---
 
@@ -122,7 +141,9 @@ const garantias = [
     <HeaderApple />
 
     <main class="main">
-        <ServiceHero title="Instalación y calibración de equipos de control y fuerza" />
+        <ServiceHero
+            title="Instalación y calibración de equipos de control y fuerza"
+        />
 
         <IntroSection
             content="<strong>SMIIR realiza la instalación, conexión y calibración</strong> de equipos eléctricos y de control industrial garantizando precisión operativa, seguridad y confiabilidad en la operación continua de plantas y sistemas automatizados. Cada instalación se ejecuta bajo planos de ingeniería eléctrica, cumpliendo normas NOM-001-SEDE, NFPA 70E e IEC 60204-1."

@@ -16,92 +16,108 @@ const disenoIngenieria = [
     {
         icon: 'fas fa-chart-line',
         title: 'Análisis Energético Integral',
-        description: 'Análisis energético integral: consumo promedio, demanda máxima, perfil horario y factor de potencia'
+        description:
+            'Análisis energético integral: consumo promedio, demanda máxima, perfil horario y factor de potencia',
     },
     {
         icon: 'fas fa-solar-panel',
         title: 'Dimensionamiento de Sistemas',
-        description: 'Dimensionamiento de sistemas fotovoltaicos, híbridos o autónomos según carga instalada y disponibilidad solar del sitio'
+        description:
+            'Dimensionamiento de sistemas fotovoltaicos, híbridos o autónomos según carga instalada y disponibilidad solar del sitio',
     },
     {
         icon: 'fas fa-calculator',
         title: 'Cálculo de Estructura',
-        description: 'Cálculo de estructura, orientación y rendimiento de paneles solares con software especializado'
+        description:
+            'Cálculo de estructura, orientación y rendimiento de paneles solares con software especializado',
     },
     {
         icon: 'fas fa-microchip',
         title: 'Selección de Componentes',
-        description: 'Selección de inversores, protecciones, cableado y tableros conforme a normas NOM-001-SEDE y NEC 690'
-    }
+        description:
+            'Selección de inversores, protecciones, cableado y tableros conforme a normas NOM-001-SEDE y NEC 690',
+    },
 ];
 
 const integracionTecnica = [
     {
         icon: 'fas fa-wrench',
         title: 'Instalación de Sistemas',
-        description: 'Instalación de paneles solares, inversores y sistemas de almacenamiento (baterías de litio o AGM)'
+        description:
+            'Instalación de paneles solares, inversores y sistemas de almacenamiento (baterías de litio o AGM)',
     },
     {
         icon: 'fas fa-plug',
         title: 'Integración Eléctrica',
-        description: 'Integración eléctrica directa a tableros de fuerza o sistemas de respaldo UPS'
+        description:
+            'Integración eléctrica directa a tableros de fuerza o sistemas de respaldo UPS',
     },
     {
         icon: 'fas fa-wifi',
         title: 'Monitoreo Remoto',
-        description: 'Monitoreo remoto mediante plataformas IoT o SCADA, con lectura en tiempo real de generación, consumo y eficiencia'
+        description:
+            'Monitoreo remoto mediante plataformas IoT o SCADA, con lectura en tiempo real de generación, consumo y eficiencia',
     },
     {
         icon: 'fas fa-handshake',
         title: 'Coordinación con CFE',
-        description: 'Coordinación con CFE para contratos de interconexión, medición bidireccional y permisos de operación'
-    }
+        description:
+            'Coordinación con CFE para contratos de interconexión, medición bidireccional y permisos de operación',
+    },
 ];
 
 const aplicaciones = [
     {
         icon: 'fas fa-industry',
         title: 'Plantas Industriales',
-        description: 'Plantas industriales y líneas de producción con alto consumo energético'
+        description:
+            'Plantas industriales y líneas de producción con alto consumo energético',
     },
     {
         icon: 'fas fa-building',
         title: 'Centros Comerciales',
-        description: 'Centros comerciales, edificios corporativos y almacenes logísticos'
+        description:
+            'Centros comerciales, edificios corporativos y almacenes logísticos',
     },
     {
         icon: 'fas fa-tint',
         title: 'Estaciones de Bombeo',
-        description: 'Estaciones de bombeo, plantas de tratamiento y parques fotovoltaicos modulares'
+        description:
+            'Estaciones de bombeo, plantas de tratamiento y parques fotovoltaicos modulares',
     },
     {
         icon: 'fas fa-wind',
         title: 'Proyectos Híbridos',
-        description: 'Proyectos híbridos con integración de energía solar, eólica o diésel inteligente'
-    }
+        description:
+            'Proyectos híbridos con integración de energía solar, eólica o diésel inteligente',
+    },
 ];
 
 const beneficios = [
     {
         icon: 'fas fa-dollar-sign',
         title: 'Reducción de Costos',
-        description: 'Permite reducir costos energéticos y dependencia de la red eléctrica convencional'
+        description:
+            'Permite reducir costos energéticos y dependencia de la red eléctrica convencional',
     },
     {
         icon: 'fas fa-chart-bar',
         title: 'Retorno de Inversión',
-        description: 'Enfoque técnico que prioriza eficiencia, retorno de inversión y estabilidad operativa'
+        description:
+            'Enfoque técnico que prioriza eficiencia, retorno de inversión y estabilidad operativa',
     },
     {
         icon: 'fas fa-leaf',
         title: 'Energía Limpia',
-        description: 'Energía confiable, limpia y rentable para operaciones continuas'
+        description:
+            'Energía confiable, limpia y rentable para operaciones continuas',
     },
     {
         icon: 'fas fa-award',
         title: 'Solución Llave en Mano',
-        description: 'Ingeniería certificada, documentación técnica y soporte posterior incluido'
-    }
+        description:
+            'Ingeniería certificada, documentación técnica y soporte posterior incluido',
+    },
 ];
 ---
 
@@ -115,10 +131,7 @@ const beneficios = [
             content="<strong>SMIIR diseña, instala e integra sistemas de generación y gestión energética renovable</strong> adaptados a entornos industriales, comerciales y corporativos. Cada proyecto se desarrolla con un enfoque técnico que prioriza eficiencia, retorno de inversión y estabilidad operativa, permitiendo reducir costos energéticos y dependencia de la red eléctrica convencional."
         />
 
-        <ServicesGrid
-            title="Diseño e Ingeniería"
-            services={disenoIngenieria}
-        />
+        <ServicesGrid title="Diseño e Ingeniería" services={disenoIngenieria} />
 
         <BenefitsSection
             title="Integración Técnica"
@@ -126,10 +139,7 @@ const beneficios = [
             variant="highlighted"
         />
 
-        <ServicesGrid
-            title="Aplicaciones"
-            services={aplicaciones}
-        />
+        <ServicesGrid title="Aplicaciones" services={aplicaciones} />
 
         <BenefitsSection
             title="Beneficios y Garantías"

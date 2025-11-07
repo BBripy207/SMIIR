@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+
+const title = 'Supervisión integral bajo estándares industriales | SMIIR';
+const description =
+    'SMIIR ejecuta la supervisión técnica integral de cada proyecto bajo lineamientos industriales y de construcción certificados, asegurando cumplimiento normativo, calidad estructural y desempeño operativo en todas las fases.';
+
+const controlTecnico = [
+    {
+        icon: 'fas fa-search-plus',
+        title: 'Verificación Continua',
+        description:
+            'Verificación continua de la ejecución en campo frente a planos, memorias de cálculo y especificaciones de ingeniería',
+    },
+    {
+        icon: 'fas fa-ruler-combined',
+        title: 'Control Dimensional',
+        description:
+            'Control dimensional, alineación de estructuras y precisión en montaje electromecánico',
+    },
+    {
+        icon: 'fas fa-certificate',
+        title: 'Revisión de Materiales',
+        description:
+            'Revisión de materiales, soldaduras, conexiones y componentes eléctricos con trazabilidad de lote y certificación de origen',
+    },
+    {
+        icon: 'fas fa-camera',
+        title: 'Documentación Digital',
+        description:
+            'Documentación fotográfica y técnica de cada fase constructiva, generando bitácoras digitales de obra',
+    },
+];
+
+const gestionSeguridad = [
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Cumplimiento Normativo',
+        description:
+            'Supervisión conforme a NOM-001-STPS, NOM-017-STPS, NOM-029-STPS y reglamentos de seguridad industrial',
+    },
+    {
+        icon: 'fas fa-hard-hat',
+        title: 'Protocolos de Trabajo Seguro',
+        description:
+            'Coordinación de protocolos de trabajo seguro, maniobras de izaje, soldadura, confinamiento y energía eléctrica',
+    },
+    {
+        icon: 'fas fa-exclamation-triangle',
+        title: 'Evaluación de Riesgos',
+        description:
+            'Evaluación de riesgos y aplicación de medidas preventivas en tiempo real para mitigar incidentes o daños',
+    },
+    {
+        icon: 'fas fa-clipboard-list',
+        title: 'Registro de Cumplimiento',
+        description:
+            'Registro de cumplimiento ante auditorías, inspecciones y revisiones técnicas',
+    },
+];
+
+const coordinacionEspecialidades = [
+    {
+        icon: 'fas fa-project-diagram',
+        title: 'Integración de Frentes',
+        description:
+            'Integración de frentes civiles, eléctricos, mecánicos y de automatización en un solo plan de supervisión',
+    },
+    {
+        icon: 'fas fa-check-double',
+        title: 'Validación de Compatibilidad',
+        description:
+            'Validación de compatibilidad entre sistemas antes de conexión final: potencia, control, datos y seguridad',
+    },
+    {
+        icon: 'fas fa-vial',
+        title: 'Pruebas FAT y SAT',
+        description:
+            'Aseguramiento de pruebas FAT (Factory Acceptance Test) y SAT (Site Acceptance Test) con documentación técnica completa',
+    },
+];
+
+const cierreTecnico = [
+    {
+        icon: 'fas fa-cogs',
+        title: 'Validación Funcional',
+        description:
+            'Validación funcional de equipos, calibraciones y protocolos de arranque',
+    },
+    {
+        icon: 'fas fa-file-alt',
+        title: 'Reportes de Cumplimiento',
+        description:
+            'Emisión de reportes de cumplimiento, listas de verificación y certificados de pruebas',
+    },
+    {
+        icon: 'fas fa-handshake',
+        title: 'Entrega Técnica',
+        description:
+            'Entrega de informes finales al cliente con recomendaciones de mantenimiento y operación',
+    },
+];
+
+const metodologias = [
+    {
+        icon: 'fas fa-award',
+        title: 'Estándares ISO 9001',
+        description:
+            'Metodologías de control basadas en estándares ISO 9001 para aseguramiento de calidad',
+    },
+    {
+        icon: 'fas fa-fire',
+        title: 'Normativas NFPA',
+        description:
+            'Cumplimiento con estándares NFPA para protección contra incendios y seguridad',
+    },
+    {
+        icon: 'fas fa-bolt',
+        title: 'Estándares IEC e IEEE',
+        description:
+            'Aplicación de normativas IEC e IEEE para sistemas eléctricos y electrónicos',
+    },
+];
+---
+
+<BaseLayout title={title} description={description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero
+            title="Supervisión integral bajo estándares industriales"
+        />
+
+        <IntroSection
+            content="<strong>SMIIR ejecuta la supervisión técnica integral</strong> de cada proyecto bajo lineamientos industriales y de construcción certificados, asegurando cumplimiento normativo, calidad estructural y desempeño operativo en todas las fases. El objetivo es garantizar que cada sistema funcione de acuerdo con su diseño, sin desviaciones técnicas ni retrasos operativos."
+        />
+
+        <ServicesGrid
+            title="Control Técnico y de Calidad"
+            services={controlTecnico}
+        />
+
+        <BenefitsSection
+            title="Gestión de Seguridad y Cumplimiento"
+            benefits={gestionSeguridad}
+            variant="highlighted"
+        />
+
+        <ServicesGrid
+            title="Coordinación de Especialidades"
+            services={coordinacionEspecialidades}
+        />
+
+        <BenefitsSection
+            title="Cierre Técnico y Aseguramiento de Entrega"
+            benefits={cierreTecnico}
+            variant="default"
+        />
+
+        <BenefitsSection
+            title="Metodologías y Estándares"
+            benefits={metodologias}
+            variant="highlighted"
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    /* FORZAR que TODOS los títulos sean idénticos */
+    .hero h1,
+    .services-grid h2,
+    .benefits-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        color: white !important;
+        background: none !important;
+        -webkit-background-clip: unset !important;
+        -webkit-text-fill-color: white !important;
+    }
+</style>

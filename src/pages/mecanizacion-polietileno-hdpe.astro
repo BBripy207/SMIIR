@@ -27,32 +27,38 @@ const services = [
     {
         icon: 'fas fa-cogs',
         title: 'Mecanización de Precisión',
-        description: 'Mecanizado CNC de componentes HDPE con tolerancias exactas para aplicaciones industriales críticas',
+        description:
+            'Mecanizado CNC de componentes HDPE con tolerancias exactas para aplicaciones industriales críticas',
     },
     {
         icon: 'fas fa-cube',
         title: 'Surtido de Materiales',
-        description: 'Amplio inventario de polietilenos HDPE, UHMWPE y PP en diferentes espesores y dimensiones',
+        description:
+            'Amplio inventario de polietilenos HDPE, UHMWPE y PP en diferentes espesores y dimensiones',
     },
     {
         icon: 'fas fa-drafting-compass',
         title: 'Diseño Personalizado',
-        description: 'Desarrollo de componentes a medida según especificaciones técnicas y requerimientos de aplicación',
+        description:
+            'Desarrollo de componentes a medida según especificaciones técnicas y requerimientos de aplicación',
     },
     {
         icon: 'fas fa-shipping-fast',
         title: 'Entrega Rápida',
-        description: 'Tiempos de entrega optimizados para mantener la continuidad operacional de nuestros clientes',
+        description:
+            'Tiempos de entrega optimizados para mantener la continuidad operacional de nuestros clientes',
     },
     {
         icon: 'fas fa-atom',
         title: 'UHMWPE Ultra Alto Peso Molecular',
-        description: 'Polietileno de ultra alto peso molecular con excepcional resistencia al desgaste y bajo coeficiente de fricción',
+        description:
+            'Polietileno de ultra alto peso molecular con excepcional resistencia al desgaste y bajo coeficiente de fricción',
     },
     {
         icon: 'fas fa-shield-alt',
         title: 'Componentes para Tolvas y Silos',
-        description: 'Revestimientos UHMWPE para tolvas de descarga, silos de almacenamiento y sistemas de transporte de materiales',
+        description:
+            'Revestimientos UHMWPE para tolvas de descarga, silos de almacenamiento y sistemas de transporte de materiales',
     },
 ];
 
@@ -60,17 +66,20 @@ const benefits = [
     {
         icon: 'fas fa-check-circle',
         title: 'Resistencia Química Excepcional',
-        description: 'Inerte a la mayoría de productos químicos, ácidos y bases, ideal para ambientes corrosivos',
+        description:
+            'Inerte a la mayoría de productos químicos, ácidos y bases, ideal para ambientes corrosivos',
     },
     {
         icon: 'fas fa-check-circle',
         title: 'Ultra Baja Fricción',
-        description: 'Coeficiente de fricción menor que el teflón, reduciendo significativamente el desgaste y energía de operación',
+        description:
+            'Coeficiente de fricción menor que el teflón, reduciendo significativamente el desgaste y energía de operación',
     },
     {
         icon: 'fas fa-check-circle',
         title: 'Resistencia al Impacto',
-        description: 'Excelente tenacidad y resistencia al impacto, incluso a temperaturas muy bajas',
+        description:
+            'Excelente tenacidad y resistencia al impacto, incluso a temperaturas muy bajas',
     },
 ];
 ---
@@ -79,18 +88,16 @@ const benefits = [
     <HeaderApple />
 
     <main class="main">
-        <ServiceHero
-            title="MECANIZACIÓN E SURTIDO DE POLIETILENO HDPE"
-        />
+        <ServiceHero title="MECANIZACIÓN E SURTIDO DE POLIETILENO HDPE" />
 
         <IntroSection content={introContent} />
 
-        <ServicesGrid 
+        <ServicesGrid
             title="Servicios especializados de mecanización"
             services={services}
         />
 
-        <BenefitsSection 
+        <BenefitsSection
             title="Ventajas del polietileno HDPE"
             benefits={benefits}
         />
@@ -103,5 +110,41 @@ const benefits = [
 <style>
     .main {
         margin-top: 0;
+    }
+
+    /* Reducir espaciado vertical entre secciones */
+    :global(.service-hero) {
+        padding: 30px 0 20px 0 !important;
+    }
+
+    :global(.intro-section) {
+        padding: 15px 0 !important;
+    }
+
+    :global(.services-grid) {
+        padding: 30px 0 !important;
+    }
+
+    :global(.benefits-section) {
+        padding: 30px 0 40px 0 !important;
+    }
+
+    /* Reducir márgenes en móvil */
+    @media (max-width: 768px) {
+        :global(.service-hero) {
+            padding: 20px 0 15px 0 !important;
+        }
+
+        :global(.intro-section) {
+            padding: 10px 0 !important;
+        }
+
+        :global(.services-grid) {
+            padding: 20px 0 !important;
+        }
+
+        :global(.benefits-section) {
+            padding: 20px 0 30px 0 !important;
+        }
     }
 </style>

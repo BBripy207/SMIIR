@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title =
+    'Mecanización e Surtido de Polietileno HDPE | SMIIR - Componentes Industriales';
+const description =
+    'Servicios especializados de mecanización e surtido de polietileno HDPE, UHMWPE. Tolvas, revestimientos, componentes industriales para sector minero, agroindustrial y transporte de materiales.';
+
+const introContent = `
+    En <strong>SMIIR</strong> somos especialistas en la
+    <strong>mecanización y surtido de polietileno HDPE</strong> y
+    materiales termoplásticos de alta performance. Ofrecemos
+    componentes industriales diseñados específicamente para
+    aplicaciones exigentes en minería, agroindustria y transporte
+    de materiales, garantizando <strong>máxima durabilidad</strong>
+    y <strong>resistencia al desgaste</strong>.
+`;
+
+const services = [
+    {
+        icon: 'fas fa-cogs',
+        title: 'Mecanización de Precisión',
+        description: 'Mecanizado CNC de componentes HDPE con tolerancias exactas para aplicaciones industriales críticas',
+    },
+    {
+        icon: 'fas fa-cube',
+        title: 'Surtido de Materiales',
+        description: 'Amplio inventario de polietilenos HDPE, UHMWPE y PP en diferentes espesores y dimensiones',
+    },
+    {
+        icon: 'fas fa-drafting-compass',
+        title: 'Diseño Personalizado',
+        description: 'Desarrollo de componentes a medida según especificaciones técnicas y requerimientos de aplicación',
+    },
+    {
+        icon: 'fas fa-shipping-fast',
+        title: 'Entrega Rápida',
+        description: 'Tiempos de entrega optimizados para mantener la continuidad operacional de nuestros clientes',
+    },
+    {
+        icon: 'fas fa-atom',
+        title: 'UHMWPE Ultra Alto Peso Molecular',
+        description: 'Polietileno de ultra alto peso molecular con excepcional resistencia al desgaste y bajo coeficiente de fricción',
+    },
+    {
+        icon: 'fas fa-shield-alt',
+        title: 'Componentes para Tolvas y Silos',
+        description: 'Revestimientos UHMWPE para tolvas de descarga, silos de almacenamiento y sistemas de transporte de materiales',
+    },
+];
+
+const benefits = [
+    {
+        icon: 'fas fa-check-circle',
+        title: 'Resistencia Química Excepcional',
+        description: 'Inerte a la mayoría de productos químicos, ácidos y bases, ideal para ambientes corrosivos',
+    },
+    {
+        icon: 'fas fa-check-circle',
+        title: 'Ultra Baja Fricción',
+        description: 'Coeficiente de fricción menor que el teflón, reduciendo significativamente el desgaste y energía de operación',
+    },
+    {
+        icon: 'fas fa-check-circle',
+        title: 'Resistencia al Impacto',
+        description: 'Excelente tenacidad y resistencia al impacto, incluso a temperaturas muy bajas',
+    },
+];
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero
+            title="MECANIZACIÓN E SURTIDO DE POLIETILENO HDPE"
+        />
+
+        <IntroSection content={introContent} />
+
+        <ServicesGrid 
+            title="Servicios especializados de mecanización"
+            services={services}
+        />
+
+        <BenefitsSection 
+            title="Ventajas del polietileno HDPE"
+            benefits={benefits}
+        />
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+</style>

@@ -39,8 +39,8 @@ const { services } = Astro.props as Props;
                                 <a
                                     href={item.link}
                                     class="item-link"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    target={item.link.startsWith('http') ? '_blank' : '_self'}
+                                    rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 >
                                     <h3>{item.title}</h3>
                                 </a>

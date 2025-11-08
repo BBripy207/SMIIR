@@ -1,0 +1,51 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<div class="hero">
+    <h1>{title}</h1>
+    <p>{description}</p>
+</div>
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 1rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto 1rem;
+    }
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 900;
+        margin: 0 0 0.5rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #b3b3b3;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+        .hero {
+            padding: 1rem;
+        }
+    }
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 2rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+    }
+</style>

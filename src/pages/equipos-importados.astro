@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ServiceHero from '../components/ServiceHero.astro';
+import IntroSection from '../components/IntroSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import BenefitsSection from '../components/BenefitsSection.astro';
+
+const title =
+    'Equipos Importados | SMIIR - Maquinaria Industrial Especializada';
+const description =
+    'Equipos industriales importados de alta calidad para sector minero, agroindustrial y construcción. Maquinaria especializada con soporte técnico y repuestos garantizados.';
+
+const introContent = `
+    En <strong>SMIIR</strong> ofrecemos <strong>equipos industriales importados</strong> 
+    de las mejores marcas internacionales. Contamos con maquinaria especializada 
+    para sector minero, agroindustrial y construcción, garantizando 
+    <strong>calidad mundial</strong>, <strong>soporte técnico integral</strong> y 
+    <strong>disponibilidad de repuestos</strong>.
+`;
+
+const services = [
+    {
+        icon: 'fas fa-globe',
+        title: 'Equipos Internacionales',
+        description:
+            'Importación directa de equipos de marcas líderes mundiales con certificaciones internacionales',
+    },
+    {
+        icon: 'fas fa-industry',
+        title: 'Maquinaria Minera',
+        description:
+            'Equipos especializados para minería: chancadoras, cribas, bombas, sistemas de transporte',
+    },
+    {
+        icon: 'fas fa-tractor',
+        title: 'Equipos Agroindustriales',
+        description:
+            'Maquinaria para procesamiento agrícola, sistemas de riego y equipos de postcosecha',
+    },
+    {
+        icon: 'fas fa-hammer',
+        title: 'Maquinaria de Construcción',
+        description:
+            'Equipos pesados para construcción, movimiento de tierras y obras civiles',
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'Soporte Técnico Integral',
+        description:
+            'Instalación, puesta en marcha, capacitación y mantenimiento especializado',
+    },
+    {
+        icon: 'fas fa-shipping-fast',
+        title: 'Gestión de Importación',
+        description:
+            'Manejo completo del proceso de importación, nacionalización y entrega en sitio',
+    },
+];
+
+const benefits = [
+    {
+        icon: 'fas fa-certificate',
+        title: 'Equipos Certificados',
+        description:
+            'Maquinaria con certificaciones internacionales y garantía de fábrica extendida',
+    },
+    {
+        icon: 'fas fa-cogs',
+        title: 'Repuestos Garantizados',
+        description:
+            'Disponibilidad asegurada de repuestos originales y soporte técnico post-venta',
+    },
+    {
+        icon: 'fas fa-users',
+        title: 'Capacitación Especializada',
+        description:
+            'Entrenamiento técnico para operadores y personal de mantenimiento',
+    },
+    {
+        icon: 'fas fa-chart-line',
+        title: 'Tecnología Avanzada',
+        description:
+            'Equipos con última tecnología para maximizar eficiencia y productividad',
+    },
+    {
+        icon: 'fas fa-handshake',
+        title: 'Financiamiento Disponible',
+        description:
+            'Opciones de financiamiento y leasing para facilitar la adquisición de equipos',
+    },
+    {
+        icon: 'fas fa-map-marker-alt',
+        title: 'Soporte Nacional',
+        description:
+            'Red de soporte técnico a nivel nacional para atención rápida y eficiente',
+    },
+];
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ServiceHero title="EQUIPOS IMPORTADOS" />
+
+        <section class="pdf-section">
+            <iframe
+                src="/assets/images/PDF/404f50c1ac42713d4438bedf11ca1c8c (1).pdf"
+                width="100%"
+                style="border: none; display: block; min-height: 800px;"
+            ></iframe>
+        </section>
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    :global(.service-hero) {
+        padding: 30px 0 20px 0 !important;
+    }
+
+    :global(.intro-section) {
+        padding: 15px 0 !important;
+    }
+
+    :global(.services-grid) {
+        padding: 30px 0 !important;
+    }
+
+    .pdf-section {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        :global(.service-hero) {
+            padding: 20px 0 10px 0 !important;
+        }
+
+        .pdf-section iframe {
+            min-height: 600px;
+        }
+    }
+</style>

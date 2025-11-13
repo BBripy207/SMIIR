@@ -8,6 +8,7 @@ import ImageContainer from '../components/ImageContainer.astro';
 import MainTitle from '../components/MainTitle.astro';
 import PageLayout from '../components/PageLayout.astro';
 import VideoVimeo from '../components/VideoVimeo.astro';
+import BatteryDisclaimer from '../components/BatteryDisclaimer.astro';
 
 // Metadatos SEO
 const title = 'KLEENBOOT C55 - SIMIR';
@@ -142,8 +143,124 @@ const description =
                     muted={false}
                     loop={true}
                 />
+
+                <h2 class="interaction-title">
+                    Diseño de tanque de agua patentado - Volteo de 3 segundos
+                    para un fácil mantenimiento
+                </h2>
+                <p class="tech-description">
+                    Rompe las limitaciones del mantenimiento tradicional de
+                    máquinas completas. Un solo operador puede voltear
+                    manualmente el tanque de agua 90° en solo 3 segundos, con
+                    total visibilidad de la bomba y la tubería. La operación
+                    extremadamente simple reduce significativamente el tiempo y
+                    el costo de mantenimiento.
+                </p>
+
+                <VideoVimeo
+                    vimeoId="1136370786"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">
+                    Manual y automático - Funcionamiento sin esfuerzo
+                </h2>
+                <p class="tech-description">
+                    Cambie fácilmente entre los modos manual y automático.
+                    Equipado con un mango de asistencia, lo que hace que la
+                    limpieza sea fácil y cómoda.
+                </p>
+
+                <VideoVimeo
+                    vimeoId="1136370929"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">
+                    Percepción panorámica de 360° - Seguro sin puntos ciegos
+                </h2>
+                <p class="tech-description">
+                    Equipado con cuatro cámaras estéreo, que permiten una mejor
+                    detección de obstáculos bajos, objetos irregulares y
+                    multitudes dinámicas. Combinado con el LiDAR montado en la
+                    parte superior, realiza un escaneo de 360° en tiempo real
+                    del entorno, planificando rutas de forma autónoma y
+                    navegando de forma segura a través de espacios concurridos.
+                </p>
+
+                <VideoVimeo
+                    vimeoId="1136371106"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">
+                    Suministro de agua y drenaje autónomos
+                </h2>
+                <p class="tech-description">
+                    Equipado con una estación de trabajo conectada a las
+                    tuberías del edificio, que permite la carga automática, el
+                    suministro de agua limpia y el drenaje de aguas residuales,
+                    reduciendo el funcionamiento manual y mejorando la
+                    eficiencia.
+                </p>
+
+                <VideoVimeo
+                    vimeoId="1136371431"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">
+                    Plataforma inteligente y actualización de IoT
+                </h2>
+                <p class="tech-description">
+                    Admite la gestión digital 24/7 a través de la aplicación o
+                    la web. Las funciones incluyen la gestión de tareas, el
+                    monitoreo del estado, el envío remoto y los informes de
+                    limpieza, lo que permite operaciones de limpieza
+                    inteligentes sostenibles y basadas en datos.
+                </p>
+
+                <VideoVimeo
+                    vimeoId="1136371604"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-4.png"
+                    alt="KLEENBOOT C55 - Tecnología Avanzada"
+                />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-5.png"
+                    alt="KLEENBOOT C55 - Sistema Completo"
+                />
             </div>
         </PageLayout>
+
+        <BatteryDisclaimer>
+            * Todas las reclamaciones de batería dependen de muchos factores;
+            los resultados reales variarán. La batería tiene ciclos de recarga
+            limitados y puede que eventualmente sea necesario reemplazarla. La
+            duración de la batería y los ciclos de carga varían según el uso y
+            la configuración.
+            <br /><br />
+            ** El tiempo de carga indicado se refiere a la duración requerida para
+            cargar de la capacidad de la batería del 15 % al 100 %, utilizando un
+            cargador o una pila de carga, con el robot encendido. No intente cargar
+            un robot mojado.
+            <br /><br />
+            * Medición tomada con cepillos laterales dobles + cepillo de barrido
+        </BatteryDisclaimer>
 
         <Footer />
 

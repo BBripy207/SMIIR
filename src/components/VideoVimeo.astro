@@ -40,11 +40,12 @@ const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?${vimeoParams.toStri
 {description && <p class={descriptionClass} set:html={description} />}
 
 <div class="vimeo-container">
-    <iframe 
+    <iframe
         src={vimeoUrl}
-        title={title || "Video Demo"}
+        title={title || 'Video Demo'}
         allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen>
+        allowfullscreen
+    >
     </iframe>
 </div>
 

@@ -8,6 +8,7 @@ import ImageContainer from '../components/ImageContainer.astro';
 import MainTitle from '../components/MainTitle.astro';
 import PageLayout from '../components/PageLayout.astro';
 import VideoVimeo from '../components/VideoVimeo.astro';
+import BatteryDisclaimer from '../components/BatteryDisclaimer.astro';
 
 // Metadatos SEO
 const title = 'KLEENBOOT C30 - SIMIR';
@@ -68,6 +69,49 @@ const description =
                     autoplay={true}
                     muted={false}
                     loop={true}
+                />
+
+                <VideoVimeo
+                    vimeoId="1136361535"
+                    title="100% Cargado, Limpieza de 2500㎡"
+                    description="Con una carga automática completa, el C30 puede limpiar hasta 2500㎡, ideal para sesiones de limpieza prolongadas"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <VideoVimeo
+                    vimeoId="1136363014"
+                    title="Modos de Operación Dual"
+                    description="Cambia entre limpieza automática y limpieza manual con el innovador mango extensible"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <VideoVimeo
+                    vimeoId="1136362600"
+                    title="Control y Seguimiento Remotos"
+                    description="Asigna y rastrea fácilmente las tareas de limpieza, y obtén información sobre tu C30 con la aplicación KEENON"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C30/KLEENBOOT-C30-1.png"
+                    alt="KLEENBOOT C30"
+                />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C30/KLEENBOOT-C30-2.png"
+                    alt="KLEENBOOT C30"
+                />
+
+                <BatteryDisclaimer
+                    useCustomOnly={true}
+                    customText1="* Todas las especificaciones de la batería dependen de factores externos. Los resultados reales podrían variar. La batería admite un número limitado de cargas y podría ser necesario sustituirla con el tiempo. La duración de la batería y el número de ciclos de carga dependerán del uso y los ajustes."
+                    customText2="** El tiempo de carga indicado se refiere a la duración necesaria para cargar la batería del 15% al 100% de capacidad, utilizando un cargador o una estación de carga, con el robot encendido. No intentes cargar un Robot mojado.<br><br>* Medición realizada con cepillos laterales dobles + cepillo barredor."
                 />
             </div>
         </PageLayout>

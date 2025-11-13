@@ -1,0 +1,126 @@
+---
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ImageContainer from '../components/ImageContainer.astro';
+import MainTitle from '../components/MainTitle.astro';
+import PageLayout from '../components/PageLayout.astro';
+import VideoVimeo from '../components/VideoVimeo.astro';
+
+// Metadatos SEO
+const title = 'KLEENBOOT C55 - SIMIR';
+const description =
+    'Presentación del robot KLEENBOOT C55 - Robot innovador con diseño de triple rodillo que integra barrer y fregar en una sola pasada';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx/kleenboot-c55" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/typography.css" />
+        <link rel="stylesheet" href="/styles/components.css" />
+        <link rel="stylesheet" href="/styles/responsive.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* CSS específico para KLEENBOOT C55 si es necesario */
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <PageLayout>
+            <div class="content-text">
+                <MainTitle robotName="KLEENBOOT" version="C55" />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55.png"
+                    alt="KLEENBOOT C55"
+                />
+
+                <h2 class="interaction-title">Barrer y fregar en una - Dos funciones, una máquina</h2>
+                <p class="tech-description">Con el primer diseño de triple rodillo de la industria, que integra una barredora y una fregadora en uno solo. Logra barrer y fregar en una sola pasada, ofreciendo un resultado más limpio en comparación con los depuradores tradicionales de doble rodillo</p>
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-1.png"
+                    alt="KLEENBOOT C55"
+                />
+
+                <VideoVimeo
+                    vimeoId="1136369714"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">Duplica la cantidad de agua, solo agrega agua una vez al día.</h2>
+                <p class="tech-description">Equipado con un tanque de agua extra grande, duplicado en comparación con modelos similares en la industria. Reduce la frecuencia de recarga y permite que un solo llenado limpie un área equivalente a tres campos de fútbol.</p>
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-2ç.png"
+                    alt="KLEENBOOT C55"
+                />
+
+                <h2 class="interaction-title">Sistema de batería dual - Intercambio de 5 segundos, sin tiempo de inactividad</h2>
+                <p class="tech-description">Los compartimentos de doble batería admiten el intercambio en caliente mientras están encendidos, lo que permite un reemplazo rápido en solo 5 segundos. Esto rompe por completo con el ciclo ineficiente de "2 horas de carga, 2 horas de funcionamiento" común en las máquinas de limpieza tradicionales.</p>
+
+                <VideoVimeo
+                    vimeoId="1136370180"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+
+                <h2 class="interaction-title">Chasis de alto rendimiento: supera los obstáculos sin problemas</h2>
+                <p class="tech-description">
+                    Capaz de cruzar de forma estable badenes de velocidad de hasta 5 cm de altura, lo que garantiza un funcionamiento ininterrumpido incluso en entornos complejos como garajes subterráneos.
+                </p>
+                
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-3.png"
+                    alt="KLEENBOOT C55 Chasis de Alto Rendimiento"
+                />
+
+                <VideoVimeo
+                    vimeoId="1136370302"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
+                />
+            </div>
+        </PageLayout>
+
+        <Footer />
+
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
+</html>

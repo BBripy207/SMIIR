@@ -43,7 +43,20 @@ const description =
         />
 
         <style>
-            /* CSS específico para KLEENBOOT C55 si es necesario */
+            /* CSS moderno para iframes */
+            .video-container iframe {
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .video-container iframe:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            }
         </style>
 
         <!-- View Transitions para navegación fluida -->
@@ -62,17 +75,6 @@ const description =
                     alt="KLEENBOOT C55"
                 />
 
-                <h2 class="interaction-title">
-                    Barrer y fregar en una - Dos funciones, una máquina
-                </h2>
-                <p class="tech-description">
-                    Con el primer diseño de triple rodillo de la industria, que
-                    integra una barredora y una fregadora en uno solo. Logra
-                    barrer y fregar en una sola pasada, ofreciendo un resultado
-                    más limpio en comparación con los depuradores tradicionales
-                    de doble rodillo
-                </p>
-
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-1.png"
                     alt="KLEENBOOT C55"
@@ -80,156 +82,81 @@ const description =
 
                 <VideoVimeo
                     vimeoId="1136369714"
+                    title="Barrer y fregar en una - Dos funciones, una máquina"
+                    description="Con el primer diseño de triple rodillo de la industria, que integra una barredora y una fregadora en uno solo. Logra barrer y fregar en una sola pasada, ofreciendo un resultado más limpio en comparación con los depuradores tradicionales de doble rodillo"
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
-
-                <h2 class="interaction-title">
-                    Duplica la cantidad de agua, solo agrega agua una vez al
-                    día.
-                </h2>
-                <p class="tech-description">
-                    Equipado con un tanque de agua extra grande, duplicado en
-                    comparación con modelos similares en la industria. Reduce la
-                    frecuencia de recarga y permite que un solo llenado limpie
-                    un área equivalente a tres campos de fútbol.
-                </p>
 
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-2ç.png"
                     alt="KLEENBOOT C55"
                 />
 
-                <h2 class="interaction-title">
-                    Sistema de batería dual - Intercambio de 5 segundos, sin
-                    tiempo de inactividad
-                </h2>
-                <p class="tech-description">
-                    Los compartimentos de doble batería admiten el intercambio
-                    en caliente mientras están encendidos, lo que permite un
-                    reemplazo rápido en solo 5 segundos. Esto rompe por completo
-                    con el ciclo ineficiente de "2 horas de carga, 2 horas de
-                    funcionamiento" común en las máquinas de limpieza
-                    tradicionales.
-                </p>
-
                 <VideoVimeo
                     vimeoId="1136370180"
+                    title="Sistema de batería dual - Intercambio de 5 segundos, sin tiempo de inactividad"
+                    description="Los compartimentos de doble batería admiten el intercambio en caliente mientras están encendidos, lo que permite un reemplazo rápido en solo 5 segundos. Esto rompe por completo con el ciclo ineficiente de '2 horas de carga, 2 horas de funcionamiento' común en las máquinas de limpieza tradicionales."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
 
-                <h2 class="interaction-title">
-                    Chasis de alto rendimiento: supera los obstáculos sin
-                    problemas
-                </h2>
-                <p class="tech-description">
-                    Capaz de cruzar de forma estable badenes de velocidad de
-                    hasta 5 cm de altura, lo que garantiza un funcionamiento
-                    ininterrumpido incluso en entornos complejos como garajes
-                    subterráneos.
-                </p>
-
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-3.png"
-                    alt="KLEENBOOT C55 Chasis de Alto Rendimiento"
+                    alt="KLEENBOOT C55"
                 />
 
                 <VideoVimeo
                     vimeoId="1136370302"
+                    title="Chasis de alto rendimiento: supera los obstáculos sin problemas"
+                    description="Capaz de cruzar de forma estable badenes de velocidad de hasta 5 cm de altura, lo que garantiza un funcionamiento ininterrumpido incluso en entornos complejos como garajes subterráneos."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
-
-                <h2 class="interaction-title">
-                    Diseño de tanque de agua patentado - Volteo de 3 segundos
-                    para un fácil mantenimiento
-                </h2>
-                <p class="tech-description">
-                    Rompe las limitaciones del mantenimiento tradicional de
-                    máquinas completas. Un solo operador puede voltear
-                    manualmente el tanque de agua 90° en solo 3 segundos, con
-                    total visibilidad de la bomba y la tubería. La operación
-                    extremadamente simple reduce significativamente el tiempo y
-                    el costo de mantenimiento.
-                </p>
 
                 <VideoVimeo
                     vimeoId="1136370786"
+                    title="Diseño de tanque de agua patentado - Volteo de 3 segundos para un fácil mantenimiento"
+                    description="Rompe las limitaciones del mantenimiento tradicional de máquinas completas. Un solo operador puede voltear manualmente el tanque de agua 90° en solo 3 segundos, con total visibilidad de la bomba y la tubería. La operación extremadamente simple reduce significativamente el tiempo y el costo de mantenimiento."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
-
-                <h2 class="interaction-title">
-                    Manual y automático - Funcionamiento sin esfuerzo
-                </h2>
-                <p class="tech-description">
-                    Cambie fácilmente entre los modos manual y automático.
-                    Equipado con un mango de asistencia, lo que hace que la
-                    limpieza sea fácil y cómoda.
-                </p>
 
                 <VideoVimeo
                     vimeoId="1136370929"
+                    title="Manual y automático - Funcionamiento sin esfuerzo"
+                    description="Cambie fácilmente entre los modos manual y automático. Equipado con un mango de asistencia, lo que hace que la limpieza sea fácil y cómoda."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
-
-                <h2 class="interaction-title">
-                    Percepción panorámica de 360° - Seguro sin puntos ciegos
-                </h2>
-                <p class="tech-description">
-                    Equipado con cuatro cámaras estéreo, que permiten una mejor
-                    detección de obstáculos bajos, objetos irregulares y
-                    multitudes dinámicas. Combinado con el LiDAR montado en la
-                    parte superior, realiza un escaneo de 360° en tiempo real
-                    del entorno, planificando rutas de forma autónoma y
-                    navegando de forma segura a través de espacios concurridos.
-                </p>
 
                 <VideoVimeo
                     vimeoId="1136371106"
+                    title="Percepción panorámica de 360° - Seguro sin puntos ciegos"
+                    description="Equipado con cuatro cámaras estéreo, que permiten una mejor detección de obstáculos bajos, objetos irregulares y multitudes dinámicas. Combinado con el LiDAR montado en la parte superior, realiza un escaneo de 360° en tiempo real del entorno, planificando rutas de forma autónoma y navegando de forma segura a través de espacios concurridos."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
-
-                <h2 class="interaction-title">
-                    Suministro de agua y drenaje autónomos
-                </h2>
-                <p class="tech-description">
-                    Equipado con una estación de trabajo conectada a las
-                    tuberías del edificio, que permite la carga automática, el
-                    suministro de agua limpia y el drenaje de aguas residuales,
-                    reduciendo el funcionamiento manual y mejorando la
-                    eficiencia.
-                </p>
 
                 <VideoVimeo
                     vimeoId="1136371431"
+                    title="Suministro de agua y drenaje autónomos"
+                    description="Equipado con una estación de trabajo conectada a las tuberías del edificio, que permite la carga automática, el suministro de agua limpia y el drenaje de aguas residuales, reduciendo el funcionamiento manual y mejorando la eficiencia."
                     autoplay={true}
                     muted={false}
                     loop={true}
                 />
 
-                <h2 class="interaction-title">
-                    Plataforma inteligente y actualización de IoT
-                </h2>
-                <p class="tech-description">
-                    Admite la gestión digital 24/7 a través de la aplicación o
-                    la web. Las funciones incluyen la gestión de tareas, el
-                    monitoreo del estado, el envío remoto y los informes de
-                    limpieza, lo que permite operaciones de limpieza
-                    inteligentes sostenibles y basadas en datos.
-                </p>
-
                 <VideoVimeo
                     vimeoId="1136371604"
+                    title="Plataforma inteligente y actualización de IoT"
+                    description="Admite la gestión digital 24/7 a través de la aplicación o la web. Las funciones incluyen la gestión de tareas, el monitoreo del estado, el envío remoto y los informes de limpieza, lo que permite operaciones de limpieza inteligentes sostenibles y basadas en datos."
                     autoplay={true}
                     muted={false}
                     loop={true}
@@ -237,28 +164,21 @@ const description =
 
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-4.png"
-                    alt="KLEENBOOT C55 - Tecnología Avanzada"
+                    alt="KLEENBOOT C55"
                 />
 
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C55/KLEENBOOT-C55-5.png"
-                    alt="KLEENBOOT C55 - Sistema Completo"
+                    alt="KLEENBOOT C55"
                 />
             </div>
         </PageLayout>
 
         <BatteryDisclaimer>
-            * Todas las reclamaciones de batería dependen de muchos factores;
-            los resultados reales variarán. La batería tiene ciclos de recarga
-            limitados y puede que eventualmente sea necesario reemplazarla. La
-            duración de la batería y los ciclos de carga varían según el uso y
-            la configuración.
-            <br /><br />
-            ** El tiempo de carga indicado se refiere a la duración requerida para
-            cargar de la capacidad de la batería del 15 % al 100 %, utilizando un
-            cargador o una pila de carga, con el robot encendido. No intente cargar
-            un robot mojado.
-            <br /><br />
+            * Todas las reclamaciones de batería dependen de muchos factores; los resultados reales variarán. La batería tiene ciclos de recarga limitados y puede que eventualmente sea necesario reemplazarla. La duración de la batería y los ciclos de carga varían según el uso y la configuración.
+            <br><br>
+            ** El tiempo de carga indicado se refiere a la duración requerida para cargar de la capacidad de la batería del 15 % al 100 %, utilizando un cargador o una pila de carga, con el robot encendido. No intente cargar un robot mojado.
+            <br><br>
             * Medición tomada con cepillos laterales dobles + cepillo de barrido
         </BatteryDisclaimer>
 

@@ -14,7 +14,7 @@ const {
     title,
     description,
     vimeoId,
-    titleClass = 'interaction-title-purple',
+    titleClass = 'interaction-title',
     descriptionClass = 'tech-description',
     autoplay = true,
     muted = true,
@@ -76,28 +76,52 @@ const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?${vimeoParams.toStri
         display: block;
     }
 
-    /* Títulos y descripciones */
-    .interaction-title-purple {
-        font-size: 2.5rem;
+    /* Títulos y descripciones - IDÉNTICOS a VideoPerfecto */
+    .navigation-title,
+    .interaction-title,
+    .service-title,
+    .safeguard-title,
+    .styles-title,
+    .algorithms-title,
+    .simplicity-title {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
         font-weight: 700;
         text-align: center;
-        margin: 2rem 0 1rem 0;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        margin-top: 3rem;
+        color: #4a9eff;
+        background: linear-gradient(135deg, #4a9eff 0%, #007bff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        line-height: 1.2;
+        margin-bottom: 1.5rem;
     }
 
-    .tech-description {
-        font-size: 1.1rem;
-        color: #a1a1aa;
+    .interaction-title-purple {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        font-weight: 700;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-top: 3rem;
+        color: #4a9eff;
+        background: linear-gradient(135deg, #4a9eff 0%, #007bff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1.5rem;
+    }
+
+    .customization-description,
+    .mapping-description,
+    .algorithms-description,
+    .tech-description,
+    .detection-description {
+        font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+        font-weight: 400;
         line-height: 1.6;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+        color: #ffffff;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        max-width: 800px;
+        opacity: 0.9;
     }
 
     /* Responsive */

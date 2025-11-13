@@ -7,6 +7,7 @@ import FloatingButtons from '../components/FloatingButtons.astro';
 import ImageContainer from '../components/ImageContainer.astro';
 import MainTitle from '../components/MainTitle.astro';
 import PageLayout from '../components/PageLayout.astro';
+import VideoVimeo from '../components/VideoVimeo.astro';
 
 // Metadatos SEO
 const title = 'KLEENBOOT C30 - SIMIR';
@@ -58,6 +59,15 @@ const description =
                 <ImageContainer
                     src="/assets/images/KLEENBOOT-C30/KLEENBOOT-C30.png"
                     alt="KLEENBOOT C30"
+                />
+
+                <VideoVimeo
+                    vimeoId="1136360234"
+                    title="Limpieza 3 en 1"
+                    description="Barrido, aspirado y desempolvado cubren 610mm de ancho"
+                    autoplay={true}
+                    muted={false}
+                    loop={true}
                 />
             </div>
         </PageLayout>

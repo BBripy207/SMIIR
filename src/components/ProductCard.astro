@@ -33,7 +33,9 @@ const {
     <ul class="product-features">
         {features.map(feature => <li>{feature}</li>)}
     </ul>
-    <span class="cta-button">{ctaText}</span>
+    <div style="text-align: center;">
+        <span class="cta-button">{ctaText}</span>
+    </div>
 </a>
 
 <style>
@@ -149,6 +151,8 @@ const {
         transition: all 0.3s ease;
         position: relative;
         z-index: 1;
+        margin: 0 auto;
+        width: fit-content;
     }
 
     .cta-button:hover {

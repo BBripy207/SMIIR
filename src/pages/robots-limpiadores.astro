@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ProductsHero from '../components/ProductsHero.astro';
+
+// Metadatos SEO mejorados
+const title = 'Robots Limpiadores - Línea de Robots de Limpieza Autónoma';
+const description =
+    'Descubre nuestra línea de robots limpiadores autónomos. Tecnología de vanguardia para limpieza automatizada con navegación inteligente, IA avanzada y diseño especializado para el sector de limpieza.';
+
+// Datos de productos - por ahora solo uno de ejemplo
+const proximoLimpiadorFeatures = [
+    'Limpieza autónoma inteligente',
+    'Navegación y mapeo avanzado',
+    'Múltiples modos de limpieza',
+    'Funcionamiento 24/7',
+];
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ProductsHero
+            title="ROBOTS LIMPIADORES"
+            description="Descubre nuestra línea completa de robots limpiadores autónomos diseñados para revolucionar la limpieza automatizada con tecnología de vanguardia."
+        />
+
+        <div class="products-container">
+            <div class="products-grid">
+                <ProductCard
+                    name="Próximo Robot Limpiador"
+                    description="Nuevo robot limpiador en desarrollo. Más información disponible próximamente."
+                    features={proximoLimpiadorFeatures}
+                    imageUrl="/assets/images/portadas/novedades.png"
+                    imageAlt="Próximo Robot Limpiador"
+                    linkUrl="#proximo-robot-limpiador"
+                />
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    .products-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        align-items: start;
+    }
+
+    @media (max-width: 768px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .products-container {
+            padding: 20px;
+        }
+    }
+</style>

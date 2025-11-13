@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ImageContainer from '../components/ImageContainer.astro';
+import MainTitle from '../components/MainTitle.astro';
+import PageLayout from '../components/PageLayout.astro';
+
+// Metadatos SEO
+const title = 'KLEENBOOT C30 - SIMIR';
+const description =
+    'Presentación del robot KLEENBOOT C30 - Robot limpiador de nueva generación con tecnología superior y capacidades avanzadas';
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://smiir.com.mx/kleenboot-c30" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/styles/base.css" />
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/typography.css" />
+        <link rel="stylesheet" href="/styles/components.css" />
+        <link rel="stylesheet" href="/styles/responsive.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* CSS específico para KLEENBOOT C30 si es necesario */
+        </style>
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <PageLayout>
+            <div class="content-text">
+                <MainTitle robotName="KLEENBOOT" version="C30" />
+
+                <ImageContainer
+                    src="/assets/images/KLEENBOOT-C30/KLEENBOOT-C30.png"
+                    alt="KLEENBOOT C30"
+                />
+            </div>
+        </PageLayout>
+
+        <Footer />
+
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
+</html>

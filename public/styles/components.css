@@ -9,7 +9,7 @@
 }
 
 .image-container-dual {
-    background: white;
+    background: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;

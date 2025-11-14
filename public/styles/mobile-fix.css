@@ -1,56 +1,17 @@
-/* Mobile viewport fix - Solo prevención de overflow horizontal */
+/* Mobile viewport fix - Solución simple para overflow */
 
-/* Prevenir scroll horizontal global */
-html {
-    overflow-x: hidden !important;
-    max-width: 100vw;
-}
-
-body {
-    overflow-x: hidden !important;
-    max-width: 100vw;
-    position: relative;
-}
-
-/* Específico para móviles - solo overflow fix */
+/* Solo prevenir scroll horizontal en toda la página */
 @media (max-width: 768px) {
 
     html,
     body {
-        overflow-x: hidden !important;
-        max-width: 100vw !important;
-        width: 100%;
-    }
-
-    /* Prevenir elementos que causen overflow */
-    * {
-        box-sizing: border-box;
-    }
-
-    /* Headers específicos */
-    .apple-header,
-    .header {
-        overflow-x: hidden !important;
-        max-width: 100vw !important;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Contenedores principales */
-    main,
-    .presentation-container,
-    .products-page,
-    .content {
         overflow-x: hidden;
         max-width: 100vw;
-        box-sizing: border-box;
     }
 
-    /* Elementos que pueden causar overflow */
-    img,
-    video,
-    iframe {
-        max-width: 100%;
-        height: auto;
+    /* Permitir que los headers funcionen normalmente */
+    .apple-header,
+    .header {
+        max-width: 100vw;
     }
 }

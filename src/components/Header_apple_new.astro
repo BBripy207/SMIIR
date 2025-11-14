@@ -127,31 +127,64 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .apple-header {
+        min-height: 140px;
+        padding: 8px 0;
+        overflow-x: hidden;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    
     .header-content {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px 20px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 8px 10px;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .header-content::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+    
+    .logo {
+        height: 35px;
+        flex-shrink: 0;
     }
     
     .products-card {
-        width: 80px;
-        height: 100px;
-        padding: 4px 3px 3px 3px;
+        width: 70px;
+        height: 90px;
+        padding: 3px 2px 2px 2px;
         gap: 1px;
+        flex-shrink: 0;
     }
     
     .product-icon-large {
-        width: 58px;
-        height: 58px;
+        width: 50px;
+        height: 50px;
     }
     
-    .apple-header {
-        min-height: 140px;
-        padding: 16px 0;
+    .product-title {
+        font-size: 10px;
     }
     
     .contact-section {
-        justify-content: center;
+        display: flex;
+        flex-shrink: 0;
+        gap: 8px;
+    }
+    
+    .contact-link {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
     }
 }
 </style>

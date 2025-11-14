@@ -97,33 +97,46 @@ import HeaderCard from './HeaderCard.astro';
 
     /* Responsive */
     @media (max-width: 768px) {
-        .header-content {
-            justify-content: flex-start;
-            gap: 20px;
-            padding-left: 20px;
-        }
-
-        .logo {
-            height: 115px;
-            width: 95px;
-            object-fit: contain;
-        }
-
-        .products-card {
-            width: 95px;
-            height: 115px;
-            padding: 6px 4px 4px 4px;
-            gap: 2px;
-        }
-
-        .product-icon-large {
-            width: 70px;
-            height: 70px;
-        }
-
         .apple-header {
             min-height: 90px;
             padding: 8px 0;
+            overflow-x: hidden;
+            width: 100vw;
+        }
+
+        .header-content {
+            justify-content: flex-start;
+            gap: 15px;
+            padding: 0 15px;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .header-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .logo {
+            height: 100px;
+            width: 80px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .products-card {
+            width: 80px;
+            height: 100px;
+            padding: 4px 2px 2px 2px;
+            gap: 1px;
+            flex-shrink: 0;
+        }
+
+        .product-icon-large {
+            width: 60px;
+            height: 60px;
         }
     }
 </style>

@@ -69,21 +69,32 @@ import HeaderCard from './HeaderCard.astro';
         .apple-header {
             min-height: 90px;
             padding: 8px 0;
+            overflow-x: hidden;
+            width: 100vw;
         }
 
         .header-content {
             justify-content: center;
-            gap: 20px;
-            padding: 0 20px;
+            gap: 15px;
+            padding: 0 15px;
             max-width: 100%;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .header-content::-webkit-scrollbar {
+            display: none;
         }
 
         .logo {
-            height: 115px;
-            width: 95px;
+            height: 100px;
+            width: 80px;
             object-fit: contain;
+            flex-shrink: 0;
         }
     }
 

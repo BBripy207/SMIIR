@@ -103,12 +103,12 @@ export const robotsData = {
 // Metadatos SEO centralizados
 export const seoData = {
     global: {
-        siteName: "SIMIR",
+        siteName: "SMIIR - Ingeniería y Desarrollo Tecnológico Integral",
         baseUrl: "https://smiir.com.mx"
     },
     pages: {
         productos: {
-            title: "Productos SIMIR - Robots de Servicio Autónomo",
+            title: "Productos SMIIR - Robots de Servicio Autónomo",
             description: "Explora nuestra línea completa de robots de servicio autónomo - DINERBOT T9, T10, T8, T3, T11 y MAYORDOMO W3"
         },
         't8': {

@@ -85,6 +85,19 @@ export const robotsData = {
         imageUrl: "/assets/images/portadas/KLEENBOT-C20-PORTADA.png",
         linkUrl: "/kleenbot-c20"
     }
+        ,
+        kleenbootc30: {
+            name: "KLEENBOOT C30",
+            description: "Robot limpiador 3 en 1 con barrido, aspirado y desempolvado. Autonomía hasta 2500㎡ y modos dual automático/manual con control remoto.",
+            features: [
+                'Limpieza 3 en 1: barrido, aspirado y desempolvado',
+                'Cobertura de 610mm de ancho',
+                'Autonomía hasta 2500㎡ con carga completa',
+                'Modos dual: automático y manual con mango extensible',
+            ],
+            imageUrl: "/assets/images/portadas/KLEENBOOT C30-poertada.png",
+            linkUrl: "/kleenboot-c30"
+        }
 };
 
 // Metadatos SEO centralizados

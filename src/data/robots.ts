@@ -72,6 +72,19 @@ export const robotsData = {
         imageUrl: "/assets/images/MAYORDOMO-W3/MAYORDOMO W3-01.png",
         linkUrl: "/mayordomo-w3"
     }
+    ,
+    kleenbotc20: {
+        name: "KLEENBOT C20",
+        description: "Robot de limpieza industrial con tecnología avanzada y diseño compacto para espacios reducidos.",
+        features: [
+            'Tecnología de limpieza avanzada',
+            'Diseño compacto',
+            'Ideal para espacios reducidos',
+            'Fácil operación y mantenimiento',
+        ],
+        imageUrl: "/assets/images/portadas/KLEENBOT-C20-PORTADA.png",
+        linkUrl: "/kleenbot-c20"
+    }
 };
 
 // Metadatos SEO centralizados

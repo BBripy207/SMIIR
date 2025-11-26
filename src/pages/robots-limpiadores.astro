@@ -114,6 +114,12 @@ const kleenbootC55Features = [
         margin-top: 1rem;
     }
 
+    /* Ajustar posición de imágenes de robots limpiadores para mostrar mejor la parte inferior */
+    :global(.product-image img) {
+        object-position: center bottom !important;
+        transform: translateY(10px);
+    }
+
     @media (max-width: 768px) {
         .products-grid {
             grid-template-columns: 1fr;

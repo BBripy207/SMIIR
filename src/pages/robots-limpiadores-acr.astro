@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ProductsHero from '../components/ProductsHero.astro';
+
+// Metadatos SEO mejorados
+const title = 'Robot autónomo para limpieza - ACR - SIMIR';
+const description =
+    'Descubre nuestro robot autónomo para limpieza ACR. Tecnología de vanguardia para limpieza automatizada con navegación inteligente, IA avanzada y diseño especializado.';
+
+// Datos de productos
+const acrFeatures = [
+    'Tecnología autónoma avanzada',
+    'Navegación inteligente',
+    'Limpieza eficiente y precisa',
+    'Operación totalmente automatizada',
+];
+
+const proximamenteFeatures = [
+    'Próximamente disponible',
+    'Tecnología de vanguardia',
+    'Características innovadoras',
+    'Más información pronto',
+];
+---
+
+<BaseLayout {title} {description}>
+    <HeaderApple />
+
+    <main class="main">
+        <ProductsHero
+            title="ROBOT AUTÓNOMO PARA LIMPIEZA - ACR"
+            description="Descubre nuestro robot autónomo para limpieza ACR diseñado para revolucionar la limpieza automatizada con tecnología de vanguardia."
+        />
+
+        <div class="products-container">
+            <div class="products-grid">
+                <ProductCard
+                    name="Robot autónomo para limpieza - ACR"
+                    description="Robot limpiador autónomo con tecnología avanzada de inteligencia artificial y navegación autónoma para espacios comerciales e industriales."
+                    features={acrFeatures}
+                    imageUrl="/assets/images/Robot autónomo para limpieza - ACR/Robot autónomo para limpieza - ACR .png"
+                    imageAlt="Robot autónomo para limpieza - ACR"
+                    linkUrl="/robot-autonomo-limpieza-acr"
+                />
+
+                <ProductCard
+                    name="Próximamente"
+                    description="Nuevo robot limpiador autónomo en desarrollo. Próximamente disponible con las últimas innovaciones en tecnología de limpieza."
+                    features={proximamenteFeatures}
+                    imageUrl="/assets/images/simir.png"
+                    imageAlt="Próximo Robot Limpiador"
+                    linkUrl="#"
+                />
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+    <FloatingButtons />
+</BaseLayout>
+
+<style>
+    .main {
+        margin-top: 0;
+    }
+
+    .products-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 60px;
+        margin-top: 1rem;
+    }
+
+    /* Ajustar posición de imágenes de robots limpiadores para mostrar mejor la parte inferior */
+    :global(.product-image img) {
+        object-position: center bottom !important;
+        transform: translateY(10px);
+    }
+
+    @media (max-width: 768px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .products-container {
+            padding: 20px;
+        }
+    }
+</style>

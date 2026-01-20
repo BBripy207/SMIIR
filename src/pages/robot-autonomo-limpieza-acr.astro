@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderApple from '../components/Header_clean.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import PageLayout from '../components/PageLayout.astro';
+
+// Metadatos SEO
+const title = 'Robot autónomo para limpieza - ACR - SIMIR';
+const description =
+    'Presentación del robot autónomo para limpieza ACR - Tecnología avanzada de limpieza autónoma con navegación inteligente';
+---
+
+<html 
+    lang="es"
+    style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%) !important; min-height: 100vh !important;"
+>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://smiir.com.mx/robot-autonomo-limpieza-acr"
+        />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/simir.png" />
+
+        <!-- Fuentes Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FontAwesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+
+        <!-- View Transitions para navegación fluida -->
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <HeaderApple />
+
+        <PageLayout>
+            <div class="pdf-container">
+                <iframe
+                    src="/assets/images/PDF/Robot autónomo para limpieza - ACR.pdf"
+                    width="100%"
+                    height="800px"
+                    title="Robot autónomo para limpieza - ACR"
+                    style="border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);"
+                >
+                </iframe>
+            </div>
+        </PageLayout>
+
+        <Footer />
+
+        <!-- Scripts modulares -->
+        <script src="/components/SlideshowManager.js" is:inline></script>
+        <script src="/components/NavigationManager.js" is:inline></script>
+        <script src="/components/AnimationManager.js" is:inline></script>
+        <script src="/components/app.js" is:inline></script>
+
+        <FloatingButtons />
+    </body>
+</html>
+
+<style>
+    .pdf-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+        .pdf-container {
+            margin: 1rem auto;
+            padding: 0 10px;
+        }
+
+        .pdf-container iframe {
+            height: 600px;
+        }
+    }
+</style>
